@@ -31,3 +31,5 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 
 1. First delete extra code from copy and paste and fix the imports so that tests run. After this, one test runs, but 
 does not pass.
+2. Generalize test of ranges for ability score rollers. The classic ability score roller gives absurd result of rolling 
+48 for one of the ability score.
