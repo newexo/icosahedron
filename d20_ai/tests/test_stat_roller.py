@@ -4,31 +4,35 @@ from d20_ai.stat_roller import AbilityScoreRoller, ClassicAbilityScoreRoller, He
 
 class TestAbilityScoreRoller(unittest.TestCase):
     def test_roll_standard_ability_scores_ranges(self):
-        roller = AbilityScoreRoller()
-        scores = roller.roll_ability_scores()
+        for seed in range(1,1000):
+            roller = AbilityScoreRoller(seed=seed)
+            scores = roller.roll_ability_scores()
 
-        self.assertEqual(len(scores), 6)
-        for score in scores:
-            self.assertGreaterEqual(score, 3)
-            self.assertLessEqual(score, 18)
+            self.assertEqual(len(scores), 6)
+            for score in scores:
+                self.assertGreaterEqual(score, 3)
+                self.assertLessEqual(score, 18)
 
     def test_roll_classic_ability_scores_ranges(self):
-        roller = ClassicAbilityScoreRoller()
-        scores = roller.roll_ability_scores()
+        for seed in range(1,1000):
+            roller = ClassicAbilityScoreRoller(seed=seed)
+            scores = roller.roll_ability_scores()
 
-        self.assertEqual(len(scores), 6)
-        for score in scores:
-            self.assertGreaterEqual(score, 3)
-            self.assertLessEqual(score, 18)
+            self.assertEqual(len(scores), 6)
+            for score in scores:
+                self.assertGreaterEqual(score, 3)
+                self.assertLessEqual(score, 18)
 
     def test_roll_heroic_ability_scores_ranges(self):
-        roller = HeroicAbilityScoreRoller()
-        scores = roller.roll_ability_scores()
+        for seed in range(1,1000):
+            roller = HeroicAbilityScoreRoller(seed=seed)
+            scores = roller.roll_ability_scores()
+            print(scores)
 
-        self.assertEqual(len(scores), 6)
-        for score in scores:
-            self.assertGreaterEqual(score, 3)
-            self.assertLessEqual(score, 18)
+            self.assertEqual(len(scores), 6)
+            for score in scores:
+                self.assertGreaterEqual(score, 3)
+                self.assertLessEqual(score, 18)
 
     def test_roll_standard_ability_scores(self):
         # test standard ability score rolling

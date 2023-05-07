@@ -222,3 +222,18 @@ Deleted "__main__" code from `stat_roller.py`.
 Duplicated standard ability score roller unit test for classic and heroic rollers.
 
 Both classic and heroic rollers were producing values out of the correct range.
+
+All three turned out to be rolling dice which were not correct, for example
+
+    dice_rolls = rand_state.randint(1, 6, size=3)
+
+should have been.
+
+    dice_rolls = rand_state.randint(3, 19, size=3)
+
+Moved initialization of `rand_state` to `__init__` of base class.
+
+Rewrote unit tests to roll stats 1000 times.
+
+In the end, I was not satisfied with the code and decided to begin again with a modified strategy. Have abandoned the 
+heroic character roller, because it seemed too complicated to generate stable code.
