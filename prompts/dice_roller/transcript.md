@@ -97,8 +97,6 @@ Write a python class to roll dice according to D20 rules.
 
 Sure, here's an example Python class that rolls dice according to D20 rules:
 
-    python
-    
     import random
     
     class D20Roller:
@@ -125,8 +123,6 @@ The `roll()` method first checks that the dice_type argument is valid (i.e., one
 
 Here's an example usage of the `D20Roller` class to roll a D20 with a +5 modifier:
 
-    python
-    
     roller = D20Roller()
     result = roller.roll(20, modifier=5)
     print("Result:", result)
@@ -165,8 +161,6 @@ Write a function to roll `D20Roller` given a json object.
 Sure! Here's an example Python function that takes a JSON object as input, uses it to roll a die using a `D20Roller`
 object, and returns the result:
 
-    python
-    
     import json
     
     def roll_dice(json_obj):
@@ -193,15 +187,11 @@ a single field, result, containing the total value of the roll.
 
 Here's an example usage of the `roll_dice()` function with a JSON object representing a roll of 2D6+3:
 
-    python
-    
     json_obj = '{"dice_type": 6, "num_dice": 2, "modifier": 3}'
     result = roll_dice(json_obj)
     print(result)
 
 This would output a JSON object representing the total result of the roll, which might look something like this:
-
-json
 
     {"result": 10}
 
@@ -213,8 +203,6 @@ Create a class to encapsulate the json object representing a `D20Roller` roll.
 ### ChatGPT
 
 Sure! Here's an example Python class that encapsulates the JSON object representing a `D20Roller` roll:
-
-python
 
     import json
     
@@ -257,8 +245,6 @@ constructs a new `D20Roll` object with those values.
 Here's an example usage of the `D20Roll` class to create a D20Roll object representing a roll of 3D8+2, convert it to a J
 SON string, and then construct a new `D20Roll` object from that string:
 
-python
-
     # Create a new D20Roll object
     my_roll = D20Roll(dice_type=8, num_dice=3, modifier=2)
     
@@ -284,8 +270,6 @@ Write a unit test for `D20Roller`.
 ### ChatGPT
 
 Sure! Here's an example unit test for the `D20Roller` class:
-
-python
 
     import unittest
     from d20roller import D20Roller, D20Roll
@@ -341,8 +325,6 @@ Write a unit test for `D20Roll`.
 ### ChatGPT
 
 Sure! Here's an example unit test for the `D20Roll` class:
-
-python
 
     import unittest
     from d20roller import D20Roll
