@@ -33,3 +33,4 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 does not pass.
 2. Generalize test of ranges for ability score rollers. The classic ability score roller gives absurd result of rolling 
 48 for one of the ability score.
+3. Write regression tests for standard and heroic ability score rollers based on existing classical roller test.

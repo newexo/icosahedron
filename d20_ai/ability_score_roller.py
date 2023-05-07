@@ -23,16 +23,6 @@ class AbilityScoreRoller(BaseAbilityScoreRoller):
         return self.scores
 
 
-class BaseAbilityScoreRoller(ABC):
-    def __init__(self, seed=None):
-        self.scores = []
-        self.seed = seed
-
-    @abstractmethod
-    def roll_ability_scores(self):
-        pass
-
-
 class ClassicAbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_scores(self):
         rand_state = np.random.RandomState(seed=self.seed)
@@ -51,4 +41,3 @@ class HeroicAbilityScoreRoller(BaseAbilityScoreRoller):
             score = np.sum(dice_rolls)
             self.scores.append(score)
         return self.scores
-
