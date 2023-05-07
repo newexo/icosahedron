@@ -36,3 +36,10 @@ does not pass.
 3. Write regression tests for standard and heroic ability score rollers based on existing classical roller test.
 4. Fix classic roller so that scores are within correct ranges.
 5. Fix regression tests.
+
+## Final refactor
+
+After the fixes, the code is working, but some naming conventions are inconsistent. Also, the RandomState for the 
+rollers is reset at the beginning of each roll, so the scores are the same everytime based on seed.
+
+1. Refactor rename AbilityScoreRoller to StandardAbilityScoreRoller.

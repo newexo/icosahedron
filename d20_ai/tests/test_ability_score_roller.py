@@ -1,6 +1,6 @@
 import unittest
 from d20_ai.ability_score_roller import (
-    AbilityScoreRoller,
+    StandardAbilityScoreRoller,
     ClassicAbilityScoreRoller,
     HeroicAbilityScoreRoller,
 )
@@ -17,7 +17,7 @@ class TestAbilityScoreRoller(unittest.TestCase):
 
     def test_ability_score_ranges(self):
         self.roll_ability_scores_range_test(
-            AbilityScoreRoller(), "standard ability score roller"
+            StandardAbilityScoreRoller(), "standard ability score roller"
         )
 
     def test_classic_ability_score_ranges(self):
@@ -32,7 +32,7 @@ class TestAbilityScoreRoller(unittest.TestCase):
 
     def test_standard_roll_ability_scores(self):
         # regression test of classical ability score rolling
-        roller = AbilityScoreRoller(seed=42)
+        roller = StandardAbilityScoreRoller(seed=42)
         scores = roller.roll_ability_scores()
 
         expected_scores = [14, 11, 12, 15, 16, 11]

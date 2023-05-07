@@ -12,7 +12,7 @@ class BaseAbilityScoreRoller(ABC):
         pass
 
 
-class AbilityScoreRoller(BaseAbilityScoreRoller):
+class StandardAbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_scores(self):
         rand_state = np.random.RandomState(seed=self.seed)
         for i in range(6):
