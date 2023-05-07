@@ -7,4 +7,4 @@ repair generated code.
 
 Experiments in order.
 
-- [Ability score roller](stat_roller)
+- [Ability score roller](ability_score_roller)
