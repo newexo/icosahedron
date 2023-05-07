@@ -7,4 +7,5 @@ repair generated code.
 
 Experiments in order.
 
-- [Ability score roller](ability_score_roller)
+1. [Ability score roller](ability_score_roller)
+2. [Dice roller](dice_roller)
