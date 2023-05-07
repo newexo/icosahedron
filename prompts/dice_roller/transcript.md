@@ -137,8 +137,6 @@ Write a json object representing the arguments for `D20Roller.roll` function.
 
 Sure! Here's an example JSON object representing the arguments for the `D20Roller.roll()` function:
 
-    json
-    
     {
       "dice_type": 20,
       "num_dice": 1,
