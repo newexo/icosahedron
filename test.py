@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 import unittest
 
+from d20_ai.tests.test_ability_score_roller import TestAbilityScoreRoller
 from d20_ai.tests.test_directories import TestDirectories
 from d20_ai.tests.test_example import TestExample
+
 
 
 class CountSuite(object):
@@ -19,6 +21,7 @@ class CountSuite(object):
 def suite():
     s = CountSuite()
 
+    s.add(TestAbilityScoreRoller)
     s.add(TestDirectories)
     s.add(TestExample)
 

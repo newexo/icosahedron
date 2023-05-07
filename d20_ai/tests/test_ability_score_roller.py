@@ -1,5 +1,5 @@
 import unittest
-from ability_score_roller import AbilityScoreRoller
+from d20_ai.ability_score_roller import AbilityScoreRoller, ClassicAbilityScoreRoller, HeroicAbilityScoreRoller
 
 class TestAbilityScoreRoller(unittest.TestCase):
     def test_roll_ability_scores(self):
@@ -10,9 +10,6 @@ class TestAbilityScoreRoller(unittest.TestCase):
         for score in scores:
             self.assertGreaterEqual(score, 3)
             self.assertLessEqual(score, 18)
-
-if __name__ == '__main__':
-    unittest.main()
 
 class TestAbilityScoreRoller(unittest.TestCase):
     def test_roll_ability_scores(self):

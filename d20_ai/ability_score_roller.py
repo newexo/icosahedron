@@ -1,4 +1,6 @@
+import numpy as np
 from abc import ABC, abstractmethod
+
 
 class BaseAbilityScoreRoller(ABC):
     def __init__(self, seed=None):
@@ -9,7 +11,6 @@ class BaseAbilityScoreRoller(ABC):
     def roll_ability_scores(self):
         pass
 
-import numpy as np
 
 class AbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_scores(self):
@@ -21,13 +22,6 @@ class AbilityScoreRoller(BaseAbilityScoreRoller):
             self.scores.append(score)
         return self.scores
 
-if __name__ == '__main__':
-    roller = AbilityScoreRoller(seed=42)
-    scores = roller.roll_ability_scores()
-    print(f"Your ability scores are: {scores}")
-
-import numpy as np
-from abc import ABC, abstractmethod
 
 class BaseAbilityScoreRoller(ABC):
     def __init__(self, seed=None):
@@ -37,6 +31,7 @@ class BaseAbilityScoreRoller(ABC):
     @abstractmethod
     def roll_ability_scores(self):
         pass
+
 
 class ClassicAbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_scores(self):
@@ -47,22 +42,6 @@ class ClassicAbilityScoreRoller(BaseAbilityScoreRoller):
             self.scores.append(score)
         return self.scores
 
-if __name__ == '__main__':
-    roller = ClassicAbilityScoreRoller(seed=42)
-    scores = roller.roll_ability_scores()
-    print(f"Your ability scores are: {scores}")
-
-import numpy as np
-from abc import ABC, abstractmethod
-
-class BaseAbilityScoreRoller(ABC):
-    def __init__(self, seed=None):
-        self.scores = []
-        self.seed = seed
-
-    @abstractmethod
-    def roll_ability_scores(self):
-        pass
 
 class HeroicAbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_scores(self):
@@ -73,7 +52,3 @@ class HeroicAbilityScoreRoller(BaseAbilityScoreRoller):
             self.scores.append(score)
         return self.scores
 
-if __name__ == '__main__':
-    roller = HeroicAbilityScoreRoller(seed=42)
-    scores = roller.roll_ability_scores()
-    print(f"Your ability scores are: {scores}")
