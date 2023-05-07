@@ -4,40 +4,34 @@ from abc import ABC, abstractmethod
 
 class BaseAbilityScoreRoller(ABC):
     def __init__(self, seed=None):
-        self.scores = []
         self.seed = seed
+        self.rand_state = np.random.RandomState(seed=self.seed)
 
     @abstractmethod
-    def roll_ability_scores(self):
+    def roll_ability_score(self):
         pass
+
+    def roll_ability_scores(self):
+        scores = []
+        for i in range(6):
+            scores.append(self.roll_ability_score())
+        return scores
 
 
 class StandardAbilityScoreRoller(BaseAbilityScoreRoller):
-    def roll_ability_scores(self):
-        rand_state = np.random.RandomState(seed=self.seed)
-        for i in range(6):
-            dice_rolls = rand_state.randint(1, 7, size=4)
-            dropped_die = np.min(dice_rolls)
-            score = np.sum(dice_rolls) - dropped_die
-            self.scores.append(score)
-        return self.scores
+    def roll_ability_score(self):
+        dice_rolls = self.rand_state.randint(1, 7, size=4)
+        dropped_die = np.min(dice_rolls)
+        return np.sum(dice_rolls) - dropped_die
 
 
 class ClassicAbilityScoreRoller(BaseAbilityScoreRoller):
-    def roll_ability_scores(self):
-        rand_state = np.random.RandomState(seed=self.seed)
-        for i in range(6):
-            dice_rolls = rand_state.randint(1, 7, size=3)
-            score = np.sum(dice_rolls)
-            self.scores.append(score)
-        return self.scores
+    def roll_ability_score(self):
+        dice_rolls = self.rand_state.randint(1, 7, size=3)
+        return np.sum(dice_rolls)
 
 
 class HeroicAbilityScoreRoller(BaseAbilityScoreRoller):
-    def roll_ability_scores(self):
-        rand_state = np.random.RandomState(seed=self.seed)
-        for i in range(6):
-            dice_rolls = rand_state.randint(4, 7, size=3)
-            score = np.sum(dice_rolls)
-            self.scores.append(score)
-        return self.scores
+    def roll_ability_score(self):
+        dice_rolls = self.rand_state.randint(4, 7, size=3)
+        return np.sum(dice_rolls)
