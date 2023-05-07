@@ -208,3 +208,8 @@ Response:
     
     if __name__ == '__main__':
         unittest.main()
+
+## Raw results
+
+Raw results are in branch [raw/stat_roller](https://github.com/newexo/d20-ai/tree/raw/stat_roller).
+
