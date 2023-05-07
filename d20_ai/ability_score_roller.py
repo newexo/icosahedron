@@ -12,10 +12,7 @@ class BaseAbilityScoreRoller(ABC):
         pass
 
     def roll_ability_scores(self):
-        scores = []
-        for i in range(6):
-            scores.append(self.roll_ability_score())
-        return scores
+        return [self.roll_ability_score() for _ in range(6)]
 
 
 class StandardAbilityScoreRoller(BaseAbilityScoreRoller):

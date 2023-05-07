@@ -45,3 +45,4 @@ rollers is reset at the beginning of each roll, so the scores are the same every
 1. Refactor rename AbilityScoreRoller to StandardAbilityScoreRoller.
 2. Add a test which fails for each of the ability score roller tests because results are repeated.
 3. Refactor BaseAbilityScoreRoller to contain a single RandomState initialized with seed.
+4. Refactor to be more pythonic and concise.
