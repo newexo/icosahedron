@@ -35,3 +35,4 @@ does not pass.
 48 for one of the ability score.
 3. Write regression tests for standard and heroic ability score rollers based on existing classical roller test.
 4. Fix classic roller so that scores are within correct ranges.
+5. Fix regression tests.

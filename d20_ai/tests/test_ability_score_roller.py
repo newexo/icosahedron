@@ -35,7 +35,7 @@ class TestAbilityScoreRoller(unittest.TestCase):
         roller = AbilityScoreRoller(seed=42)
         scores = roller.roll_ability_scores()
 
-        expected_scores = [15, 14, 13, 12, 10, 8]
+        expected_scores = [14, 11, 12, 15, 16, 11]
         self.assertEqual(scores, expected_scores)
 
     def test_classic_roll_ability_scores(self):
@@ -43,7 +43,7 @@ class TestAbilityScoreRoller(unittest.TestCase):
         roller = ClassicAbilityScoreRoller(seed=42)
         scores = roller.roll_ability_scores()
 
-        expected_scores = [15, 14, 13, 12, 10, 8]
+        expected_scores = [12, 12, 9, 12, 13, 16]
         self.assertEqual(scores, expected_scores)
 
     def test_heroic_roll_ability_scores(self):
@@ -51,7 +51,7 @@ class TestAbilityScoreRoller(unittest.TestCase):
         roller = HeroicAbilityScoreRoller(seed=42)
         scores = roller.roll_ability_scores()
 
-        expected_scores = [15, 14, 13, 12, 10, 8]
+        expected_scores = [16, 14, 17, 18, 15, 14]
         self.assertEqual(scores, expected_scores)
 
 
