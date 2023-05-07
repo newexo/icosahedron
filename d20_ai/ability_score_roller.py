@@ -27,7 +27,7 @@ class ClassicAbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_scores(self):
         rand_state = np.random.RandomState(seed=self.seed)
         for i in range(6):
-            dice_rolls = rand_state.randint(3, 19, size=3)
+            dice_rolls = rand_state.randint(1, 7, size=3)
             score = np.sum(dice_rolls)
             self.scores.append(score)
         return self.scores

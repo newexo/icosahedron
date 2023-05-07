@@ -34,3 +34,4 @@ does not pass.
 2. Generalize test of ranges for ability score rollers. The classic ability score roller gives absurd result of rolling 
 48 for one of the ability score.
 3. Write regression tests for standard and heroic ability score rollers based on existing classical roller test.
+4. Fix classic roller so that scores are within correct ranges.
