@@ -43,3 +43,4 @@ After the fixes, the code is working, but some naming conventions are inconsiste
 rollers is reset at the beginning of each roll, so the scores are the same everytime based on seed.
 
 1. Refactor rename AbilityScoreRoller to StandardAbilityScoreRoller.
+2. Add a test which fails for each of the ability score roller tests because results are repeated.
