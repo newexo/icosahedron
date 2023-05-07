@@ -1,6 +1,9 @@
 import sys
 from setuptools import setup, find_packages
 
+with open("d20_ai/_version.py") as f:
+    version = f.readlines()[-1].split()[-1].strip("\"'")
+
 
 def forbid_publish():
     argv = sys.argv
@@ -17,7 +20,7 @@ forbid_publish()
 
 setup(
     name="d20_ai",
-    version="0.0.1",
+    version=version,
     author="Reuben Brasher",
     install_requires=["numpy~=1.24"],
     packages=find_packages(),

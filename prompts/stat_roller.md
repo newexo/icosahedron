@@ -213,3 +213,12 @@ Response:
 
 Raw results are in branch [raw/stat_roller](https://github.com/newexo/d20-ai/tree/raw/stat_roller).
 
+## Steps for fixing
+
+Fixed imports in `test_stat_roller.py`.
+
+Deleted "__main__" code from `stat_roller.py`.
+
+Duplicated standard ability score roller unit test for classic and heroic rollers.
+
+Both classic and heroic rollers were producing values out of the correct range.

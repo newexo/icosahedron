@@ -1,8 +1,9 @@
 import unittest
-from ability_score_roller import AbilityScoreRoller
+from d20_ai.stat_roller import AbilityScoreRoller, ClassicAbilityScoreRoller, HeroicAbilityScoreRoller
+
 
 class TestAbilityScoreRoller(unittest.TestCase):
-    def test_roll_ability_scores(self):
+    def test_roll_standard_ability_scores_ranges(self):
         roller = AbilityScoreRoller()
         scores = roller.roll_ability_scores()
 
@@ -11,11 +12,25 @@ class TestAbilityScoreRoller(unittest.TestCase):
             self.assertGreaterEqual(score, 3)
             self.assertLessEqual(score, 18)
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_roll_classic_ability_scores_ranges(self):
+        roller = ClassicAbilityScoreRoller()
+        scores = roller.roll_ability_scores()
 
-class TestAbilityScoreRoller(unittest.TestCase):
-    def test_roll_ability_scores(self):
+        self.assertEqual(len(scores), 6)
+        for score in scores:
+            self.assertGreaterEqual(score, 3)
+            self.assertLessEqual(score, 18)
+
+    def test_roll_heroic_ability_scores_ranges(self):
+        roller = HeroicAbilityScoreRoller()
+        scores = roller.roll_ability_scores()
+
+        self.assertEqual(len(scores), 6)
+        for score in scores:
+            self.assertGreaterEqual(score, 3)
+            self.assertLessEqual(score, 18)
+
+    def test_roll_standard_ability_scores(self):
         # test standard ability score rolling
         roller = AbilityScoreRoller()
         scores = roller.roll_ability_scores()
