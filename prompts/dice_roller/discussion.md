@@ -26,7 +26,8 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 
 1. First delete extra code from copy and paste and fix the imports so that tests run. After this, two test runs, but 
 does not pass fail because of similar error `missing 1 required positional argument: 'dice_type'`.
-
+2. Request fix for unit tests and a refactor for D20Roll and D20Roller. Managed to improve D20Roll and D20Roller, but 
+the tests remained problematic. Eventually decided to accept parts the proposed tests.
 
 ## Final refactor
 

@@ -7,7 +7,6 @@ from d20_ai.tests.test_directories import TestDirectories
 from d20_ai.tests.test_example import TestExample
 
 
-
 class CountSuite(object):
     def __init__(self):
         self.count = 0
@@ -24,7 +23,7 @@ def suite():
 
     s.add(TestAbilityScoreRoller)
     s.add(TestD20Roll)
-    s.add(TestD20Roll)
+    s.add(TestD20Roller)
     s.add(TestDirectories)
     s.add(TestExample)
 
