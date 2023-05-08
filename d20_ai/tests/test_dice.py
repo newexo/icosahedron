@@ -1,5 +1,6 @@
 import unittest
-from d20roller import D20Roller, D20Roll
+from d20_ai.dice import D20Roller, D20Roll
+
 
 class TestD20Roller(unittest.TestCase):
     def setUp(self):
@@ -21,11 +22,6 @@ class TestD20Roller(unittest.TestCase):
         result = self.d20roller.roll(roll)
         self.assertTrue(0 <= result <= 11)
 
-if __name__ == '__main__':
-    unittest.main()
-
-import unittest
-from d20roller import D20Roll
 
 class TestD20Roll(unittest.TestCase):
     def test_init(self):
@@ -51,5 +47,6 @@ class TestD20Roll(unittest.TestCase):
         with self.assertRaises(TypeError):
             roll = D20Roll(8, modifier="foo")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

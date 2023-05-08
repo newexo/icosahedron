@@ -22,6 +22,12 @@ Raw results are in branch [generated/dice_roller](https://github.com/newexo/d20-
 
 ## Steps to make code actually work
 
+Recorded steps to make code actually work in commit history of branch [refactor/dice_roller](https://github.com/newexo/d20-ai/tree/refactor/dice_roller).
+
+1. First delete extra code from copy and paste and fix the imports so that tests run. After this, two test runs, but 
+does not pass fail because of similar error `missing 1 required positional argument: 'dice_type'`.
+
+
 ## Final refactor
 
 ## Documentation comments
