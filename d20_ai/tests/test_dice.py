@@ -46,6 +46,18 @@ class TestD20Roll(unittest.TestCase):
         self.assertEqual(roll.num_dice, 1)
         self.assertEqual(roll.modifier, 0)
 
+    def test_to_dict(self):
+        roll = D20Roll(dice_type=20, num_dice=1, modifier=0)
+        expected = {"dice_type": 20, "num_dice": 1, "modifier": 0}
+        self.assertDictEqual(roll.to_dict(), expected)
+
+    def test_from_dict(self):
+        data = {"dice_type": 20, "num_dice": 1, "modifier": 0}
+        roll = D20Roll.from_dict(data)
+        self.assertEqual(roll.dice_type, 20)
+        self.assertEqual(roll.num_dice, 1)
+        self.assertEqual(roll.modifier, 0)
+
 
 class TestD20Roller(unittest.TestCase):
     def test_roll(self):

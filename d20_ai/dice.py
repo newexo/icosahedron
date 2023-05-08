@@ -13,17 +13,22 @@ class D20Roll:
         self.modifier = modifier
 
     def to_json(self):
-        return json.dumps(
-            {
-                "dice_type": self.dice_type,
-                "num_dice": self.num_dice,
-                "modifier": self.modifier,
-            }
-        )
+        return json.dumps(self.to_dict())
 
     @classmethod
     def from_json(cls, json_str):
         data = json.loads(json_str)
+        return cls.from_dict(data)
+
+    def to_dict(self):
+        return {
+            "dice_type": self.dice_type,
+            "num_dice": self.num_dice,
+            "modifier": self.modifier,
+        }
+
+    @classmethod
+    def from_dict(cls, data):
         return cls(data["dice_type"], data.get("num_dice", 1), data.get("modifier", 0))
 
 
