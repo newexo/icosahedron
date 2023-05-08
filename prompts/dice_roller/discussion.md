@@ -31,4 +31,9 @@ the tests remained problematic. Eventually decided to accept parts the proposed 
 
 ## Final refactor
 
+1. Fixed tests by hand.
+2. Added functions to and from dict to D20Roller.
+
 ## Documentation comments
+
+Fed back the resulting rewrite of `dice.py` into ChatGPT and requested python doc comments.
