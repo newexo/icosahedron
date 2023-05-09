@@ -1,4 +1,5 @@
 import unittest
+from d20_ai.inventory_item import InventoryItem, ArmorItem, WeaponItem, MagicRing
 
 bedroll = {
     "name": "Bedroll",
@@ -159,8 +160,6 @@ ring_of_protection_dict = {
     "effect": "This ring grants a +1 deflection bonus to AC."
 }
 
-import unittest
-
 
 class TestInventoryItem(unittest.TestCase):
     def test_init(self):
@@ -228,8 +227,6 @@ class TestInventoryItem(unittest.TestCase):
         self.assertEqual(item.condition, "new")
         self.assertEqual(item.value, 100)
 
-import unittest
-from inventory_item import ArmorItem
 
 class TestArmorItem(unittest.TestCase):
 
@@ -291,8 +288,6 @@ class TestArmorItem(unittest.TestCase):
         self.assertEqual(item_dict["value"], 150)
         self.assertEqual(item_dict["condition"], "new")
 
-import unittest
-from inventory import WeaponItem
 
 class TestWeaponItem(unittest.TestCase):
     def setUp(self):
@@ -329,8 +324,6 @@ class TestWeaponItem(unittest.TestCase):
         self.assertEqual(mace.weight, 6)
         self.assertEqual(mace.damage, "1d6")
         self.assertEqual(mace.damage_type, "Bludgeoning")
-
-import unittest
 
 class TestMagicRing(unittest.TestCase):
 

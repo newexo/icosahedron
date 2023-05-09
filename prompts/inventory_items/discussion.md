@@ -58,9 +58,9 @@ Raw results are in branch [generate/inventory](https://github.com/newexo/d20-ai/
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
+Recorded steps to make code actually work in commit history of branch [refactor/inventory](https://github.com/newexo/d20-ai/tree/refactor/inventory).
 
-1. 
+1. Delete unused code and fix imports. After this, 8 tests fail with errors.
 
 ## Final refactor
 
