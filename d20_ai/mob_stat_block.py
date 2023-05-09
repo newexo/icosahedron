@@ -1,7 +1,7 @@
 import json
 
 
-class NPC:
+class MobStatBlock:
     def __init__(
         self,
         name,
@@ -42,7 +42,7 @@ class NPC:
 # Example usage:
 
 # Create an instance of the NPC class for Iggy
-iggy = NPC(
+iggy = MobStatBlock(
     name="Iggy",
     hit_points=12,
     armor_class=14,
@@ -62,7 +62,7 @@ iggy_json = iggy.to_json()
 print(iggy_json)
 
 # Recreate the Iggy object from the JSON string
-iggy_from_json = NPC.from_json(iggy_json)
+iggy_from_json = MobStatBlock.from_json(iggy_json)
 print(iggy_from_json.name)  # prints "Iggy"
 
 

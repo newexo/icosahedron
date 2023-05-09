@@ -33,7 +33,7 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 
 ## Final refactor
 
-1.
+1. Renamed class from NPC to mob_stat_block.
 
 ## Documentation comments
 
