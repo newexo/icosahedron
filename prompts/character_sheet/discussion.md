@@ -29,6 +29,7 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 The generated code samples were long enough that the full code would have exceeded the length limit for generated text.
 
 1. Delete useless code and fix imports. Two tests fail with KeyError.
+2. Fix errors in unit tests.
 
 ## Final refactor
 

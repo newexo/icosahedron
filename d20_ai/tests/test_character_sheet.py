@@ -156,7 +156,7 @@ class TestD20CharacterSheet(unittest.TestCase):
         # Check that the dictionary has the correct values
         self.assertEqual(alice_dict["name"], "Alice")
         self.assertEqual(alice_dict["race"], "Human")
-        self.assertEqual(alice_dict["char_class"], "Wizard")
+        self.assertEqual(alice_dict["class"], "Wizard")
         self.assertEqual(alice_dict["level"], 3)
         self.assertEqual(alice_dict["alignment"], "Neutral Good")
         self.assertEqual(alice_dict["ability_scores"], {
@@ -187,7 +187,7 @@ class TestD20CharacterSheet(unittest.TestCase):
         alice_dict = {
             "name": "Alice",
             "race": "Human",
-            "char_class": "Wizard",
+            "class": "Wizard",
             "level": 3,
             "alignment": "Neutral Good",
             "ability_scores": {
@@ -264,9 +264,9 @@ class TestD20CharacterSheet(unittest.TestCase):
             "religion": 6
         })
         self.assertEqual(len(alice.feats), 2)
-        self.assertEqual(alice.feats[0].name, "Alert")
-        self.assertEqual(alice.feats[0].description, "+5 initiative and cannot be surprised")
-        self.assertEqual(alice.feats[1].name, "Magic Initiate")
+        self.assertEqual(alice.feats[0]["name"], "Alert")
+        self.assertEqual(alice.feats[0]["description"], "+5 initiative and cannot be surprised")
+        self.assertEqual(alice.feats[1]["name"], "Magic Initiate")
         # self.assertEqual(alice.feats[1].description, "Can cast two cantrips and one 1st-leve
         # test is incomplete
 
