@@ -65,6 +65,9 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 error.
 3. MagicRing tests consistently have incorrect argument and non-existent fields, magic_type and bonus. After fixing 
 errors from MagicRing tests, now 4 tests fail and 5 fail with error.
+4. ArmorItem tests consistently have incorrect argument and non-existent fields. Fixed errors. Now 8 tests fail, but 
+none with error.
+
 ## Final refactor
 
 1.
