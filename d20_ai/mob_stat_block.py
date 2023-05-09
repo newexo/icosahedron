@@ -1,7 +1,9 @@
 import json
 
+from d20_ai.dictable import Dictable
 
-class MobStatBlock:
+
+class MobStatBlock(Dictable):
     def __init__(
         self,
         name,
@@ -30,14 +32,6 @@ class MobStatBlock:
         self.alignment = alignment
         self.description = description
 
-    def to_json(self):
-        return json.dumps(self, default=lambda o: o.__dict__, indent=4)
-
-    @classmethod
-    def from_json(cls, json_string):
-        json_dict = json.loads(json_string)
-        return cls(**json_dict)
-
     def to_dict(self):
         return {
             "name": self.name,
@@ -53,10 +47,10 @@ class MobStatBlock:
             "alignment": self.alignment,
             "description": self.description
         }
+
     @classmethod
-    def from_dict(cls, json_string):
-        json_dict = json.loads(json_string)
-        return cls(**json_dict)
+    def from_dict(cls, data):
+        return cls(**data)
 
 
 # Example usage:
