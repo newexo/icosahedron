@@ -1,7 +1,6 @@
 import unittest
+from d20_ai.character_sheet import D20CharacterSheet
 
-
-import unittest
 
 class TestD20CharacterSheet(unittest.TestCase):
     def test_init(self):
@@ -94,9 +93,6 @@ class TestD20CharacterSheet(unittest.TestCase):
         # self.assertEqual(al
         # test is incomplete
 
-import unittest
-
-class TestD20CharacterSheet(unittest.TestCase):
     def test_to_dict(self):
         # Create a D20CharacterSheet object
         alice = D20CharacterSheet(
@@ -186,9 +182,6 @@ class TestD20CharacterSheet(unittest.TestCase):
         # self.assertEqual(len
         # test is incomplete
 
-import unittest
-
-class TestD20CharacterSheet(unittest.TestCase):
     def test_from_dict(self):
         # Create a dictionary representing a D20CharacterSheet
         alice_dict = {

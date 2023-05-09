@@ -24,9 +24,11 @@ Raw results are in branch [generate/character-sheet](https://github.com/newexo/d
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
+Recorded steps to make code actually work in commit history of branch [refactor/character-sheet](https://github.com/newexo/d20-ai/tree/refactor/character-sheet).
 
-1. 
+The generated code samples were long enough that the full code would have exceeded the length limit for generated text.
+
+1. Delete useless code and fix imports. Two tests fail with KeyError.
 
 ## Final refactor
 
