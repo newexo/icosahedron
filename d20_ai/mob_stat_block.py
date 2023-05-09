@@ -38,6 +38,26 @@ class MobStatBlock:
         json_dict = json.loads(json_string)
         return cls(**json_dict)
 
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "hit_points": self.hit_points,
+            "armor_class": self.armor_class,
+            "attack_bonus": self.attack_bonus,
+            "damage": self.damage,
+            "speed": self.speed,
+            "abilities": self.abilities,
+            "skills": self.skills,
+            "special_abilities": self.special_abilities,
+            "equipment": self.equipment,
+            "alignment": self.alignment,
+            "description": self.description
+        }
+    @classmethod
+    def from_dict(cls, json_string):
+        json_dict = json.loads(json_string)
+        return cls(**json_dict)
+
 
 # Example usage:
 

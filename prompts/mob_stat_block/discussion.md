@@ -34,6 +34,7 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 ## Final refactor
 
 1. Renamed class from NPC to mob_stat_block.
+2. Requested a `to_dict` method and additional tests. The tests passed without error.
 
 ## Documentation comments
 
