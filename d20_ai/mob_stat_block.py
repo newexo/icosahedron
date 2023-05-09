@@ -4,6 +4,24 @@ from d20_ai.dictable import Dictable
 
 
 class MobStatBlock(Dictable):
+    """
+    A class representing the stat block of a non-player character (NPC) or monster in a role-playing game.
+
+    Attributes:
+        name (str): The name of the NPC/monster.
+        hit_points (int): The amount of damage the NPC/monster can sustain before being defeated.
+        armor_class (int): The difficulty of hitting the NPC/monster with an attack.
+        attack_bonus (int): The bonus added to the NPC/monster's attack roll.
+        damage (str): The type and amount of damage the NPC/monster deals with a successful attack.
+        speed (int): The NPC/monster's speed in feet per round.
+        abilities (dict): A dictionary of the NPC/monster's abilities (e.g. Strength, Dexterity, etc.).
+        skills (dict): A dictionary of the NPC/monster's skills and their bonuses.
+        special_abilities (list): A list of the NPC/monster's special abilities.
+        equipment (list): A list of the NPC/monster's equipment.
+        alignment (str): The NPC/monster's moral and ethical alignment.
+        description (str): A brief description of the NPC/monster's appearance and behavior.
+    """
+
     def __init__(
         self,
         name,
@@ -19,6 +37,23 @@ class MobStatBlock(Dictable):
         alignment,
         description,
     ):
+        """
+        Initializes a new instance of the MobStatBlock class.
+
+        Args:
+            name (str): The name of the NPC/monster.
+            hit_points (int): The amount of damage the NPC/monster can sustain before being defeated.
+            armor_class (int): The difficulty of hitting the NPC/monster with an attack.
+            attack_bonus (int): The bonus added to the NPC/monster's attack roll.
+            damage (str): The type and amount of damage the NPC/monster deals with a successful attack.
+            speed (int): The NPC/monster's speed in feet per round.
+            abilities (dict): A dictionary of the NPC/monster's abilities (e.g. Strength, Dexterity, etc.).
+            skills (dict): A dictionary of the NPC/monster's skills and their bonuses.
+            special_abilities (list): A list of the NPC/monster's special abilities.
+            equipment (list): A list of the NPC/monster's equipment.
+            alignment (str): The NPC/monster's moral and ethical alignment.
+            description (str): A brief description of the NPC/monster's appearance and behavior.
+        """
         self.name = name
         self.hit_points = hit_points
         self.armor_class = armor_class
@@ -45,56 +80,9 @@ class MobStatBlock(Dictable):
             "special_abilities": self.special_abilities,
             "equipment": self.equipment,
             "alignment": self.alignment,
-            "description": self.description
+            "description": self.description,
         }
 
     @classmethod
     def from_dict(cls, data):
         return cls(**data)
-
-
-# Example usage:
-
-# Create an instance of the NPC class for Iggy
-iggy = MobStatBlock(
-    name="Iggy",
-    hit_points=12,
-    armor_class=14,
-    attack_bonus=4,
-    damage="1d6+2",
-    speed=30,
-    abilities={"str": 12, "dex": 16, "con": 10, "int": 8, "wis": 8, "cha": 6},
-    skills={"stealth": 6},
-    special_abilities={"nimbleEscape": True},
-    equipment=["Shortsword", "Shortbow", "Leather Armor"],
-    alignment="Chaotic Evil",
-    description="Iggy is a small, wiry goblin with beady eyes and a wicked grin. He wears a ragged leather tunic and carries a shortsword and shortbow. He is always looking for an opportunity to cause chaos and sow discord.",
-)
-
-# Convert the Iggy object to a JSON string
-iggy_json = iggy.to_json()
-print(iggy_json)
-
-# Recreate the Iggy object from the JSON string
-iggy_from_json = MobStatBlock.from_json(iggy_json)
-print(iggy_from_json.name)  # prints "Iggy"
-
-
-# Create an instance of the NPC class for Bob the Evil Wizard
-# bob = NPC(
-#     name="Bob the Evil Wizard",
-#     hit_points=40,
-#     armor_class=15,
-#     attack_bonus=7,
-#     damage="2d6+4",
-#     speed=30,
-#     abilities={
-#         "str": 10,
-#         "dex": 14,
-#         "con": 12,
-#         "int": 18,
-#         "wis": 16,
-#         "cha": 8
-#     },
-#     skills={
-#         "arcana": 8,

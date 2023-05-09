@@ -40,3 +40,4 @@ have a common base class. Call this common base class dictable.
 
 ## Documentation comments
 
+Fed back class MobStatBlock and requested python comments. Incorporated two of these comments into code.
