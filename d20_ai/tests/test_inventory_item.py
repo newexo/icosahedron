@@ -296,7 +296,7 @@ class TestArmorItem(unittest.TestCase):
         self.assertEqual(item.condition, "new")
 
     def test_to_dict(self):
-        item = ArmorItem("Chain mail", "armor", "medium", 5, 2, -5, 30, -5, 40)
+        item = ArmorItem("Chain mail", 40, 150, 5, 2, -5, 30, -5)
 
         item_dict = item.to_dict()
 

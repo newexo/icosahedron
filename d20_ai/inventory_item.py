@@ -39,7 +39,7 @@ class ArmorItem(InventoryItem):
         speed_reduction,
         condition="new",
     ):
-        super().__init__(name, weight, value, condition)
+        super().__init__(name, weight=weight, value=value, condition=condition)
         self.armor_class = armor_class
         self.max_dex_bonus = max_dex_bonus
         self.check_penalty = check_penalty

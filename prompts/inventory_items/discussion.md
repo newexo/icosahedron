@@ -67,6 +67,9 @@ error.
 errors from MagicRing tests, now 4 tests fail and 5 fail with error.
 4. ArmorItem tests consistently have incorrect argument and non-existent fields. Fixed errors. Now 8 tests fail, but 
 none with error.
+5. All tests for InventoryItem were passing. ArmorItem called super init with arguments in incorrect order. Fixing that 
+fixed two failures. The last failure related to ArmorItem was caused by calling ArmorItem with arguments in correct
+order.
 
 ## Final refactor
 
