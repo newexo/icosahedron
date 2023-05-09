@@ -6,6 +6,7 @@ from d20_ai.tests.test_dice import TestD20Roll, TestD20Roller
 from d20_ai.tests.test_directories import TestDirectories
 from d20_ai.tests.test_example import TestExample
 from d20_ai.tests.test_mob_stat_block import TestMobStatBlock
+from d20_ai.tests.test_character_sheet import TestD20CharacterSheet
 
 
 class CountSuite(object):
@@ -23,6 +24,7 @@ def suite():
     s = CountSuite()
 
     s.add(TestAbilityScoreRoller)
+    s.add(TestD20CharacterSheet)
     s.add(TestD20Roll)
     s.add(TestD20Roller)
     s.add(TestDirectories)
