@@ -30,6 +30,7 @@ The generated code samples were long enough that the full code would have exceed
 
 1. Delete useless code and fix imports. Two tests fail with KeyError.
 2. Fix errors in unit tests.
+3. Unit tests passed, but were still incomplete. Added remaining assertions.
 
 ## Final refactor
 
