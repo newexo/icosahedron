@@ -358,25 +358,27 @@ class TestMagicRing(unittest.TestCase):
         # Test initialization of MagicRing object
         ring = MagicRing(
             name="Ring of Protection",
+            weight=0,
             value=100,
             condition=90,
-            magic_type="protection",
-            bonus=2,
+            effect="protection",
+            magic_bonus=2,
         )
         self.assertEqual(ring.name, "Ring of Protection")
         self.assertEqual(ring.value, 100)
         self.assertEqual(ring.condition, 90)
-        self.assertEqual(ring.magic_type, "protection")
-        self.assertEqual(ring.bonus, 2)
+        self.assertEqual(ring.effect, "protection")
+        self.assertEqual(ring.magic_bonus, 2)
 
     def test_to_dict(self):
         # Test conversion of MagicRing object to dictionary
         ring = MagicRing(
             name="Ring of Protection",
+            weight=0,
             value=100,
             condition=90,
-            magic_type="protection",
-            bonus=2,
+            magic_bonus=2,
+            effect="protection",
         )
         ring_dict = ring.to_dict()
         expected_dict = {
@@ -392,10 +394,11 @@ class TestMagicRing(unittest.TestCase):
         # Test conversion of dictionary to MagicRing object
         ring_dict = {
             "name": "Ring of Protection",
+            "weight": 0,
             "value": 100,
             "condition": 90,
-            "magic_type": "protection",
-            "bonus": 2,
+            "effect": "protection",
+            "magic_bonus": 2,
         }
         ring = MagicRing.from_dict(ring_dict)
         self.assertEqual(ring.name, "Ring of Protection")

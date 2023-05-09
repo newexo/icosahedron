@@ -63,7 +63,8 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 1. Delete unused code and fix imports. After this, 8 tests fail with errors.
 2. Requested a new unit test for init of ArmorItem. This test fails with an error. Fixed so that test failed without 
 error.
-
+3. MagicRing tests consistently have incorrect argument and non-existent fields, magic_type and bonus. After fixing 
+errors from MagicRing tests, now 4 tests fail and 5 fail with error.
 ## Final refactor
 
 1.
