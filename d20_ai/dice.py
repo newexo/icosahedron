@@ -1,10 +1,11 @@
 import numpy as np
-import json
+
+from d20_ai.dictable import Dictable
 
 dice_types = [4, 6, 8, 10, 12, 20]
 
 
-class D20Roll:
+class D20Roll(Dictable):
     """Represents a D20 roll with a given dice type, number of dice, and modifier."""
 
     def __init__(self, dice_type: int, num_dice: int = 1, modifier: int = 0):
@@ -27,27 +28,6 @@ class D20Roll:
         self.dice_type = dice_type
         self.num_dice = num_dice
         self.modifier = modifier
-
-    def to_json(self) -> str:
-        """Converts the D20Roll instance to a JSON string.
-
-        Returns:
-            str: The JSON string representing the D20Roll instance.
-        """
-        return json.dumps(self.to_dict())
-
-    @classmethod
-    def from_json(cls, json_str: str) -> "D20Roll":
-        """Creates a D20Roll instance from a JSON string.
-
-        Args:
-            json_str (str): The JSON string representing the D20Roll instance.
-
-        Returns:
-            D20Roll: The D20Roll instance represented by the JSON string.
-        """
-        data = json.loads(json_str)
-        return cls.from_dict(data)
 
     def to_dict(self) -> dict:
         """Converts the D20Roll instance to a dictionary.
