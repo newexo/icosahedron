@@ -1,7 +1,22 @@
 import json
 
+
 class NPC:
-    def __init__(self, name, hit_points, armor_class, attack_bonus, damage, speed, abilities, skills, special_abilities, equipment, alignment, description):
+    def __init__(
+        self,
+        name,
+        hit_points,
+        armor_class,
+        attack_bonus,
+        damage,
+        speed,
+        abilities,
+        skills,
+        special_abilities,
+        equipment,
+        alignment,
+        description,
+    ):
         self.name = name
         self.hit_points = hit_points
         self.armor_class = armor_class
@@ -34,27 +49,12 @@ iggy = NPC(
     attack_bonus=4,
     damage="1d6+2",
     speed=30,
-    abilities={
-        "str": 12,
-        "dex": 16,
-        "con": 10,
-        "int": 8,
-        "wis": 8,
-        "cha": 6
-    },
-    skills={
-        "stealth": 6
-    },
-    special_abilities={
-        "nimbleEscape": True
-    },
-    equipment=[
-        "Shortsword",
-        "Shortbow",
-        "Leather Armor"
-    ],
+    abilities={"str": 12, "dex": 16, "con": 10, "int": 8, "wis": 8, "cha": 6},
+    skills={"stealth": 6},
+    special_abilities={"nimbleEscape": True},
+    equipment=["Shortsword", "Shortbow", "Leather Armor"],
     alignment="Chaotic Evil",
-    description="Iggy is a small, wiry goblin with beady eyes and a wicked grin. He wears a ragged leather tunic and carries a shortsword and shortbow. He is always looking for an opportunity to cause chaos and sow discord."
+    description="Iggy is a small, wiry goblin with beady eyes and a wicked grin. He wears a ragged leather tunic and carries a shortsword and shortbow. He is always looking for an opportunity to cause chaos and sow discord.",
 )
 
 # Convert the Iggy object to a JSON string
@@ -63,7 +63,7 @@ print(iggy_json)
 
 # Recreate the Iggy object from the JSON string
 iggy_from_json = NPC.from_json(iggy_json)
-print(iggy_from_json.name) # prints "Iggy"
+print(iggy_from_json.name)  # prints "Iggy"
 
 
 # Create an instance of the NPC class for Bob the Evil Wizard
