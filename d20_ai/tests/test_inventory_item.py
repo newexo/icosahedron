@@ -317,6 +317,7 @@ class TestWeaponItem(unittest.TestCase):
             name="Mace",
             weight=8.0,
             value=308.0,
+            description="nothing special",
             condition="Good",
             range=0,
             damage="1d6",
@@ -327,20 +328,21 @@ class TestWeaponItem(unittest.TestCase):
 
     def test_init(self):
         self.assertEqual(self.mace.name, "Mace")
-        self.assertEqual(self.mace.value, 0)
+        self.assertEqual(self.mace.value, 308)
         self.assertEqual(self.mace.condition, "Good")
-        self.assertEqual(self.mace.damage_type, "Melee")
-        self.assertEqual(self.mace.weight, 6)
+        self.assertEqual(self.mace.value, 308.0)
+        self.assertEqual(self.mace.weight, 8)
         self.assertEqual(self.mace.damage, "1d6")
         self.assertEqual(self.mace.damage_type, "Bludgeoning")
+        self.assertEqual(self.mace.description, "nothing special")
 
     def test_to_dict(self):
         expected = {
             "name": "Mace",
             "weight": 8.0,
-            "description": 308.0,
+            "description": "nothing special",
             "condition": "Good",
-            "value": 0,
+            "value": 308.0,
             "damage": "1d6",
             "damage_type": "Bludgeoning",
             "range": 0,
@@ -348,15 +350,16 @@ class TestWeaponItem(unittest.TestCase):
             "crit_multiplier": "2x",
             "special_properties": [],
         }
-        self.assertEqual(self.mace.to_dict(), expected)
+        actual = self.mace.to_dict()
+        self.assertEqual(actual, expected)
 
     def test_from_dict(self):
         data = {
             "name": "Mace",
             "weight": 8.0,
-            "description": 308.0,
+            "description": "nothing special",
             "condition": "Good",
-            "value": 0,
+            "value": 20,
             "damage": "1d6",
             "damage_type": "Bludgeoning",
             "range": 0,
@@ -366,12 +369,12 @@ class TestWeaponItem(unittest.TestCase):
         }
         mace = WeaponItem.from_dict(data)
         self.assertEqual(mace.name, "Mace")
-        self.assertEqual(mace.value, 0)
+        self.assertEqual(mace.value, 20)
         self.assertEqual(mace.condition, "Good")
-        self.assertEqual(mace.damage_type, "Melee")
-        self.assertEqual(mace.weight, 6)
+        self.assertEqual(mace.weight, 8.0)
         self.assertEqual(mace.damage, "1d6")
         self.assertEqual(mace.damage_type, "Bludgeoning")
+        self.assertEqual(mace.description, "nothing special")
 
 
 class TestMagicRing(unittest.TestCase):

@@ -87,8 +87,9 @@ class WeaponItem(InventoryItem):
         crit_multiplier,
         special_properties=None,
         condition=None,
+        description=None
     ):
-        super().__init__(name, weight, value, condition)
+        super().__init__(name=name, weight=weight, value=value, condition=condition, description=description)
         self.damage = damage
         self.damage_type = damage_type
         self.range = range
@@ -114,16 +115,17 @@ class WeaponItem(InventoryItem):
     def from_dict(cls, data):
         special_properties = data.get("special_properties", [])
         return cls(
-            data["name"],
-            data["weight"],
-            data["value"],
-            data["damage"],
-            data["damage_type"],
-            data["range"],
-            data["crit_range"],
-            data["crit_multiplier"],
-            special_properties,
-            data.get("condition", None),
+            name=data["name"],
+            weight=data["weight"],
+            value=data["value"],
+            damage=data["damage"],
+            damage_type=data["damage_type"],
+            range=data["range"],
+            crit_range=data["crit_range"],
+            crit_multiplier=data["crit_multiplier"],
+            special_properties=special_properties,
+            condition=data.get("condition", None),
+            description=data.get("description", None)
         )
 
 
