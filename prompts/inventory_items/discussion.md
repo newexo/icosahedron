@@ -71,10 +71,12 @@ none with error.
 fixed two failures. The last failure related to ArmorItem was caused by calling ArmorItem with arguments in correct
 order.
 6. There were two failures for WeaponItem. Some of these were caused by incorrect ordering of arguments for super init.
+7. Fix tests for MagicRing.
 
 ## Final refactor
 
-1.
+Does not seem necessary.
 
 ## Documentation comments
 
+Does not seem necessary.

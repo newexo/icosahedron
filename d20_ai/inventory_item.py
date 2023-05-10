@@ -1,5 +1,5 @@
 class InventoryItem:
-    def __init__(self, name, weight, description="", condition="new", value=0):
+    def __init__(self, name, weight, description="", condition="new", value: float = 0):
         self.name = name
         self.weight = weight
         self.description = description
@@ -87,9 +87,15 @@ class WeaponItem(InventoryItem):
         crit_multiplier,
         special_properties=None,
         condition=None,
-        description=None
+        description=None,
     ):
-        super().__init__(name=name, weight=weight, value=value, condition=condition, description=description)
+        super().__init__(
+            name=name,
+            weight=weight,
+            value=value,
+            condition=condition,
+            description=description,
+        )
         self.damage = damage
         self.damage_type = damage_type
         self.range = range
@@ -125,7 +131,7 @@ class WeaponItem(InventoryItem):
             crit_multiplier=data["crit_multiplier"],
             special_properties=special_properties,
             condition=data.get("condition", None),
-            description=data.get("description", None)
+            description=data.get("description", None),
         )
 
 
@@ -139,7 +145,7 @@ class MagicRing(InventoryItem):
         magic_bonus: int,
         effect: str,
     ):
-        super().__init__(name, weight, value, condition)
+        super().__init__(name, weight=weight, value=value, condition=condition)
         self.magic_bonus = magic_bonus
         self.effect = effect
 
@@ -151,10 +157,10 @@ class MagicRing(InventoryItem):
     @classmethod
     def from_dict(cls, item_dict):
         return cls(
-            item_dict["name"],
-            item_dict["weight"],
-            item_dict["value"],
-            item_dict["condition"],
-            item_dict["magic_bonus"],
-            item_dict["effect"],
+            name=item_dict["name"],
+            weight=item_dict["weight"],
+            value=item_dict["value"],
+            condition=item_dict["condition"],
+            magic_bonus=item_dict["magic_bonus"],
+            effect=item_dict["effect"],
         )

@@ -384,13 +384,13 @@ class TestMagicRing(unittest.TestCase):
             name="Ring of Protection",
             weight=0,
             value=100,
-            condition=90,
+            condition="Good",
             effect="protection",
             magic_bonus=2,
         )
         self.assertEqual(ring.name, "Ring of Protection")
         self.assertEqual(ring.value, 100)
-        self.assertEqual(ring.condition, 90)
+        self.assertEqual(ring.condition, "Good")
         self.assertEqual(ring.effect, "protection")
         self.assertEqual(ring.magic_bonus, 2)
 
@@ -400,17 +400,19 @@ class TestMagicRing(unittest.TestCase):
             name="Ring of Protection",
             weight=0,
             value=100,
-            condition=90,
+            condition="Good",
             magic_bonus=2,
             effect="protection",
         )
         ring_dict = ring.to_dict()
         expected_dict = {
             "name": "Ring of Protection",
+            "weight": 0,
+            "description": "",
+            "condition": "Good",
             "value": 100,
-            "condition": 90,
-            "magic_type": "protection",
-            "bonus": 2,
+            "magic_bonus": 2,
+            "effect": "protection",
         }
         self.assertDictEqual(ring_dict, expected_dict)
 
@@ -420,16 +422,16 @@ class TestMagicRing(unittest.TestCase):
             "name": "Ring of Protection",
             "weight": 0,
             "value": 100,
-            "condition": 90,
+            "condition": "Good",
             "effect": "protection",
             "magic_bonus": 2,
         }
         ring = MagicRing.from_dict(ring_dict)
         self.assertEqual(ring.name, "Ring of Protection")
         self.assertEqual(ring.value, 100)
-        self.assertEqual(ring.condition, 90)
-        self.assertEqual(ring.magic_type, "protection")
-        self.assertEqual(ring.bonus, 2)
+        self.assertEqual(ring.condition, "Good")
+        self.assertEqual(ring.effect, "protection")
+        self.assertEqual(ring.magic_bonus, 2)
 
 
 if __name__ == "__main__":
