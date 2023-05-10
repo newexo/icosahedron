@@ -9,3 +9,5 @@ Experiments in order.
 
 1. [Ability score roller](ability_score_roller)
 2. [Dice roller](dice_roller)
+3. [Character sheet](character_sheet)
+4. [Inventory item](inventory_items)
