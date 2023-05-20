@@ -5,9 +5,15 @@ from d20_ai.tests.test_ability_score_roller import TestAbilityScoreRoller
 from d20_ai.tests.test_dice import TestD20Roll, TestD20Roller
 from d20_ai.tests.test_directories import TestDirectories
 from d20_ai.tests.test_example import TestExample
-from d20_ai.tests.test_inventory_item import TestInventoryItem, TestArmorItem, TestWeaponItem, TestMagicRing
+from d20_ai.tests.test_inventory_item import (
+    TestInventoryItem,
+    TestArmorItem,
+    TestWeaponItem,
+    TestMagicRing,
+)
 from d20_ai.tests.test_mob_stat_block import TestMobStatBlock
 from d20_ai.tests.test_character_sheet import TestD20CharacterSheet
+from d20_ai.tests.test_package import TestPackage
 
 
 class CountSuite(object):
@@ -35,6 +41,7 @@ def suite():
     s.add(TestWeaponItem)
     s.add(TestMagicRing)
     s.add(TestMobStatBlock)
+    s.add(TestPackage)
 
     return s.s
 
