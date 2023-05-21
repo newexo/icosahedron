@@ -122,7 +122,7 @@ The character sheet acts as a reference during gameplay, helping players easily 
 
 ### User
 
-    Create a character named Alice, a third level neutral good wizard.
+Create a character named Alice, a third level neutral good wizard.
 
 ### ChatGPT
 
