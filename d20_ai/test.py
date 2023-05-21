@@ -14,6 +14,7 @@ from d20_ai.tests.test_inventory_item import (
 from d20_ai.tests.test_mob_stat_block import TestMobStatBlock
 from d20_ai.tests.test_character_sheet import TestD20CharacterSheet
 from d20_ai.tests.test_package import TestPackage
+from d20_ai.tests.test_skills import TestSkill
 
 
 class CountSuite(object):
@@ -42,6 +43,7 @@ def suite():
     s.add(TestMagicRing)
     s.add(TestMobStatBlock)
     s.add(TestPackage)
+    s.add(TestSkill)
 
     return s.s
 

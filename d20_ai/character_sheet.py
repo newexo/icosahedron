@@ -1,6 +1,21 @@
-class D20CharacterSheet:
-    def __init__(self, name, race, char_class, level, alignment, ability_scores, skills, feats, equipment, spells_known,
-                 background):
+from d20_ai.dictable import Dictable
+
+
+class D20CharacterSheet(Dictable):
+    def __init__(
+        self,
+        name,
+        race,
+        char_class,
+        level,
+        alignment,
+        ability_scores,
+        skills,
+        feats,
+        equipment,
+        spells_known,
+        background,
+    ):
         self.name = name
         self.race = race
         self.char_class = char_class
@@ -26,7 +41,7 @@ class D20CharacterSheet:
             feats=data["feats"],
             equipment=data["equipment"],
             spells_known=data["spells_known"],
-            background=data["background"]
+            background=data["background"],
         )
 
     def to_dict(self):
@@ -41,5 +56,5 @@ class D20CharacterSheet:
             "feats": self.feats,
             "equipment": self.equipment,
             "spells_known": self.spells_known,
-            "background": self.background
+            "background": self.background,
         }
