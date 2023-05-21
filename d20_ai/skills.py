@@ -1,4 +1,4 @@
-from d20_ai.dictable import Dictable
+from d20_ai.utils.dictable import Dictable
 
 
 class Skill(Dictable):

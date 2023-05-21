@@ -1,6 +1,6 @@
 import numpy as np
 
-from d20_ai.dictable import Dictable
+from d20_ai.utils.dictable import Dictable
 
 dice_types = [4, 6, 8, 10, 12, 20, 100]
 
