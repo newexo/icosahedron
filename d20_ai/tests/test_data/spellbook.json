@@ -1,0 +1,7 @@
+{
+    "name": "Spellbook",
+    "weight": 3,
+    "description": "A book of spells.",
+    "condition": "good",
+    "value": 100
+}

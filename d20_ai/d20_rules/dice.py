@@ -1,11 +1,11 @@
 import numpy as np
 
-from d20_ai.dictable import Dictable
+from d20_ai.utils.dictable import Dictable
 
-dice_types = [4, 6, 8, 10, 12, 20]
+dice_types = [4, 6, 8, 10, 12, 20, 100]
 
 
-class D20Roll(Dictable):
+class DiceRoll(Dictable):
     """Represents a D20 roll with a given dice type, number of dice, and modifier."""
 
     def __init__(self, dice_type: int, num_dice: int = 1, modifier: int = 0):
@@ -42,19 +42,19 @@ class D20Roll(Dictable):
         }
 
     @classmethod
-    def from_dict(cls, data: dict) -> "D20Roll":
+    def from_dict(cls, data: dict) -> "DiceRoll":
         """Creates a D20Roll instance from a dictionary.
 
         Args:
             data (dict): The dictionary representing the D20Roll instance.
 
         Returns:
-            D20Roll: The D20Roll instance represented by the dictionary.
+            DiceRoll: The D20Roll instance represented by the dictionary.
         """
         return cls(data["dice_type"], data.get("num_dice", 1), data.get("modifier", 0))
 
 
-class D20Roller:
+class DiceRoller:
     """A class that simulates rolling a D20 dice.
 
     This class uses a numpy RandomState object to generate random numbers
@@ -81,11 +81,11 @@ class D20Roller:
         """
         self.random = np.random.RandomState(random_seed)
 
-    def roll(self, d20roll: D20Roll) -> int:
+    def roll(self, d20roll: DiceRoll) -> int:
         """Simulates rolling the given D20Roll object.
 
         Args:
-            d20roll (D20Roll): The D20Roll object to simulate.
+            d20roll (DiceRoll): The D20Roll object to simulate.
 
         Returns:
             int: The result of the dice roll.

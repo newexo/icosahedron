@@ -1,5 +1,5 @@
 import unittest
-from d20_ai.ability_score_roller import (
+from d20_ai.d20_rules.ability_score_roller import (
     StandardAbilityScoreRoller,
     ClassicAbilityScoreRoller,
     HeroicAbilityScoreRoller,

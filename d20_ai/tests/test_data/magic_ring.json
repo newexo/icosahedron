@@ -1,0 +1,9 @@
+{
+    "name": "Ring of Protection",
+    "weight": 0,
+    "description": "",
+    "condition": "Good",
+    "value": 100,
+    "magic_bonus": 2,
+    "effect": "protection"
+}

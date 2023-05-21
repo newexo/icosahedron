@@ -1,7 +1,7 @@
-from d20_ai.dictable import Dictable
+from d20_ai.utils.dictable import Dictable
 
 
-class D20CharacterSheet(Dictable):
+class CharacterSheet(Dictable):
     def __init__(
         self,
         name,
