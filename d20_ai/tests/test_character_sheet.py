@@ -1,13 +1,12 @@
 import unittest
-import json
 
-from d20_ai.directories import test_data
-from d20_ai.character_sheet import D20CharacterSheet
+from d20_ai.character_sheet import CharacterSheet
+from d20_ai.tests.base_test_case import BaseTestCase
 
 
-class TestD20CharacterSheet(unittest.TestCase):
+class TestCharacterSheet(unittest.TestCase, BaseTestCase):
     def setUp(self):
-        self.instance = D20CharacterSheet(
+        self.instance = CharacterSheet(
             name="Alice",
             race="Human",
             char_class="Wizard",
@@ -54,10 +53,7 @@ class TestD20CharacterSheet(unittest.TestCase):
             background="Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and",
         )
 
-        with open(test_data("alice.json")) as f:
-            self.instance_str = f.read()
-
-        self.instance_dict = json.loads(self.instance_str)
+        self.load_data("alice.json")
 
     def instance_test(self, instance):
         self.assertEqual(instance.name, "Alice")
@@ -115,24 +111,8 @@ class TestD20CharacterSheet(unittest.TestCase):
             "Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and",
         )
 
-    def from_dict(self, d):
-        return D20CharacterSheet.from_dict(d)
-    def test_init(self):
-        self.instance_test(self.instance)
-
-    def test_to_dict(self):
-        expected = self.instance_dict
-        actual = self.instance.to_dict()
-        self.assertEqual(expected, actual)
-
-    def test_from_dict(self):
-        # verify that we can change from dict to Character and back
-        instance_from_dict = self.from_dict(self.instance_dict)
-        self.instance_test(instance_from_dict)
-
-        expected = self.instance_dict
-        actual = instance_from_dict.to_dict()
-        self.assertEqual(expected, actual)
+    def from_dict(self):
+        return CharacterSheet.from_dict(self.instance_dict)
 
 
 if __name__ == "__main__":

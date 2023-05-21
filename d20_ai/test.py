@@ -13,7 +13,7 @@ from d20_ai.tests.test_inventory_item import (
     TestMagicRing,
 )
 from d20_ai.tests.test_mob_stat_block import TestMobStatBlock
-from d20_ai.tests.test_character_sheet import TestD20CharacterSheet
+from d20_ai.tests.test_character_sheet import TestCharacterSheet
 from d20_ai.tests.test_package import TestPackage
 from d20_ai.tests.test_skills import TestSkill
 
@@ -33,7 +33,7 @@ def suite():
     s = CountSuite()
 
     s.add(TestAbilityScoreRoller)
-    s.add(TestD20CharacterSheet)
+    s.add(TestCharacterSheet)
     s.add(TestDiceRoll)
     s.add(TestDiceRoller)
     s.add(TestDirectories)
