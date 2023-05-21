@@ -30,13 +30,7 @@ Raw results are in branch [generate/skills](https://github.com/newexo/d20-ai/tre
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
-
-1. 
-
-## Final refactor
-
-1.
+This time the code worked almost without modification.
 
 ## Documentation comments
 
