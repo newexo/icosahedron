@@ -1,0 +1,5 @@
+[
+    {"dice_type": 20, "num_dice": 1, "modifier": 5},
+    {"dice_type": 6, "num_dice": 3, "modifier": 0},
+    {"dice_type": 12, "num_dice": 6, "modifier": 2}
+]

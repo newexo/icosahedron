@@ -13,7 +13,7 @@ class Dictable(metaclass=ABCMeta):
 
     @classmethod
     def from_json(cls, json_str: str):
-        """Creates a instance from a JSON string.
+        """Creates an instance from a JSON string.
 
         Args:
             json_str (str): The JSON string representing the instance.
@@ -23,6 +23,19 @@ class Dictable(metaclass=ABCMeta):
         """
         data = json.loads(json_str)
         return cls.from_dict(data)
+
+    @classmethod
+    def list_from_json(cls, json_str: str):
+        """Creates a list of instances from a JSON string.
+
+        Args:
+            json_str (str): The JSON string representing the list of instances.
+
+        Returns:
+            The list of instances represented by the JSON string.
+        """
+        data = json.loads(json_str)
+        return [cls.from_dict(row) for row in data]
 
     @abstractmethod
     def to_dict(self):
