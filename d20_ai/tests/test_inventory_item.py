@@ -81,17 +81,6 @@ holy_symbol = {
 
 eve_items = [chain_mail, mace, shield, holy_symbol]
 
-chain_mail = {
-    "name": "Chain Mail",
-    "weight": 40.0,
-    "value": 150.0,
-    "armor_class": 16,
-    "max_dex_bonus": 2,
-    "armor_check_penalty": -5,
-    "spell_failure_chance": 30,
-    "speed": 10,
-}
-
 mace = {
     "name": "Mace",
     "type": "Weapon",
@@ -114,7 +103,6 @@ quarterstaff = {
     "condition": "Excellent",
 }
 
-
 chain_mail = ArmorItem(
     name="Chain mail",
     weight=40,
@@ -125,20 +113,6 @@ chain_mail = ArmorItem(
     spell_failure=30,
     speed_reduction=10,
 )
-print(chain_mail.to_dict())
-
-# Output:
-# {
-#     'name': 'Chain mail',
-#     'weight': 40,
-#     'value': 150,
-#     'condition': 'new',
-#     'armor_class': 5,
-#     'max_dex_bonus': 2,
-#     'check_penalty': -5,
-#     'spell_failure': 30,
-#     'speed_reduction': 10
-# }
 
 crossbow = {
     "name": "Heavy Crossbow",
