@@ -11,3 +11,5 @@ Experiments in order.
 2. [Dice roller](dice_roller)
 3. [Character sheet](character_sheet)
 4. [Inventory item](inventory_items)
+5. [Skills](skills)
+6. [Feats](feats)
