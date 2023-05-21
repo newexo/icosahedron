@@ -1,4 +1,4 @@
-# Generate code for ability score roller
+# Discussion
 
 ## Prompts to prime the pump
 
