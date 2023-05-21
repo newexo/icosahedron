@@ -30,7 +30,13 @@ Raw results are in branch [generate/skills](https://github.com/newexo/d20-ai/tre
 
 ## Steps to make code actually work
 
-This time the code worked almost without modification.
+This time the code worked almost without modification. The refactoring necessary was to make Skill implement to 
+Dictable class to make it easy to translate to and from JSON. There were other classes that also had not been refactored 
+to implement Dictable. Did those also in this same refactor. 
+
+Recorded steps to refactor work in commit history of branch [refactor/skills](https://github.com/newexo/d20-ai/tree/refactor/skills).
+
 
 ## Documentation comments
 
+Requested documentation for the Skill class. The comments for the init method and class seemed okay.

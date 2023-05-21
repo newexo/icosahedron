@@ -782,6 +782,78 @@ Apologies for the confusion. Here's the corrected version of the test_to_dict fu
 
 Now, the test_to_dict function correctly creates a Skill object, calls the to_dict method, and asserts that the resulting dictionary matches the expected dictionary representation of the Spellcraft skill.
 
-## Request changes
-
 ## Feedback working results and request documentation comments
+
+### User
+
+Provide docstring comments for the Skill class.
+
+### ChatGPT
+
+Certainly! Here's an updated version of the Skill class with docstring comments:
+
+  class Skill:
+      """
+      Represents a skill object with various attributes.
+      """
+  
+      def __init__(self, name, description, ability_score, class_skill, synergy, retry, special):
+          """
+          Initialize a Skill object.
+  
+          Args:
+              name (str): The name of the skill.
+              description (str): A brief description of the skill.
+              ability_score (str): The ability score associated with the skill.
+              class_skill (bool): Indicates if the skill is a class skill for certain character classes.
+              synergy (list): A list of dictionaries representing skill synergies.
+              retry (bool): Indicates whether retries are allowed for the skill.
+              special (list): A list of strings providing additional information about the skill.
+          """
+          self.name = name
+          self.description = description
+          self.ability_score = ability_score
+          self.class_skill = class_skill
+          self.synergy = synergy
+          self.retry = retry
+          self.special = special
+  
+      def to_dict(self):
+          """
+          Converts the Skill object to a dictionary.
+  
+          Returns:
+              dict: A dictionary representing the Skill object.
+          """
+          return {
+              "name": self.name,
+              "description": self.description,
+              "ability_score": self.ability_score,
+              "class_skill": self.class_skill,
+              "synergy": self.synergy,
+              "retry": self.retry,
+              "special": self.special
+          }
+  
+      @classmethod
+      def from_dict(cls, data):
+          """
+          Creates a Skill object from a dictionary.
+  
+          Args:
+              data (dict): A dictionary representing a Skill object.
+  
+          Returns:
+              Skill: The Skill object created from the dictionary.
+          """
+          return cls(
+              data["name"],
+              data["description"],
+              data["ability_score"],
+              data["class_skill"],
+              data["synergy"],
+              data["retry"],
+              data["special"]
+          )
+
+In this updated version, the Skill class is provided with docstring comments that describe the purpose, arguments, and return values of each method. These comments serve as documentation to explain the functionality and usage of the class and its methods.

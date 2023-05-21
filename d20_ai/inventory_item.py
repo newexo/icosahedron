@@ -1,4 +1,7 @@
-class InventoryItem:
+from d20_ai.dictable import Dictable
+
+
+class InventoryItem(Dictable):
     def __init__(self, name, weight, description="", condition="new", value: float = 0):
         self.name = name
         self.weight = weight
