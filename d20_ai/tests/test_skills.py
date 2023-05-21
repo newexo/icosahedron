@@ -1,4 +1,7 @@
+import json
 import unittest
+from d20_ai.tests.base_test_case import BaseTestCase
+from d20_ai.directories import test_data
 
 from d20_ai.d20_rules.skills import Skill
 
@@ -30,6 +33,8 @@ class TestSkill(unittest.TestCase):
                 "Determine Magic Item Properties: By examining a magic item, Spellcraft can help determine its properties, functions, and limitations.",
             ],
         }
+        with open(test_data("spellcraft.json"), "w") as f:
+            json.dump(self.skill, f)
 
     def test_init(self):
         skill_obj = Skill(
