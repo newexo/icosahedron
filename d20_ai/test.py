@@ -8,10 +8,10 @@ from d20_ai.tests.test_directories import TestDirectories
 from d20_ai.tests.test_example import TestExample
 from d20_ai.tests.test_inventory_item import (
     TestInventoryItem,
-    TestArmorItem,
-    TestWeaponItem,
-    TestMagicRing,
 )
+from d20_ai.tests.test_ring_item import TestMagicRing
+from d20_ai.tests.test_weapon_item import TestWeaponItem
+from d20_ai.tests.test_armor_item import TestArmorItem
 from d20_ai.tests.test_mob_stat_block import TestMobStatBlock
 from d20_ai.tests.test_character_sheet import TestCharacterSheet
 from d20_ai.tests.test_package import TestPackage
