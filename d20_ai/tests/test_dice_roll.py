@@ -19,8 +19,29 @@ class TestDiceRoll(unittest.TestCase):
         self.assertEqual(roll.num_dice, 3)
         self.assertEqual(roll.modifier, -2)
 
-        # Test initializing a D20Roll with invalid arguments (should not raise exceptions)
-        roll = DiceRoll(dice_type=8, modifier="foo")
+    def test_all_valid_dice_types(self):
+        d4 = DiceRoll(dice_type=4)
+        self.assertEqual(4, d4.dice_type)
+        self.assertEqual(1, d4.num_dice)
+        self.assertEqual(0, d4.modifier)
+
+        d6 = DiceRoll(dice_type=6)
+        self.assertEqual(6, d6.dice_type)
+
+        d8 = DiceRoll(dice_type=8)
+        self.assertEqual(8, d8.dice_type)
+
+        d10 = DiceRoll(dice_type=10)
+        self.assertEqual(10, d10.dice_type)
+
+        d12 = DiceRoll(dice_type=12)
+        self.assertEqual(12, d12.dice_type)
+
+        d20 = DiceRoll(dice_type=20)
+        self.assertEqual(20, d20.dice_type)
+
+        d00 = DiceRoll(dice_type=100)
+        self.assertEqual(100, d00.dice_type)
 
     def test_init_valid_dice_type(self):
         roll = DiceRoll(dice_type=20, num_dice=1, modifier=0)
@@ -29,6 +50,12 @@ class TestDiceRoll(unittest.TestCase):
     def test_init_invalid_dice_type(self):
         with self.assertRaises(ValueError):
             DiceRoll(dice_type=0, num_dice=1, modifier=0)
+        with self.assertRaises(ValueError):
+            DiceRoll(dice_type=-1, num_dice=1, modifier=0)
+        with self.assertRaises(ValueError):
+            DiceRoll(dice_type=3, num_dice=1, modifier=0)
+        with self.assertRaises(ValueError):
+            DiceRoll(dice_type=10067, num_dice=1, modifier=0)
 
     def test_init_negative_num_dice(self):
         with self.assertRaises(ValueError):
