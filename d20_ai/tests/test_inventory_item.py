@@ -1,7 +1,7 @@
 import unittest
 
 from d20_ai.tests.base_test_case import BaseTestCase
-from d20_ai.inventory_item import InventoryItem
+from d20_ai.d20_rules.inventory_item import InventoryItem
 
 
 class TestInventoryItem(unittest.TestCase, BaseTestCase):

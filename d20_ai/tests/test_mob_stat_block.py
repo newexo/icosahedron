@@ -1,7 +1,7 @@
 import unittest
 
 from d20_ai.tests.base_test_case import BaseTestCase
-from d20_ai.mob_stat_block import MobStatBlock
+from d20_ai.d20_rules.mob_stat_block import MobStatBlock
 
 
 class TestMobStatBlock(unittest.TestCase, BaseTestCase):

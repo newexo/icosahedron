@@ -1,6 +1,6 @@
 import unittest
 
-from d20_ai.character_sheet import CharacterSheet
+from d20_ai.d20_rules.character_sheet import CharacterSheet
 from d20_ai.tests.base_test_case import BaseTestCase
 
 

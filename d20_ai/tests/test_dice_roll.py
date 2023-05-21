@@ -1,7 +1,7 @@
 import unittest
 import json
 
-from d20_ai.dice import DiceRoll
+from d20_ai.d20_rules.dice import DiceRoll
 from d20_ai.directories import test_data
 
 

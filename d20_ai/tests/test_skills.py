@@ -1,6 +1,6 @@
 import unittest
 
-from d20_ai.skills import Skill
+from d20_ai.d20_rules.skills import Skill
 
 
 class TestSkill(unittest.TestCase):

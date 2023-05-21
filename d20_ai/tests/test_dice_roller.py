@@ -1,6 +1,6 @@
 import unittest
 
-from d20_ai.dice import DiceRoller, DiceRoll
+from d20_ai.d20_rules.dice import DiceRoller, DiceRoll
 
 
 class TestDiceRoller(unittest.TestCase):

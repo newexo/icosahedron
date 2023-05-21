@@ -1,6 +1,6 @@
 import unittest
 
-from d20_ai.inventory_item import ArmorItem
+from d20_ai.d20_rules.inventory_item import ArmorItem
 from d20_ai.tests.base_test_case import BaseTestCase
 
 
