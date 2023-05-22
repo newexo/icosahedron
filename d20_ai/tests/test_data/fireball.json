@@ -2,12 +2,12 @@
   "name": "Fireball",
   "school": "Evocation",
   "level": 3,
-  "castingTime": "1 action",
+  "casting_time": "1 action",
   "range": "Long (400 feet + 40 feet per caster level)",
   "area": "20-foot radius spread",
   "duration": "Instantaneous",
-  "savingThrow": "Reflex half",
-  "spellResistance": true,
+  "saving_throw": "Reflex half",
+  "spell_resistance": true,
   "components": [
     "Verbal",
     "Somatic"

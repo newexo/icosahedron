@@ -1,7 +1,20 @@
-import json
+from d20_ai.utils.dictable import Dictable
 
-class Spell:
-    def __init__(self, name, school, level, casting_time, range_, duration, saving_throw, spell_resistance, components, description):
+
+class Spell(Dictable):
+    def __init__(
+        self,
+        name,
+        school,
+        level,
+        casting_time,
+        range_,
+        duration,
+        saving_throw,
+        spell_resistance,
+        components,
+        description,
+    ):
         self.name = name
         self.school = school
         self.level = level
@@ -24,7 +37,7 @@ class Spell:
             "saving_throw": self.saving_throw,
             "spell_resistance": self.spell_resistance,
             "components": self.components,
-            "description": self.description
+            "description": self.description,
         }
 
     @classmethod
@@ -39,13 +52,5 @@ class Spell:
             dict_obj["saving_throw"],
             dict_obj["spell_resistance"],
             dict_obj["components"],
-            dict_obj["description"]
+            dict_obj["description"],
         )
-
-    def to_json(self):
-        return json.dumps(self.to_dict())
-
-    @classmethod
-    def from_json(cls, json_str):
-        json_dict = json.loads(json_str)
-        return cls.from_dict(json_dict)
