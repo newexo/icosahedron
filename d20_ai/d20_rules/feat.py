@@ -2,9 +2,28 @@ from d20_ai.utils.dictable import Dictable
 
 
 class Feat(Dictable):
+    """
+    Class representing a feat in a role-playing game.
+    """
+
     def __init__(
         self, name, prerequisites, benefit, description, usage, normal_use=None
     ):
+        """
+        Initialize a Feat object.
+
+        Args:
+            name (str): The name of the feat.
+            prerequisites (str): The prerequisites for the feat.
+            benefit (str): The benefit provided by the feat.
+            description (str): A description of the feat.
+            usage (str): Instructions on how to use the feat.
+            normal_use (str, optional): The description of the normal use without the feat.
+
+        Returns:
+            Feat: A Feat object.
+
+        """
         self.name = name
         self.prerequisites = prerequisites
         self.benefit = benefit

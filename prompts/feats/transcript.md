@@ -373,6 +373,82 @@ Certainly! Here's an example unittest test case for the Feat class, specifically
 
 In this test case, we create a Feat object using the `__init__` method and then assert that the attributes of the feat match the provided values. Running this test case will verify if the initialization of the Feat object works correctly for the Spell Sniper feat.
 
-## Request changes
-
 ## Feedback working results and request documentation comments
+
+### User
+
+Add docstring comments to Feat class.
+
+### ChatGPT
+
+Certainly! Here's the updated Feat class with docstring comments added:
+
+        class Feat:
+            """
+            Class representing a feat in a role-playing game.
+            """
+        
+            def __init__(self, name, prerequisites, benefit, description, usage, normal_use=None):
+                """
+                Initialize a Feat object.
+        
+                Args:
+                    name (str): The name of the feat.
+                    prerequisites (str): The prerequisites for the feat.
+                    benefit (str): The benefit provided by the feat.
+                    description (str): A description of the feat.
+                    usage (str): Instructions on how to use the feat.
+                    normal_use (str, optional): The description of the normal use without the feat.
+        
+                Returns:
+                    Feat: A Feat object.
+        
+                """
+                self.name = name
+                self.prerequisites = prerequisites
+                self.benefit = benefit
+                self.description = description
+                self.usage = usage
+                self.normal_use = normal_use
+        
+            def to_dict(self):
+                """
+                Convert the Feat object to a dictionary.
+        
+                Returns:
+                    dict: A dictionary representation of the Feat object.
+        
+                """
+                feat_dict = {
+                    "name": self.name,
+                    "prerequisites": self.prerequisites,
+                    "benefit": self.benefit,
+                    "description": self.description,
+                    "usage": self.usage
+                }
+                if self.normal_use is not None:
+                    feat_dict["normal_use"] = self.normal_use
+                return feat_dict
+        
+            @classmethod
+            def from_dict(cls, feat_dict):
+                """
+                Create a Feat object from a dictionary.
+        
+                Args:
+                    feat_dict (dict): A dictionary representing the feat.
+        
+                Returns:
+                    Feat: A Feat object created from the dictionary.
+        
+                """
+                return cls(
+                    feat_dict["name"],
+                    feat_dict["prerequisites"],
+                    feat_dict["benefit"],
+                    feat_dict["description"],
+                    feat_dict["usage"],
+                    feat_dict.get("normal_use")
+                )
+
+With the added docstring comments, the purpose and usage of the Feat class and its methods are now clearly described.
