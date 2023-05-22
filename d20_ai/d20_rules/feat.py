@@ -1,4 +1,7 @@
-class Feat:
+from d20_ai.utils.dictable import Dictable
+
+
+class Feat(Dictable):
     def __init__(
         self, name, prerequisites, benefit, description, usage, normal_use=None
     ):

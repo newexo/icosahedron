@@ -25,13 +25,12 @@ Raw results are in branch [generate/feats](https://github.com/newexo/d20-ai/tree
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
-
-1. 
+Recorded steps to make code actually work in commit history of branch [refactor/feats](https://github.com/newexo/d20-ai/tree/refactor/feats).
 
 ## Final refactor
 
-1.
+The generated code was almost right. The only mistake was that the generated json file had field "normalUse" in camel 
+case, while the class expected "normal_use" with underscore.
 
 ## Documentation comments
 
