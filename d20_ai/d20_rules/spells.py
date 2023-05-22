@@ -2,6 +2,10 @@ from d20_ai.utils.dictable import Dictable
 
 
 class Spell(Dictable):
+    """
+    A class representing a spell in the D20 system.
+    """
+
     def __init__(
         self,
         name,
@@ -15,6 +19,21 @@ class Spell(Dictable):
         components,
         description,
     ):
+        """
+        Initializes a new instance of the Spell class.
+
+        Args:
+            name (str): The name of the spell.
+            school (str): The school of magic the spell belongs to.
+            level (int): The level of the spell.
+            casting_time (str): The time required to cast the spell.
+            range_ (str): The range of the spell.
+            duration (str): The duration of the spell.
+            saving_throw (str): The type of saving throw, if any, required to resist the spell.
+            spell_resistance (bool): Indicates whether the spell can be resisted by spell resistance.
+            components (list[str]): The components required to cast the spell.
+            description (str): A description of the spell.
+        """
         self.name = name
         self.school = school
         self.level = level
