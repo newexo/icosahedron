@@ -27,9 +27,9 @@ Raw results are in branch [generate/spells](https://github.com/newexo/d20-ai/tre
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
+Recorded steps to make code actually work in commit history of branch [refactor/spells](https://github.com/newexo/d20-ai/tree/refactor/spells).
 
-1. 
+1. Fix imports in test_spells.py. The generated test passes.
 
 ## Final refactor
 

@@ -14,6 +14,7 @@ from d20_ai.tests.test_mob_stat_block import TestMobStatBlock
 from d20_ai.tests.test_package import TestPackage
 from d20_ai.tests.test_ring_item import TestMagicRing
 from d20_ai.tests.test_skills import TestSkill
+from d20_ai.tests.test_spells import TestSpell
 from d20_ai.tests.test_weapon_item import TestWeaponItem
 
 
@@ -44,6 +45,7 @@ def suite():
     s.add(TestMobStatBlock)
     s.add(TestPackage)
     s.add(TestSkill)
+    s.add(TestSpell)
     s.add(TestWeaponItem)
 
     return s.s

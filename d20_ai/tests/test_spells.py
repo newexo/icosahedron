@@ -1,5 +1,7 @@
 import unittest
 
+from d20_ai.d20_rules.spells import Spell
+
 class TestSpell(unittest.TestCase):
     def test_init(self):
         fireball_spell = Spell("Fireball", "Evocation", 3, "1 action", "Long (400 feet + 40 feet per caster level)", "Instantaneous",
