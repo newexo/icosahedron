@@ -35,7 +35,8 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 
 1. Made class Spell extend Dictable and TestSpells extend BaseTestCase. Test failed because the generated JSON file used
 camel case rather than underscores. Fixing that fixed the error, but two tests still failed.
-2. 
+2. The example JSON object had a field "area". Decided it was simplest to remove that from the JSON for now. All tests 
+passed after that change.
 
 ## Documentation comments
 

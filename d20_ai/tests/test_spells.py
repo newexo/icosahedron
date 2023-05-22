@@ -7,16 +7,16 @@ from d20_ai.d20_rules.spells import Spell
 class TestSpell(unittest.TestCase, BaseTestCase):
     def setUp(self):
         self.instance = Spell(
-            "Fireball",
-            "Evocation",
-            3,
-            "1 action",
-            "Long (400 feet + 40 feet per caster level)",
-            "Instantaneous",
-            "Reflex half",
-            True,
-            ["Verbal", "Somatic"],
-            "Conjures a fiery orb that explodes, dealing fire damage to all creatures and objects within a 20-foot radius. Affected creatures can make a Reflex saving throw for half damage.",
+            name="Fireball",
+            school="Evocation",
+            level=3,
+            casting_time="1 action",
+            range_="Long (400 feet + 40 feet per caster level)",
+            duration="Instantaneous",
+            saving_throw="Reflex half",
+            spell_resistance=True,
+            components=["Verbal", "Somatic"],
+            description="Conjures a fiery orb that explodes, dealing fire damage to all creatures and objects within a 20-foot radius. Affected creatures can make a Reflex saving throw for half damage.",
         )
         self.load_data("fireball.json")
 

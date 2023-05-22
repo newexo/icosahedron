@@ -4,7 +4,6 @@
   "level": 3,
   "casting_time": "1 action",
   "range": "Long (400 feet + 40 feet per caster level)",
-  "area": "20-foot radius spread",
   "duration": "Instantaneous",
   "saving_throw": "Reflex half",
   "spell_resistance": true,
