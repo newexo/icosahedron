@@ -1,4 +1,29 @@
-class D20Character:
+class CharacterClass:
+    def __init__(self, hit_dice, base_attack_bonus, bab_progression, skill_points):
+        self.hit_dice = hit_dice
+        self.base_attack_bonus = base_attack_bonus
+        self.bab_progression = bab_progression
+        self.skill_points = skill_points
+
+    def to_dict(self):
+        return {
+            "hit_dice": self.hit_dice,
+            "base_attack_bonus": self.base_attack_bonus,
+            "bab_progression": self.bab_progression,
+            "skill_points": self.skill_points
+        }
+
+    @classmethod
+    def from_dict(cls, class_dict):
+        return cls(
+            hit_dice=class_dict["hit_dice"],
+            base_attack_bonus=class_dict["base_attack_bonus"],
+            bab_progression=class_dict["bab_progression"],
+            skill_points=class_dict["skill_points"]
+        )
+
+
+class Character:
     def __init__(self, level, character_class, constitution_modifier, intelligence_modifier):
         self.level = level
         self.character_class = character_class
@@ -22,15 +47,3 @@ class D20Character:
             skill_points += max(1, (self.character_class.skill_points // 2 + 1)) + self.intelligence_modifier
         return skill_points
 
-
-# Example usage:
-character = D20Character(level=1, character_class=FighterClass(), constitution_modifier=2, intelligence_modifier=1)
-
-hit_points = character.compute_hit_points()
-print("Hit Points:", hit_points)
-
-base_attack_bonus = character.compute_base_attack_bonus()
-print("Base Attack Bonus:", base_attack_bonus)
-
-available_skill_points = character.compute_skill_points()
-print("Available Skill Points:", available_skill_points)

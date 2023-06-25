@@ -3,6 +3,8 @@ import unittest
 
 from d20_ai.tests.test_ability_score_roller import TestAbilityScoreRoller
 from d20_ai.tests.test_armor_item import TestArmorItem
+from d20_ai.tests.test_character import TestCharacter
+from d20_ai.tests.test_character_class import TestCharacterClass
 from d20_ai.tests.test_character_sheet import TestCharacterSheet
 from d20_ai.tests.test_dice_roll import TestDiceRoll
 from d20_ai.tests.test_dice_roller import TestDiceRoller
@@ -34,6 +36,8 @@ def suite():
 
     s.add(TestAbilityScoreRoller)
     s.add(TestArmorItem)
+    s.add(TestCharacter)
+    s.add(TestCharacterClass)
     s.add(TestCharacterSheet)
     s.add(TestDiceRoll)
     s.add(TestDiceRoller)

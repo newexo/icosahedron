@@ -1,0 +1,6 @@
+{
+    "hit_dice": 10,
+    "base_attack_bonus": 1,
+    "bab_progression": 0.75,
+    "skill_points": 2
+}

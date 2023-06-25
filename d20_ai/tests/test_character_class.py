@@ -1,13 +1,8 @@
 import unittest
 
-class CharacterClass:
-    def __init__(self, hit_dice, base_attack_bonus, bab_progression, skill_points):
-        self.hit_dice = hit_dice
-        self.base_attack_bonus = base_attack_bonus
-        self.bab_progression = bab_progression
-        self.skill_points = skill_points
+from d20_ai.d20_rules.character_class import CharacterClass
 
-class CharacterClassInitTestCase(unittest.TestCase):
+class TestCharacterClass(unittest.TestCase):
     def test_character_class_init(self):
         hit_dice = 10
         base_attack_bonus = 1
