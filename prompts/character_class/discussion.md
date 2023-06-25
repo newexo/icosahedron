@@ -40,6 +40,7 @@ expected value. Now all the tests pass.
 ## Final refactor
 
 1. Made character class test case conform to BaseTestCase. The tests required only basic modification.
+2. Made character class conform to dictable.
 
 ## Documentation comments
 

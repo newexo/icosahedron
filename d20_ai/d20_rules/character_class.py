@@ -1,4 +1,7 @@
-class CharacterClass:
+from d20_ai.utils.dictable import Dictable
+
+
+class CharacterClass(Dictable):
     def __init__(self, hit_dice, base_attack_bonus, bab_progression, skill_points):
         self.hit_dice = hit_dice
         self.base_attack_bonus = base_attack_bonus
