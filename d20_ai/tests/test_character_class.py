@@ -1,20 +1,30 @@
 import unittest
 
+from d20_ai.tests.base_test_case import BaseTestCase
 from d20_ai.d20_rules.character_class import CharacterClass
 
-class TestCharacterClass(unittest.TestCase):
-    def test_character_class_init(self):
+
+class TestCharacterClass(unittest.TestCase, BaseTestCase):
+    def setUp(self):
         hit_dice = 10
         base_attack_bonus = 1
         bab_progression = 0.75
         skill_points = 2
 
-        char_class = CharacterClass(hit_dice, base_attack_bonus, bab_progression, skill_points)
+        self.instance = CharacterClass(
+            hit_dice, base_attack_bonus, bab_progression, skill_points
+        )
+        self.load_data("fighter_class.json")
 
-        self.assertEqual(char_class.hit_dice, hit_dice)
-        self.assertEqual(char_class.base_attack_bonus, base_attack_bonus)
-        self.assertEqual(char_class.bab_progression, bab_progression)
-        self.assertEqual(char_class.skill_points, skill_points)
+    def instance_test(self, instance):
+        self.assertEqual(instance.hit_dice, 10)
+        self.assertEqual(instance.base_attack_bonus, 1)
+        self.assertEqual(instance.bab_progression, 0.75)
+        self.assertEqual(instance.skill_points, 2)
 
-if __name__ == '__main__':
+    def from_dict(self):
+        return CharacterClass.from_dict(self.instance_dict)
+
+
+if __name__ == "__main__":
     unittest.main()

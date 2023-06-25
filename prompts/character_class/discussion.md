@@ -34,12 +34,12 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 1. Clean up imports and remove unused code. Refactor and rename `D20Character` to `Character`. The test for 
 `CharacterClass` passes, but the three tests for `Character` fail because they attempt to initialize `Character` with 
 the `intelligence_modifier` parameter.
-2. Fixed the errors in the character class tests. Remarkably, two of them passed. The third required changing an
+2. Fixed the errors in the character tests. Remarkably, two of them passed. The third required changing an
 expected value. Now all the tests pass.
 
 ## Final refactor
 
-1.
+1. Made character class test case conform to BaseTestCase. The tests required only basic modification.
 
 ## Documentation comments
 
