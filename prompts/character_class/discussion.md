@@ -44,3 +44,4 @@ expected value. Now all the tests pass.
 
 ## Documentation comments
 
+Generated and inserted the docstring comments.
