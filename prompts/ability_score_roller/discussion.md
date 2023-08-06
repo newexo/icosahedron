@@ -23,11 +23,11 @@ Here start writing actual code.
 
 ## Branch for generated raw results
 
-Raw results are in branch [generated/ability_score_roller_first_try](https://github.com/newexo/d20-ai/tree/generated/ability_score_roller_first_try).
+Raw results are in branch [generated/ability_score_roller_first_try](https://github.com/newexo/icosahedron/tree/generated/ability_score_roller_first_try).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/ability_score_roller_first_try](https://github.com/newexo/d20-ai/tree/refactor/ability_score_roller_first_try).
+Recorded steps to make code actually work in commit history of branch [refactor/ability_score_roller_first_try](https://github.com/newexo/icosahedron/tree/refactor/ability_score_roller_first_try).
 
 1. First delete extra code from copy and paste and fix the imports so that tests run. After this, one test runs, but 
 does not pass.

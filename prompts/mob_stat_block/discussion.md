@@ -22,11 +22,11 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generated/mob_stat_block](https://github.com/newexo/d20-ai/tree/generated/mob_stat_block).
+Raw results are in branch [generated/mob_stat_block](https://github.com/newexo/icosahedron/tree/generated/mob_stat_block).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/mob_stat_block](https://github.com/newexo/d20-ai/tree/refactor/mob_stat_block).
+Recorded steps to make code actually work in commit history of branch [refactor/mob_stat_block](https://github.com/newexo/icosahedron/tree/refactor/mob_stat_block).
 
 1. Remove excess code and fix imports to make code and tests run.
 2. Remarkably, this time to test passed without error.

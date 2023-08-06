@@ -20,11 +20,11 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generate/character-sheet](https://github.com/newexo/d20-ai/tree/generate/character-sheet).
+Raw results are in branch [generate/character-sheet](https://github.com/newexo/icosahedron/tree/generate/character-sheet).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/character-sheet](https://github.com/newexo/d20-ai/tree/refactor/character-sheet).
+Recorded steps to make code actually work in commit history of branch [refactor/character-sheet](https://github.com/newexo/icosahedron/tree/refactor/character-sheet).
 
 The generated code samples were long enough that the full code would have exceeded the length limit for generated text.
 

@@ -54,11 +54,11 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generate/inventory](https://github.com/newexo/d20-ai/tree/generate/inventory).
+Raw results are in branch [generate/inventory](https://github.com/newexo/icosahedron/tree/generate/inventory).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/inventory](https://github.com/newexo/d20-ai/tree/refactor/inventory).
+Recorded steps to make code actually work in commit history of branch [refactor/inventory](https://github.com/newexo/icosahedron/tree/refactor/inventory).
 
 1. Delete unused code and fix imports. After this, 8 tests fail with errors.
 2. Requested a new unit test for init of ArmorItem. This test fails with an error. Fixed so that test failed without 

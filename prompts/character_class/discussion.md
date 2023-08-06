@@ -25,11 +25,11 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generate/character_class](https://github.com/newexo/d20-ai/tree/generate/character_class).
+Raw results are in branch [generate/character_class](https://github.com/newexo/icosahedron/tree/generate/character_class).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/character_class](https://github.com/newexo/d20-ai/tree/refactor/character_class).
+Recorded steps to make code actually work in commit history of branch [refactor/character_class](https://github.com/newexo/icosahedron/tree/refactor/character_class).
 
 1. Clean up imports and remove unused code. Refactor and rename `D20Character` to `Character`. The test for 
 `CharacterClass` passes, but the three tests for `Character` fail because they attempt to initialize `Character` with 
