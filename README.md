@@ -1,6 +1,6 @@
-# d20-ai
+# Icosahedron
 
-This project records step-by-step building a basic implementation the D20 SRD in python using ChatGPT.
+This project records step-by-step building a basic RPG inspired the D20 SRD in python using ChatGPT.
 
 ## OGL and SRD
 
@@ -13,7 +13,7 @@ to a fixed number from a chart, or two dice rolls from competing entities would 
 The idea was that simple, and Wizards of the Coast offered the rule system either in commercially published rule books, 
 or in a more basic form published online as a System Reference Document (SDR) licensed under the Open Game License 
 (OGL). 2000 and 2003, this opened up a world of possibilities for independent game developer to publish compatible rule
-system under the OGL. (See Wikpedia: [D20 system](https://en.wikipedia.org/wiki/D20_System) and 
+system under the OGL. (See Wikipedia: [D20 system](https://en.wikipedia.org/wiki/D20_System) and 
 [OGL](https://en.wikipedia.org/wiki/Open_Game_License).)
 
 Games based on these systems were very popular during the years from 2000 to 2021. The Internet was flooded content 
@@ -31,7 +31,7 @@ LLMs are also very good at transforming between formats such as tabular data and
 representations in any popular programming language. That is the purpose of this demonstration. This is a test of how 
 generative AI can write.
 
-The code itself is incidental. Directory d20_ai contains code which was written with the assistance of LLM. Some of that
+The code itself is incidental. Directory `icosahedron` contains code which was written with the assistance of LLM. Some of that
 code worked immediately after generation. Most of it did not and required modification. Each class represents some 
 concept from turn-based RPG game rules. None of this code was generated with a direct reference to any actual D20 SDR or
 any source other than an LLM and the memory of those developers participating in the project.
@@ -47,9 +47,9 @@ described in the discussion.md required to make th code work, tests pass and fin
 
 ## Outcome
 
-This repo, d20_ai is not directly an implementation of D20 or any other turn-based RPG. The point of this exercise has 
+This repo, icosahedron is not directly an implementation of D20 or any other turn-based RPG. The point of this exercise has 
 never been to implement any existing game, but to implement a new game with features which would be similar familiar to 
-players of existing games. That d20_ai is not a faithful reproduction of an existing work is a feature in itself. In 
+players of existing games. That icosahedron is not a faithful reproduction of an existing work is a feature in itself. In 
 some sense this is a new work rather than a copy of an existing work.
 
 In what sense generated text, code or images represents new work, and in what sense derivative work, I am not in a 

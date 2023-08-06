@@ -26,7 +26,7 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generate/skills](https://github.com/newexo/d20-ai/tree/generate/skills).
+Raw results are in branch [generate/skills](https://github.com/newexo/icosahedron/tree/generate/skills).
 
 ## Steps to make code actually work
 
@@ -34,7 +34,7 @@ This time the code worked almost without modification. The refactoring necessary
 Dictable class to make it easy to translate to and from JSON. There were other classes that also had not been refactored 
 to implement Dictable. Did those also in this same refactor. 
 
-Recorded steps to refactor work in commit history of branch [refactor/skills](https://github.com/newexo/d20-ai/tree/refactor/skills).
+Recorded steps to refactor work in commit history of branch [refactor/skills](https://github.com/newexo/icosahedron/tree/refactor/skills).
 
 
 ## Documentation comments

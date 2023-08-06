@@ -23,11 +23,11 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generate/spells](https://github.com/newexo/d20-ai/tree/generate/spells).
+Raw results are in branch [generate/spells](https://github.com/newexo/icosahedron/tree/generate/spells).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/spells](https://github.com/newexo/d20-ai/tree/refactor/spells).
+Recorded steps to make code actually work in commit history of branch [refactor/spells](https://github.com/newexo/icosahedron/tree/refactor/spells).
 
 1. Fix imports in test_spells.py. The generated test passes.
 

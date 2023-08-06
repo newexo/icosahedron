@@ -21,11 +21,11 @@
 
 ## Branch for generated raw results
 
-Raw results are in branch [generate/feats](https://github.com/newexo/d20-ai/tree/generate/feats).
+Raw results are in branch [generate/feats](https://github.com/newexo/icosahedron/tree/generate/feats).
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch [refactor/feats](https://github.com/newexo/d20-ai/tree/refactor/feats).
+Recorded steps to make code actually work in commit history of branch [refactor/feats](https://github.com/newexo/icosahedron/tree/refactor/feats).
 
 ## Final refactor
 
