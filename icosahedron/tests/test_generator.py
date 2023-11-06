@@ -39,19 +39,21 @@ You are adding entries to database of adventuring equipment. \
 The name of the equipment item to implement will be delimited with \
 #### characters.
 Output a JSON objects, where each object is like the following example: \
-{ \
-    "name": "Chain Mail", \
-    "weight": 40, \
-    "description": "Chain Mail Armor is made up of thousands of interlinked metal rings, forming a flexible mesh-like structure that drapes over your body to provide protection. The intricate web of these interlocking rings not only absorbs the impact of attacks but also allows for some degree of movement and flexibility, despite its weight and bulkiness.", \
-    "condition": "new", \
-    "value": 75, \
-    "armor_class": 16, \
-    "max_dex_bonus": 2, \
-    "check_penalty": -5, \
-    "spell_failure": 30, \
-    "speed_reduction": 10 \
-} \
- \
+{
+    "name": "Chain Mail",
+    "weight": 40,
+    "description": "Chain Mail Armor is made up of thousands of interlinked metal rings, forming a flexible mesh-like \
+structure that drapes over your body to provide protection. The intricate web of these interlocking rings not only \
+absorbs the impact of attacks but also allows for some degree of movement and flexibility, despite its weight and \
+bulkiness.",
+    "condition": "new",
+    "value": 75,
+    "armor_class": 16,
+    "max_dex_bonus": 2,
+    "check_penalty": -5,
+    "spell_failure": 30,
+    "speed_reduction": 10
+}  \
 Only JSON objects, with nothing else."""
         actual = self.item.system_message
         self.assertEqual(expected, actual)

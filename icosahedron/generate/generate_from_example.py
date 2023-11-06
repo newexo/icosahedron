@@ -2,6 +2,12 @@ from abc import ABCMeta, abstractmethod
 
 import openai
 
+import json
+from icosahedron import directories
+
+with open(directories.data("example_items.json")) as f:
+    example_items = json.load(f)
+
 
 class Generator(metaclass=ABCMeta):
     def __init__(
@@ -66,30 +72,12 @@ class GeneratorFromExample(Generator):
         self.json_sample = json_sample
 
     def _make_system_message(self):
-        return f"""You are a developer for software implementation of a fantasy RPG. \
-You are adding entries to database of adventuring equipment. \
-The name of the equipment item to implement will be delimited with \
-{self.delimiter} characters.
-Output a JSON objects, where each object is like the following example: \
-{self.json_sample} \
- \
-Only JSON objects, with nothing else."""
+        return example_items["item_system_message"].format(self.delimiter, self.json_sample)
 
 
 class GeneratorArmor(GeneratorFromExample):
     def __init__(
         self, name, delimiter="####", model="gpt-3.5-turbo", temperature=0, max_tokens=500
     ):
-        json_sample = """{ \
-    "name": "Chain Mail", \
-    "weight": 40, \
-    "description": "Chain Mail Armor is made up of thousands of interlinked metal rings, forming a flexible mesh-like structure that drapes over your body to provide protection. The intricate web of these interlocking rings not only absorbs the impact of attacks but also allows for some degree of movement and flexibility, despite its weight and bulkiness.", \
-    "condition": "new", \
-    "value": 75, \
-    "armor_class": 16, \
-    "max_dex_bonus": 2, \
-    "check_penalty": -5, \
-    "spell_failure": 30, \
-    "speed_reduction": 10 \
-}"""
+        json_sample = json.dumps(example_items["chain_mail"], indent=4)
         super().__init__(name, json_sample, delimiter, model, temperature, max_tokens)
