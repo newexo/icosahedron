@@ -62,22 +62,93 @@ class GeneratorFromExample(Generator):
     def __init__(
         self,
         name,
-        json_sample,
+        json_sample=None,
+        dictionary_sample=None,
         delimiter="####",
         model="gpt-3.5-turbo",
         temperature=0,
         max_tokens=500,
     ):
         super().__init__(name, delimiter, model, temperature, max_tokens)
+        if json_sample is None:
+            json_sample = json.dumps(dictionary_sample, indent=4)
         self.json_sample = json_sample
 
     def _make_system_message(self):
-        return example_items["item_system_message"].format(self.delimiter, self.json_sample)
+        return example_items["item_system_message"].format(
+            self.delimiter, self.json_sample
+        )
 
 
 class GeneratorArmor(GeneratorFromExample):
     def __init__(
-        self, name, delimiter="####", model="gpt-3.5-turbo", temperature=0, max_tokens=500
+        self,
+        name,
+        delimiter="####",
+        model="gpt-3.5-turbo",
+        temperature=0,
+        max_tokens=500,
     ):
-        json_sample = json.dumps(example_items["chain_mail"], indent=4)
-        super().__init__(name, json_sample, delimiter, model, temperature, max_tokens)
+        super().__init__(
+            name,
+            dictionary_sample=example_items["chain_mail"],
+            delimiter=delimiter,
+            model=model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+
+
+class GeneratorWeapon(GeneratorFromExample):
+    def __init__(
+        self,
+        name,
+        delimiter="####",
+        model="gpt-3.5-turbo",
+        temperature=0,
+        max_tokens=500,
+    ):
+        super().__init__(
+            name,
+            dictionary_sample=example_items["mace"],
+            delimiter=delimiter,
+            model=model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+
+class GeneratorMagicRing(GeneratorFromExample):
+    def __init__(
+        self,
+        name,
+        delimiter="####",
+        model="gpt-3.5-turbo",
+        temperature=0,
+        max_tokens=500,
+    ):
+        super().__init__(
+            name,
+            dictionary_sample=example_items["ring_of_protection"],
+            delimiter=delimiter,
+            model=model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+
+class GeneratorGenericItem(GeneratorFromExample):
+    def __init__(
+        self,
+        name,
+        delimiter="####",
+        model="gpt-3.5-turbo",
+        temperature=0,
+        max_tokens=500,
+    ):
+        super().__init__(
+            name,
+            dictionary_sample=example_items["spellbook"],
+            delimiter=delimiter,
+            model=model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
