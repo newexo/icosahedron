@@ -11,6 +11,7 @@ from icosahedron.tests.test_dice_roller import TestDiceRoller
 from icosahedron.tests.test_directories import TestDirectories
 from icosahedron.tests.test_example import TestExample
 from icosahedron.tests.test_feat import TestFeat
+from icosahedron.tests.test_generator import TestGenerator
 from icosahedron.tests.test_inventory_item import TestInventoryItem
 from icosahedron.tests.test_mob_stat_block import TestMobStatBlock
 from icosahedron.tests.test_package import TestPackage
@@ -44,6 +45,7 @@ def suite():
     s.add(TestDirectories)
     s.add(TestExample)
     s.add(TestFeat)
+    s.add(TestGenerator)
     s.add(TestInventoryItem)
     s.add(TestMagicRing)
     s.add(TestMobStatBlock)

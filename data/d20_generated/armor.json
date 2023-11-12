@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Leather Armor",
+    "weight": 15,
+    "description": "Leather Armor is made from the hide of various animals, treated and shaped to provide protection. It is lightweight and flexible, allowing for ease of movement while still offering a decent amount of protection.",
+    "condition": "new",
+    "value": 10,
+    "armor_class": 11,
+    "max_dex_bonus": 2,
+    "check_penalty": 0,
+    "spell_failure": 10,
+    "speed_reduction": 0
+  },
+  {
+    "name": "Studded Leather Armor",
+    "weight": 20,
+    "description": "Studded Leather Armor is made from tough but flexible leather that has been reinforced with metal studs. The studs not only provide additional protection but also give the armor a stylish and intimidating appearance.",
+    "condition": "new",
+    "value": 45,
+    "armor_class": 12,
+    "max_dex_bonus": 5,
+    "check_penalty": 0,
+    "spell_failure": 15,
+    "speed_reduction": 0
+  },
+  {
+    "name": "Chain Shirt",
+    "weight": 25,
+    "description": "A Chain Shirt is a type of armor made from interlocking metal rings. It provides moderate protection while still allowing for a good range of movement. The shirt is typically worn under other layers of clothing or armor.",
+    "condition": "new",
+    "value": 50,
+    "armor_class": 13,
+    "max_dex_bonus": 2,
+    "check_penalty": 0,
+    "spell_failure": 20,
+    "speed_reduction": 0
+  },
+  {
+    "name": "Splint Mail",
+    "weight": 45,
+    "description": "Splint Mail Armor is made up of overlapping metal plates that are riveted together and attached to a cloth or leather backing. The plates provide excellent protection against slashing and piercing attacks, but the armor is heavy and restricts movement.",
+    "condition": "new",
+    "value": 200,
+    "armor_class": 17,
+    "max_dex_bonus": 0,
+    "check_penalty": -7,
+    "spell_failure": 40,
+    "speed_reduction": 20
+  },
+  {
+    "name": "Banded Mail",
+    "weight": 35,
+    "description": "Banded Mail is a type of armor made up of overlapping metal bands that are riveted together. It provides solid protection while still allowing for some mobility. The bands are typically made of steel or other strong metals, providing excellent defense against slashing and piercing attacks.",
+    "condition": "new",
+    "value": 250,
+    "armor_class": 15,
+    "max_dex_bonus": 2,
+    "check_penalty": -6,
+    "spell_failure": 35,
+    "speed_reduction": 10
+  },
+  {
+    "name": "Plate Mail",
+    "weight": 60,
+    "description": "Plate Mail Armor is a heavy suit of armor made up of large metal plates that cover the entire body. It provides excellent protection against physical attacks but can be quite cumbersome and restricts movement.",
+    "condition": "new",
+    "value": 150,
+    "armor_class": 18,
+    "max_dex_bonus": 0,
+    "check_penalty": -6,
+    "spell_failure": 35,
+    "speed_reduction": 20
+  }
+]
