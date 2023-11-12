@@ -14,7 +14,7 @@
   {
     "name": "Studded Leather Armor",
     "weight": 20,
-    "description": "Studded Leather Armor is made from tough leather that has been reinforced with metal studs. It provides a good balance between protection and mobility, making it a popular choice among adventurers. The metal studs not only add extra durability to the armor but also give it a stylish and intimidating appearance.",
+    "description": "Studded Leather Armor is made from tough but flexible leather that has been reinforced with metal studs. The studs not only provide additional protection but also give the armor a stylish and intimidating appearance.",
     "condition": "new",
     "value": 45,
     "armor_class": 12,
