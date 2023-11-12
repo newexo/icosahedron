@@ -117,6 +117,7 @@ class GeneratorWeapon(GeneratorFromExample):
             max_tokens=max_tokens,
         )
 
+
 class GeneratorMagicRing(GeneratorFromExample):
     def __init__(
         self,
@@ -134,6 +135,7 @@ class GeneratorMagicRing(GeneratorFromExample):
             temperature=temperature,
             max_tokens=max_tokens,
         )
+
 
 class GeneratorGenericItem(GeneratorFromExample):
     def __init__(
