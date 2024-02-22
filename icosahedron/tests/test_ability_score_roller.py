@@ -60,10 +60,14 @@ class TestAbilityScoreRoller(unittest.TestCase):
         self.assertNotEqual(first, second, msg=msg)
 
     def test_standard_ability_score_roller_no_repeat(self):
-        self.no_repeat_test(StandardAbilityScoreRoller(), "standard ability score roller")
+        self.no_repeat_test(
+            StandardAbilityScoreRoller(), "standard ability score roller"
+        )
 
     def test_classic_ability_score_roller_no_repeat(self):
-        self.no_repeat_test(StandardAbilityScoreRoller(), "classic ability score roller")
+        self.no_repeat_test(
+            StandardAbilityScoreRoller(), "classic ability score roller"
+        )
 
     def test_heroic_ability_score_roller_no_repeat(self):
         self.no_repeat_test(StandardAbilityScoreRoller(), "heroic ability score roller")

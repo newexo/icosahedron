@@ -9,7 +9,10 @@ class TestCharacter(unittest.TestCase):
             hit_dice=10, base_attack_bonus=1, bab_progression=0.75, skill_points=2
         )
         character = Character(
-            level=1, character_class=char_class, constitution_modifier=2, intelligence_modifier=1
+            level=1,
+            character_class=char_class,
+            constitution_modifier=2,
+            intelligence_modifier=1,
         )
 
         expected_hit_points = 12
@@ -22,7 +25,10 @@ class TestCharacter(unittest.TestCase):
             hit_dice=10, base_attack_bonus=1, bab_progression=0.75, skill_points=2
         )
         character = Character(
-            level=3, character_class=char_class, constitution_modifier=2, intelligence_modifier=1
+            level=3,
+            character_class=char_class,
+            constitution_modifier=2,
+            intelligence_modifier=1,
         )
 
         expected_bab = 2.5
@@ -35,7 +41,10 @@ class TestCharacter(unittest.TestCase):
             hit_dice=10, base_attack_bonus=1, bab_progression=0.75, skill_points=2
         )
         character = Character(
-            level=5, character_class=char_class, constitution_modifier=2, intelligence_modifier=1
+            level=5,
+            character_class=char_class,
+            constitution_modifier=2,
+            intelligence_modifier=1,
         )
 
         expected_skill_points = 15

@@ -7,5 +7,5 @@ class TestPackage(unittest.TestCase):
         self.assertIsNotNone(icosahedron.__version__)  # add assertion here
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
