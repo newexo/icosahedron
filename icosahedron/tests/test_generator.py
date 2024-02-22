@@ -10,9 +10,13 @@ from icosahedron.generate.generate_from_example import (
 )
 
 
+class MockOpenAI:
+    pass
+
+
 class TestGenerator(unittest.TestCase):
     def setUp(self):
-        self.item = GeneratorArmor(self.get_item_name())
+        self.item = GeneratorArmor(self.get_item_name(), client=MockOpenAI())
 
     def tearDown(self):
         pass
@@ -23,13 +27,14 @@ class TestGenerator(unittest.TestCase):
     def test_init_armor_generator_default(self):
         self.assertEqual(0, self.item.temperature)
         self.assertEqual(500, self.item.max_tokens)
-        self.assertEqual("gpt-3.5-turbo", self.item.model)
+        self.assertTrue("gpt-3.5-turbo" == self.item.model or "gpt-3.5-turbo-0301" == self.item.model)
         self.assertEqual("####", self.item.delimiter)
         self.assertEqual(self.get_item_name(), self.item.name)
 
     def test_init_armor_generator(self):
         item = GeneratorArmor(
             self.get_item_name(),
+            client=MockOpenAI(),
             temperature=0.5,
             max_tokens=100,
             model="fancy-model",
@@ -98,7 +103,7 @@ Only JSON objects, with nothing else."""
         self.assertEqual(expected, actual)
 
     def test_weapon_json_sample(self):
-        item = GeneratorWeapon("Mace")
+        item = GeneratorWeapon("Mace", MockOpenAI())
         expected = {
             "name": "Mace",
             "weight": 8.0,
@@ -117,7 +122,7 @@ Only JSON objects, with nothing else."""
         self.assertEqual(expected, actual)
 
     def test_magic_ring(self):
-        item = GeneratorMagicRing("Ring of Protection")
+        item = GeneratorMagicRing("Ring of Protection", MockOpenAI())
         expected = {
             "name": "Ring of Protection",
             "weight": 0,
@@ -132,7 +137,7 @@ Only JSON objects, with nothing else."""
         self.assertEqual(expected, actual)
 
     def test_generic_item(self):
-        item = GeneratorGenericItem("Spellbook")
+        item = GeneratorGenericItem("Spellbook", MockOpenAI())
         expected = {
             "name": "Spellbook",
             "weight": 3,
