@@ -27,5 +27,3 @@ class InventoryItem(Dictable):
             condition=dict_data.get("condition", "new"),
             value=dict_data.get("value", 0),
         )
-
-

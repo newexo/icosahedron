@@ -14,10 +14,11 @@ class TestFeat(unittest.TestCase, BaseTestCase):
         usage = "This feat's benefits apply whenever you cast a spell that requires an attack roll. The extended range and cover-ignoring effects are automatically in effect. To learn a new cantrip, consult the spellcasting rules for the chosen cantrip's spellcasting ability and other relevant details."
         normal_use = "Without the Spell Sniper feat, the character's ranged spells have their regular range and do not gain the benefits of extended range or cover-ignoring effects. The character's cantrip choices would follow the usual rules of their selected spellcasting class, without the additional attack roll-based cantrip granted by the feat."
 
-        self.instance = Feat(name, prerequisites, benefit, description, usage, normal_use)
+        self.instance = Feat(
+            name, prerequisites, benefit, description, usage, normal_use
+        )
 
         self.load_data("spell_sniper.json")
-
 
     def from_dict(self):
         return Feat.from_dict(self.instance_dict)
