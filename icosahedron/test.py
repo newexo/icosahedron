@@ -14,6 +14,7 @@ from icosahedron.tests.test_feat import TestFeat
 from icosahedron.tests.test_generator import TestGenerator
 from icosahedron.tests.test_inventory_item import TestInventoryItem
 from icosahedron.tests.test_mob_stat_block import TestMobStatBlock
+from icosahedron.tests.test_model_context import TestModelContex
 from icosahedron.tests.test_package import TestPackage
 from icosahedron.tests.test_ring_item import TestMagicRing
 from icosahedron.tests.test_skills import TestSkill
@@ -49,6 +50,7 @@ def suite():
     s.add(TestInventoryItem)
     s.add(TestMagicRing)
     s.add(TestMobStatBlock)
+    s.add(TestModelContex)
     s.add(TestPackage)
     s.add(TestSkill)
     s.add(TestSpell)

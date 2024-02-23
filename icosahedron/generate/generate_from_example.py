@@ -10,17 +10,21 @@ with open(directories.data("example_items.json")) as f:
     example_items = json.load(f)
 
 
-class Generator(metaclass=ABCMeta):
+class ModelContext:
+    client: openai.OpenAI
+    delimiter: str
+    model: str
+    temperature: float
+    max_tokens: int
+
     def __init__(
         self,
-        name: str,
         client: openai.OpenAI,
         delimiter: str = None,
         model: str = None,
         temperature: float = 0.0,
         max_tokens: int = -1,
     ):
-        self.name = name
         self.client = client
         if delimiter is None:
             delimiter = "####"
@@ -44,12 +48,24 @@ class Generator(metaclass=ABCMeta):
         else:
             return "gpt-3.5-turbo-0301"
 
+
+class Generator(metaclass=ABCMeta):
+    def __init__(
+        self,
+        name: str,
+        context: ModelContext = None,
+    ):
+        self.name = name
+        if context is None:
+            context = ModelContext(client=openai.OpenAI())
+        self.context = context
+
     @abstractmethod
     def _make_system_message(self):
         pass
 
     def _make_user_message(self):
-        return f"Write a JSON object for {self.delimiter}{self.name}{self.delimiter}."
+        return f"Write a JSON object for {self.context.delimiter}{self.name}{self.context.delimiter}."
 
     @property
     def system_message(self):
@@ -70,10 +86,10 @@ class Generator(metaclass=ABCMeta):
         return self._make_messages()
 
     def generate(self):
-        response = self.client.chat.completions.create(
-            model=self.model,
+        response = self.context.client.chat.completions.create(
+            model=self.context.model,
             messages=self.messages,
-            temperature=self.temperature,
+            temperature=self.context.temperature,
         )
         return response.choices[0].message.content.strip()
 
@@ -82,22 +98,18 @@ class GeneratorFromExample(Generator):
     def __init__(
         self,
         name: str,
-        client: openai.OpenAI,
+        context: ModelContext = None,
         json_sample: str = None,
         dictionary_sample: dict = None,
-        delimiter: str = None,
-        model: str = None,
-        temperature=0,
-        max_tokens=-1,
     ):
-        super().__init__(name, client, delimiter, model, temperature, max_tokens)
+        super().__init__(name, context)
         if json_sample is None:
             json_sample = json.dumps(dictionary_sample, indent=4)
         self.json_sample = json_sample
 
     def _make_system_message(self):
         return example_items["item_system_message"].format(
-            self.delimiter, self.json_sample
+            self.context.delimiter, self.json_sample
         )
 
 
@@ -105,20 +117,12 @@ class GeneratorArmor(GeneratorFromExample):
     def __init__(
         self,
         name: str,
-        client: openai.OpenAI,
-        delimiter: str = None,
-        model: str = None,
-        temperature=0,
-        max_tokens=-1,
+        context: ModelContext = None,
     ):
         super().__init__(
             name,
-            client,
+            context,
             dictionary_sample=example_items["chain_mail"],
-            delimiter=delimiter,
-            model=model,
-            temperature=temperature,
-            max_tokens=max_tokens,
         )
 
 
@@ -126,20 +130,12 @@ class GeneratorWeapon(GeneratorFromExample):
     def __init__(
         self,
         name: str,
-        client: openai.OpenAI,
-        delimiter: str = None,
-        model: str = None,
-        temperature=0,
-        max_tokens=-1,
+        context: ModelContext = None,
     ):
         super().__init__(
             name,
-            client,
+            context,
             dictionary_sample=example_items["mace"],
-            delimiter=delimiter,
-            model=model,
-            temperature=temperature,
-            max_tokens=max_tokens,
         )
 
 
@@ -147,20 +143,12 @@ class GeneratorMagicRing(GeneratorFromExample):
     def __init__(
         self,
         name: str,
-        client: openai.OpenAI,
-        delimiter: str = None,
-        model: str = None,
-        temperature=0,
-        max_tokens=-1,
+        context: ModelContext = None,
     ):
         super().__init__(
             name,
-            client,
+            context,
             dictionary_sample=example_items["ring_of_protection"],
-            delimiter=delimiter,
-            model=model,
-            temperature=temperature,
-            max_tokens=max_tokens,
         )
 
 
@@ -168,18 +156,10 @@ class GeneratorGenericItem(GeneratorFromExample):
     def __init__(
         self,
         name: str,
-        client: openai.OpenAI,
-        delimiter: str = None,
-        model: str = None,
-        temperature=0,
-        max_tokens=-1,
+        context: ModelContext = None,
     ):
         super().__init__(
             name,
-            client,
+            context,
             dictionary_sample=example_items["spellbook"],
-            delimiter=delimiter,
-            model=model,
-            temperature=temperature,
-            max_tokens=max_tokens,
         )
