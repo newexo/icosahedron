@@ -19,8 +19,7 @@ class TestModelContex(unittest.TestCase):
         self.assertEqual(0, context.temperature)
         self.assertEqual(500, context.max_tokens)
         self.assertTrue(
-            "gpt-3.5-turbo" == context.model
-            or "gpt-3.5-turbo-0301" == context.model
+            "gpt-3.5-turbo" == context.model or "gpt-3.5-turbo-0301" == context.model
         )
         self.assertEqual("####", context.delimiter)
 

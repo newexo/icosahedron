@@ -2,141 +2,141 @@
   {
     "name": "Backpack",
     "weight": 2,
-    "description": "A backpack is a sturdy bag made of canvas or leather, designed to be worn on the back. It has multiple compartments and straps for carrying various items, making it an essential tool for adventurers to carry their equipment and supplies.",
-    "condition": "good",
-    "value": 50
+    "description": "A backpack is a sturdy cloth or leather bag with shoulder straps, used to carry equipment and supplies on long journeys or adventures.",
+    "condition": "new",
+    "value": 25
   },
   {
-    "name": "Rations (iron or standard)",
+    "name": "Rations",
     "weight": 2,
-    "description": "Rations are a supply of food that adventurers carry with them on their journeys. Iron rations are a basic and durable option, consisting of hardtack, dried meat, and dried fruit. Standard rations are a more varied and flavorful option, including bread, cheese, dried meat, and fresh fruit.",
-    "condition": "good",
+    "description": "Rations are a supply of non-perishable food that can be carried on long journeys or used in emergency situations. Iron rations are made up of hardtack, dried meat, and nuts, while standard rations include bread, cheese, and dried fruit.",
+    "condition": "fresh",
     "value": 5
   },
   {
     "name": "Waterskin",
-    "weight": 1,
-    "description": "A waterskin is a small leather or cloth bag used to carry water. It is typically made from animal hide and has a stopper or cap to prevent leakage.",
-    "condition": "good",
+    "weight": 5,
+    "description": "A waterskin is a leather or animal bladder container used to carry water or other liquids while traveling.",
+    "condition": "new",
     "value": 10
   },
   {
     "name": "Torch",
     "weight": 1,
-    "description": "A torch is a long stick with a flammable material at one end, such as a cloth soaked in oil, used to provide light in dark areas.",
-    "condition": "good",
+    "description": "A torch is a long stick with a flammable material at one end, used for providing light in dark places. The most common material used for the flame is a piece of cloth soaked in oil or wax.",
+    "condition": "new",
     "value": 1
   },
   {
     "name": "Lantern",
     "weight": 2,
-    "description": "A lantern is a portable light source, typically consisting of a metal frame with glass panels enclosing a candle or oil lamp. It is used to provide illumination in dark areas.",
-    "condition": "good",
+    "description": "A lantern is a portable light source that uses oil or candles to produce a flame. It typically consists of a metal frame with glass panels to protect the flame from wind and rain.",
+    "condition": "new",
     "value": 10
   },
   {
     "name": "Rope (hemp or silk)",
-    "weight": 2,
-    "description": "A length of rope made from either hemp or silk. It is strong and durable, suitable for a variety of uses such as climbing, tying, or securing objects.",
-    "condition": "good",
-    "value": 10
+    "weight": 10,
+    "description": "A length of rope made from either hemp or silk. It can be used for climbing, tying up prisoners, or securing items.",
+    "condition": "new",
+    "value": 5
   },
   {
     "name": "Grappling Hook",
-    "weight": 2,
-    "description": "A grappling hook is a metal hook with multiple prongs attached to a length of rope or chain. It is used by adventurers to scale walls, climb cliffs, or traverse difficult terrain.",
+    "weight": 4,
+    "description": "A grappling hook is a metal hook attached to a length of rope or chain, used to climb or descend walls, cliffs, or other obstacles.",
     "condition": "good",
-    "value": 50
+    "value": 25
   },
   {
     "name": "Lockpicks",
     "weight": 0.5,
-    "description": "Lockpicks are a set of slender, metal tools used by rogues and thieves to pick locks and bypass security mechanisms. They consist of various hooks, rakes, and tension wrenches.",
-    "condition": "good",
+    "description": "Lockpicks are a set of slender metal tools used by thieves and rogues to pick locks. They consist of a variety of hooks, rakes, and tension wrenches, and require a steady hand and a keen eye to use effectively.",
+    "condition": "new",
     "value": 50
   },
   {
     "name": "Crowbar",
     "weight": 5,
-    "description": "A crowbar is a long metal bar with a flattened end, often used for prying open doors or crates. It can also be used as a makeshift weapon in a pinch.",
-    "condition": "good",
+    "description": "A crowbar is a long, metal tool with a flattened and curved end, used for prying open doors, crates, and other objects. It can also be used as a makeshift weapon in a pinch.",
+    "condition": "new",
     "value": 10
   },
   {
     "name": "Climbing Gear",
     "weight": 5,
-    "description": "Climbing gear consists of pitons, carabiners, and a harness. Pitons are metal spikes that are hammered into cracks or crevices in the rock to provide anchor points. Carabiners are metal loops with a spring-loaded gate used to connect various pieces of climbing equipment. The harness is a set of straps worn around the waist and legs to secure the climber to the rope.",
-    "condition": "good",
-    "value": 50
+    "description": "Climbing gear includes pitons, carabiners, and a harness. Pitons are metal spikes that are hammered into rock to provide an anchor point for ropes. Carabiners are metal loops with a spring-loaded gate used to connect ropes and other equipment. The harness is a set of straps worn around the waist and legs that attaches to the rope and provides support and safety while climbing.",
+    "condition": "new",
+    "value": 150
   },
   {
     "name": "Map and Compass",
-    "weight": 0.5,
-    "description": "A map and compass are essential tools for navigation. The map provides a visual representation of the surrounding area, while the compass helps determine direction. Together, they help adventurers find their way and avoid getting lost.",
-    "condition": "good",
+    "weight": 1,
+    "description": "A map and compass are essential tools for any adventurer. The map provides a detailed layout of the surrounding area, while the compass helps to navigate and orient oneself.",
+    "condition": "new",
     "value": 50
   },
   {
     "name": "Healer's Kit",
     "weight": 3,
-    "description": "A healer's kit is a collection of bandages, salves, and other medical supplies used by healers and medics to treat wounds and injuries. It includes various tools and materials necessary for basic medical procedures and first aid.",
+    "description": "A healer's kit is a collection of bandages, salves, and other supplies used by healers to mend wounds and cure ailments. It includes antiseptic ointments, splints, and other medical tools.",
     "condition": "good",
     "value": 50
   },
   {
     "name": "Tent",
-    "weight": 10,
-    "description": "A tent is a portable shelter made of fabric or other materials supported by poles and ropes. It provides a comfortable and protected space for adventurers to rest and sleep during their travels.",
-    "condition": "good",
+    "weight": 20,
+    "description": "A tent is a portable shelter made of canvas, nylon, or other durable materials, supported by poles and ropes, and used for camping or outdoor activities. It provides protection from the elements and a comfortable place to sleep.",
+    "condition": "new",
     "value": 50
   },
   {
     "name": "Mirror",
     "weight": 1,
-    "description": "A mirror is a reflective surface that reflects light in such a way that, for incident light in some range of wavelengths, the reflected light preserves many or most of the detailed physical characteristics of the original light.",
-    "condition": "good",
-    "value": 50
-  },
-  {
-    "name": "10-Foot Pole",
-    "weight": 5,
-    "description": "A 10-foot pole is a long, sturdy wooden pole that is commonly used by adventurers to probe dangerous areas, check for traps, or test the stability of surfaces.",
-    "condition": "good",
-    "value": 5
-  },
-  {
-    "name": "Blanket or Bedroll",
-    "weight": 4,
-    "description": "A blanket or bedroll is a thick, warm cloth used for sleeping or providing comfort during outdoor adventures. It is typically made of wool or a similar material and can be rolled up for easy transportation.",
+    "description": "A mirror is a reflective surface that can be used to see one's own reflection. It is often made of glass or polished metal and can come in various shapes and sizes.",
     "condition": "good",
     "value": 10
   },
   {
-    "name": "Flint and Steel",
-    "weight": 0.5,
-    "description": "Flint and steel is a small kit consisting of a piece of flint or other hard rock and a piece of steel used to create sparks for starting fires.",
-    "condition": "good",
+    "name": "10-Foot Pole",
+    "weight": 7,
+    "description": "A 10-foot pole is a long, sturdy wooden pole that can be used to probe dangerous areas, test for traps, or even as a makeshift weapon.",
+    "condition": "new",
     "value": 5
+  },
+  {
+    "name": "Blanket or Bedroll",
+    "weight": 5,
+    "description": "A blanket or bedroll is a thick, warm covering made of wool, fur, or other materials, used to keep adventurers warm and comfortable while sleeping outdoors or in drafty dungeons.",
+    "condition": "new",
+    "value": 10
+  },
+  {
+    "name": "Flint and Steel",
+    "weight": 0.1,
+    "description": "A flint and steel is a small kit consisting of a piece of flint and a small metal striker. When struck together, they create sparks that can be used to start a fire.",
+    "condition": "new",
+    "value": 1.5
   },
   {
     "name": "Potion Vials",
     "weight": 0.5,
-    "description": "Potion vials are small glass containers used to store and transport various magical potions. They are typically made of sturdy glass and have a stopper or cork to seal the contents.",
+    "description": "Potion vials are small glass containers used to hold various magical concoctions. They are often stoppered with a cork or wax seal to prevent spillage.",
     "condition": "new",
     "value": 10
   },
   {
     "name": "Sack or Bag",
-    "weight": 1,
-    "description": "A sack or bag is a simple container made of cloth or leather, used to carry and store various items. It typically has a drawstring or a flap for easy access.",
-    "condition": "good",
-    "value": 5
+    "weight": 0.5,
+    "description": "A sack or bag is a simple container made of cloth, leather, or other materials, used to carry small items or provisions. It can be tied or closed with a drawstring or flap.",
+    "condition": "new",
+    "value": 1
   },
   {
     "name": "Spyglass",
     "weight": 1,
-    "description": "A spyglass is a small handheld telescope, usually made of brass or wood, with a magnifying lens at one end and an eyepiece at the other. It is used to see distant objects more clearly, making it a valuable tool for scouts, navigators, and adventurers.",
-    "condition": "good",
-    "value": 50
+    "description": "A spyglass is a handheld optical instrument used to magnify distant objects. It consists of a long tube with lenses at either end that can be adjusted to focus on objects at different distances.",
+    "condition": "excellent",
+    "value": 1000
   }
 ]
