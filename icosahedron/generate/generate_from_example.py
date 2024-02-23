@@ -2,6 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 import openai
 import datetime
+import asyncio
 
 import json
 from icosahedron import directories
@@ -91,7 +92,18 @@ class Generator(metaclass=ABCMeta):
             messages=self.messages,
             temperature=self.context.temperature,
         )
-        return response.choices[0].message.content.strip()
+        content = response.choices[0].message.content.strip()
+        return json.loads(content)
+
+    @classmethod
+    async def generate_items(cls, names, context: ModelContext = None):
+        async def generate_item(name):
+            return cls(name, context).generate()
+
+        tasks = [asyncio.create_task(generate_item(name)) for name in names]
+        results = asyncio.gather(*tasks)
+
+        return await results
 
 
 class GeneratorFromExample(Generator):
