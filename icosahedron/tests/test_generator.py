@@ -1,5 +1,5 @@
 import unittest
-
+from .test_model_context import MockOpenAI
 import json
 
 from icosahedron.generate.generate_from_example import (
@@ -7,16 +7,14 @@ from icosahedron.generate.generate_from_example import (
     GeneratorGenericItem,
     GeneratorMagicRing,
     GeneratorWeapon,
+    ModelContext,
 )
-
-
-class MockOpenAI:
-    pass
 
 
 class TestGenerator(unittest.TestCase):
     def setUp(self):
-        self.item = GeneratorArmor(self.get_item_name(), client=MockOpenAI())
+        self.context = ModelContext(client=MockOpenAI())
+        self.item = GeneratorArmor(self.get_item_name(), context=self.context)
 
     def tearDown(self):
         pass
@@ -24,27 +22,9 @@ class TestGenerator(unittest.TestCase):
     def get_item_name(self):
         return "Scale Mail"
 
-    def test_init_armor_generator_default(self):
-        self.assertEqual(0, self.item.temperature)
-        self.assertEqual(500, self.item.max_tokens)
-        self.assertTrue("gpt-3.5-turbo" == self.item.model or "gpt-3.5-turbo-0301" == self.item.model)
-        self.assertEqual("####", self.item.delimiter)
-        self.assertEqual(self.get_item_name(), self.item.name)
-
     def test_init_armor_generator(self):
-        item = GeneratorArmor(
-            self.get_item_name(),
-            client=MockOpenAI(),
-            temperature=0.5,
-            max_tokens=100,
-            model="fancy-model",
-            delimiter="***",
-        )
-        self.assertEqual(0.5, item.temperature)
-        self.assertEqual(100, item.max_tokens)
-        self.assertEqual("fancy-model", item.model)
-        self.assertEqual("***", item.delimiter)
-        self.assertEqual(self.get_item_name(), item.name)
+        self.assertEqual(self.context, self.item.context)
+        self.assertEqual(self.get_item_name(), self.item.name)
 
     def test_system_message(self):
         expected = """You are a developer for software implementation of a fantasy RPG. \
@@ -103,7 +83,7 @@ Only JSON objects, with nothing else."""
         self.assertEqual(expected, actual)
 
     def test_weapon_json_sample(self):
-        item = GeneratorWeapon("Mace", MockOpenAI())
+        item = GeneratorWeapon("Mace", self.context)
         expected = {
             "name": "Mace",
             "weight": 8.0,
@@ -122,7 +102,7 @@ Only JSON objects, with nothing else."""
         self.assertEqual(expected, actual)
 
     def test_magic_ring(self):
-        item = GeneratorMagicRing("Ring of Protection", MockOpenAI())
+        item = GeneratorMagicRing("Ring of Protection", self.context)
         expected = {
             "name": "Ring of Protection",
             "weight": 0,
@@ -137,7 +117,7 @@ Only JSON objects, with nothing else."""
         self.assertEqual(expected, actual)
 
     def test_generic_item(self):
-        item = GeneratorGenericItem("Spellbook", MockOpenAI())
+        item = GeneratorGenericItem("Spellbook", self.context)
         expected = {
             "name": "Spellbook",
             "weight": 3,
