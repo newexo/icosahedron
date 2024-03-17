@@ -30,7 +30,7 @@
   {
     "name": "Lantern",
     "weight": 2,
-    "description": "A lantern is a portable light source that uses oil or candles to produce a flame. It typically consists of a metal frame with glass panels to protect the flame from wind and rain.",
+    "description": "A lantern is a portable light source, typically featuring a protective enclosure to prevent the flame from being extinguished by wind or rain. It can be fueled by oil, wax, or magic.",
     "condition": "new",
     "value": 10
   },
@@ -65,9 +65,9 @@
   {
     "name": "Climbing Gear",
     "weight": 5,
-    "description": "Climbing gear includes pitons, carabiners, and a harness. Pitons are metal spikes that are hammered into rock to provide an anchor point for ropes. Carabiners are metal loops with a spring-loaded gate used to connect ropes and other equipment. The harness is a set of straps worn around the waist and legs that attaches to the rope and provides support and safety while climbing.",
+    "description": "Climbing gear is a set of tools used by adventurers to scale mountains, cliffs, and other steep terrain. It includes pitons, which are metal spikes driven into rock to provide anchor points; carabiners, which are metal loops used to connect ropes and other gear; and a harness, which is worn by the climber to attach themselves to the rope and provide support.",
     "condition": "new",
-    "value": 150
+    "value": 75
   },
   {
     "name": "Map and Compass",
@@ -86,7 +86,7 @@
   {
     "name": "Tent",
     "weight": 20,
-    "description": "A tent is a portable shelter made of canvas, nylon, or other durable materials, supported by poles and ropes, and used for camping or outdoor activities. It provides protection from the elements and a comfortable place to sleep.",
+    "description": "A tent is a portable shelter made of fabric or other material stretched over a supporting framework of poles or ropes. It provides a place to sleep and shelter from the elements while adventuring.",
     "condition": "new",
     "value": 50
   },
@@ -107,7 +107,7 @@
   {
     "name": "Blanket or Bedroll",
     "weight": 5,
-    "description": "A blanket or bedroll is a thick, warm covering made of wool, fur, or other materials, used to keep adventurers warm and comfortable while sleeping outdoors or in drafty dungeons.",
+    "description": "A blanket or bedroll is a thick, warm covering made of wool, fur, or other materials, used to keep adventurers warm and comfortable while sleeping outdoors.",
     "condition": "new",
     "value": 10
   },
@@ -121,7 +121,7 @@
   {
     "name": "Potion Vials",
     "weight": 0.5,
-    "description": "Potion vials are small glass containers used to hold various magical concoctions. They are often stoppered with a cork or wax seal to prevent spillage.",
+    "description": "Potion vials are small glass containers used to hold various magical concoctions. They come in various shapes and sizes, and are often adorned with intricate designs and symbols.",
     "condition": "new",
     "value": 10
   },
@@ -135,8 +135,8 @@
   {
     "name": "Spyglass",
     "weight": 1,
-    "description": "A spyglass is a handheld optical instrument used to magnify distant objects. It consists of a long tube with lenses at either end that can be adjusted to focus on objects at different distances.",
-    "condition": "excellent",
+    "description": "A spyglass is a handheld optical instrument used to magnify distant objects. It consists of two lenses, one at each end of a hollow tube, that are aligned to create a magnified image.",
+    "condition": "good",
     "value": 1000
   }
 ]
