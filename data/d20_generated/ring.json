@@ -65,7 +65,7 @@
   {
     "name": "Ring of Teleportation",
     "weight": 0.5,
-    "description": "A Ring of Teleportation is a magical ring that allows the wearer to teleport to a location of their choosing. The ring must be attuned to a specific location before it can be used.",
+    "description": "A Ring of Teleportation is a magical ring that allows the wearer to teleport to a location of their choice, as long as they have a clear mental image of the destination.",
     "condition": "Excellent",
     "value": 500,
     "magic_bonus": 3,

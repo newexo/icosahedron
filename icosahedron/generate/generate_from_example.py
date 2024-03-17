@@ -4,6 +4,8 @@ import openai
 import datetime
 import asyncio
 
+from enum import Enum
+
 import json
 from icosahedron import directories
 
@@ -95,15 +97,12 @@ class Generator(metaclass=ABCMeta):
         content = response.choices[0].message.content.strip()
         return json.loads(content)
 
-    @classmethod
-    async def generate_items(cls, names, context: ModelContext = None):
-        async def generate_item(name):
-            return cls(name, context).generate()
 
-        tasks = [asyncio.create_task(generate_item(name)) for name in names]
-        results = asyncio.gather(*tasks)
-
-        return await results
+class ExampleItemType(Enum):
+    ARMOR = "chain_mail"
+    WEAPON = "mace"
+    MAGIC_RING = "ring_of_protection"
+    GENERIC_ITEM = "spellbook"
 
 
 class GeneratorFromExample(Generator):
@@ -124,54 +123,20 @@ class GeneratorFromExample(Generator):
             self.context.delimiter, self.json_sample
         )
 
-
-class GeneratorArmor(GeneratorFromExample):
-    def __init__(
-        self,
-        name: str,
-        context: ModelContext = None,
-    ):
-        super().__init__(
-            name,
-            context,
-            dictionary_sample=example_items["chain_mail"],
+    @staticmethod
+    def get_generator(t: ExampleItemType, name: str, context: ModelContext = None):
+        return GeneratorFromExample(
+            name, context, dictionary_sample=example_items[t.value]
         )
 
-
-class GeneratorWeapon(GeneratorFromExample):
-    def __init__(
-        self,
-        name: str,
-        context: ModelContext = None,
+    @classmethod
+    async def generate_items(
+        cls, t: ExampleItemType, names, context: ModelContext = None
     ):
-        super().__init__(
-            name,
-            context,
-            dictionary_sample=example_items["mace"],
-        )
+        async def generate_item(name):
+            return cls.get_generator(t, name, context).generate()
 
+        tasks = [asyncio.create_task(generate_item(name)) for name in names]
+        results = asyncio.gather(*tasks)
 
-class GeneratorMagicRing(GeneratorFromExample):
-    def __init__(
-        self,
-        name: str,
-        context: ModelContext = None,
-    ):
-        super().__init__(
-            name,
-            context,
-            dictionary_sample=example_items["ring_of_protection"],
-        )
-
-
-class GeneratorGenericItem(GeneratorFromExample):
-    def __init__(
-        self,
-        name: str,
-        context: ModelContext = None,
-    ):
-        super().__init__(
-            name,
-            context,
-            dictionary_sample=example_items["spellbook"],
-        )
+        return await results

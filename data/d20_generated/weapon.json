@@ -41,7 +41,7 @@
   {
     "name": "Battleaxe",
     "weight": 6.0,
-    "description": "A battleaxe is a single-handed axe designed for combat. It has a sharp metal blade mounted on a sturdy wooden or metal shaft.",
+    "description": "A battleaxe is a single-handed axe designed for combat. It has a sharp metal blade mounted on a sturdy wooden or metal shaft, and is capable of delivering powerful and devastating blows.",
     "condition": "Good",
     "value": 120.0,
     "damage": "1d8",
@@ -119,7 +119,7 @@
   {
     "name": "Scimitar",
     "weight": 3.0,
-    "description": "A scimitar is a curved, single-edged sword of Middle Eastern origin. It is designed for slashing and cutting, and is often used by cavalry.",
+    "description": "A scimitar is a curved, single-edged sword of Middle Eastern origin. It is designed for slashing and cutting, and is often used in a sweeping motion to inflict maximum damage.",
     "condition": "New",
     "value": 750.0,
     "damage": "1d6",
@@ -191,6 +191,19 @@
     "value": 20.0,
     "damage": "1d6",
     "damage_type": "Bludgeoning",
+    "range": 0,
+    "crit_range": 2,
+    "crit_multiplier": "2x",
+    "special_properties": []
+  },
+  {
+    "name": "Falchion",
+    "weight": 8.0,
+    "description": "A falchion is a one-handed, single-edged sword of European origin, whose design is reminiscent of the Persian shamshir, the Chinese dadao, and modern machetes. It has a curved blade that widens towards the point, giving it a weight-forward balance that makes it ideal for chopping and slashing.",
+    "condition": "Good",
+    "value": 75.0,
+    "damage": "2d4",
+    "damage_type": "Slashing",
     "range": 0,
     "crit_range": 2,
     "crit_multiplier": "2x",
