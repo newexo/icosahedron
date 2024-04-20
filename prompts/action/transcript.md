@@ -700,9 +700,250 @@ def test_action_saving_to_dict(sample_action_data):
 
 These tests cover the initialization of an Action object, loading from a dictionary, and saving to a dictionary. The sample_action_data fixture provides sample data for testing. You can run these tests using pytest to ensure that the Action class works as expected.
 
-## Request changes
-
 ## Feedback working results and request documentation comments
 
 
+### User
 
+What are common styles of docstring comments used in python?
+
+### ChatGPT
+
+
+In Python, there are several common styles of docstring comments used to document functions, classes, and modules. Here are three of the most widely recognized styles:
+
+**Google Style**:
+
+```python
+
+def function(arg1, arg2):
+    """
+    Summary line.
+
+    Description of the function.
+
+    Args:
+        arg1 (type): Description of arg1.
+        arg2 (type): Description of arg2.
+
+    Returns:
+        type: Description of the return value.
+
+    Raises:
+        ErrorType: Description of error conditions.
+    """
+```
+
+**Numpy/Scipy Style**:
+
+```python
+
+def function(arg1, arg2):
+    """
+    Summary line.
+
+    Description of the function.
+
+    Parameters
+    ----------
+    arg1 : type
+        Description of arg1.
+    arg2 : type
+        Description of arg2.
+
+    Returns
+    -------
+    type
+        Description of the return value.
+
+    Raises
+    ------
+    ErrorType
+        Description of error conditions.
+    """
+```
+
+**Sphinx Style**:
+
+```python
+
+    def function(arg1, arg2):
+        """
+        Summary line.
+
+        Description of the function.
+
+        :param arg1: Description of arg1.
+        :type arg1: type
+        :param arg2: Description of arg2.
+        :type arg2: type
+        :return: Description of the return value.
+        :rtype: type
+        :raises ErrorType: Description of error conditions.
+        """
+```
+
+Each style has its own conventions and preferred formatting, but they all aim to provide clear and informative documentation for Python code. The choice of style often depends on personal preference or the conventions of the project or organization.
+
+### User
+
+Add Spinx style docstring comments to the following:
+
+```python
+from pydantic import BaseModel
+
+
+class Action(BaseModel):
+    name: str
+    action_type: str
+    aoo: str
+    description: str
+
+    class Config:
+        allow_mutation = False
+```
+
+### ChatGPT
+
+
+Here's the modified code with Sphinx style docstring comments added:
+
+```python
+
+from pydantic import BaseModel
+
+
+class Action(BaseModel):
+    """
+    Represents an action in a tabletop RPG.
+
+    :param name: The name of the action.
+    :type name: str
+    :param action_type: The type of action (e.g., Standard, Move, Full-Round).
+    :type action_type: str
+    :param aoo: Whether the action may provoke attacks of opportunity (Yes/No/Varies).
+    :type aoo: str
+    :param description: A description of the action.
+    :type description: str
+    """
+
+    name: str
+    action_type: str
+    aoo: str
+    description: str
+
+    class Config:
+        """
+        Configuration settings for the Action class.
+
+        :ivar allow_mutation: Whether instances of Action are mutable or not.
+        :vartype allow_mutation: bool
+        """
+        allow_mutation = False
+```
+
+These docstring comments provide a clear and structured explanation of the Action class and its attributes, adhering to the Sphinx style conventions.
+
+### User
+
+Add Sphinx style comments to the following:
+
+```python
+import pytest
+from ..d20_rules.action import Action
+
+
+@pytest.fixture
+def sample_action_data():
+    return {
+        "name": "Attack",
+        "action_type": "Standard",
+        "aoo": "Yes",
+        "description": "Engage in melee or ranged combat with a weapon or unarmed strike.",
+    }
+
+
+def test_action_initialization(sample_action_data):
+    action = Action(**sample_action_data)
+    assert action.name == "Attack"
+    assert action.action_type == "Standard"
+    assert action.aoo == "Yes"
+    assert (
+        action.description
+        == "Engage in melee or ranged combat with a weapon or unarmed strike."
+    )
+
+
+def test_action_loading_from_dict(sample_action_data):
+    action = Action.parse_obj(sample_action_data)
+    assert action.name == "Attack"
+    assert action.action_type == "Standard"
+    assert action.aoo == "Yes"
+    assert (
+        action.description
+        == "Engage in melee or ranged combat with a weapon or unarmed strike."
+    )
+
+
+def test_action_saving_to_dict(sample_action_data):
+    action = Action(**sample_action_data)
+    action_dict = action.dict()
+    assert action_dict == sample_action_data
+```
+
+### ChatGPT
+
+
+Here's the modified code with Sphinx-style comments added:
+
+```python
+
+import pytest
+from ..d20_rules.action import Action
+
+
+@pytest.fixture
+def sample_action_data():
+    """
+    Fixture that provides sample data for testing Action class.
+    """
+    return {
+        "name": "Attack",
+        "action_type": "Standard",
+        "aoo": "Yes",
+        "description": "Engage in melee or ranged combat with a weapon or unarmed strike.",
+    }
+
+
+def test_action_initialization(sample_action_data):
+    """
+    Test initialization of Action object.
+    """
+    action = Action(**sample_action_data)
+    assert action.name == "Attack"
+    assert action.action_type == "Standard"
+    assert action.aoo == "Yes"
+    assert action.description == "Engage in melee or ranged combat with a weapon or unarmed strike."
+
+
+def test_action_loading_from_dict(sample_action_data):
+    """
+    Test loading Action object from dictionary.
+    """
+    action = Action.parse_obj(sample_action_data)
+    assert action.name == "Attack"
+    assert action.action_type == "Standard"
+    assert action.aoo == "Yes"
+    assert action.description == "Engage in melee or ranged combat with a weapon or unarmed strike."
+
+
+def test_action_saving_to_dict(sample_action_data):
+    """
+    Test saving Action object to dictionary.
+    """
+    action = Action(**sample_action_data)
+    action_dict = action.dict()
+    assert action_dict == sample_action_data
+```
+
+These Sphinx-style comments provide clear documentation for each function and fixture in the test file, explaining their purpose and usage.
