@@ -29,9 +29,9 @@ Raw results are in branch [generate/status-effects](https://github.com/newexo/ic
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
+Recorded steps to make code actually work in commit history of branch [refactor/status-effects](https://github.com/newexo/icosahedron/tree/refactor/status-effects).
 
-1. 
+1. Clean up python code and fix imports in test_status_effect.py.
 
 ## Final refactor
 
