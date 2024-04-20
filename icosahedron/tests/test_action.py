@@ -1,5 +1,5 @@
 import pytest
-from action import Action
+from ..d20_rules.action import Action
 
 @pytest.fixture
 def sample_action_data():

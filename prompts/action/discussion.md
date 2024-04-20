@@ -22,11 +22,12 @@
 
 ## Prompts to generate python code
 
+Here start writing actual code.
+
 - Make a table of all actions discussed so far. Have a column for whether action is standard, move or full round action. Have a column for whether the action may provoke attack of opportunity.
 - Write this table as a JSON object. For the Action column, use field name "name". For the type column, use field name "action_type". For the May Provoke AoO column, use the field name "aoo". Also add a description field.
 - Write a Python class encapsulating the action object using the pydantic package.
 - Write some pytest tests for Action to prove the class works. Test initialization, loading from dict and saving to dict.
-
 
 ## Branch for generated raw results
 
@@ -34,9 +35,10 @@ Raw results are in branch [generate/action](https://github.com/newexo/icosahedro
 
 ## Steps to make code actually work
 
-Recorded steps to make code actually work in commit history of branch []().
+Recorded steps to make code actually work in commit history of branch [refactor/action](https://github.com/newexo/icosahedron/tree/refactor/action).
 
-1. 
+1. Only required fixing import in test_action.py to make tests run.
+2. 
 
 ## Final refactor
 
