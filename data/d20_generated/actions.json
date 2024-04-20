@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Attack",
+    "action_type": "Standard",
+    "aoo": "Yes",
+    "description": "Engage in melee or ranged combat with a weapon or unarmed strike."
+  },
+  {
+    "name": "Cast a Spell",
+    "action_type": "Standard",
+    "aoo": "Yes",
+    "description": "Use a spell slot to cast a spell from a spell list."
+  },
+  {
+    "name": "Ready",
+    "action_type": "Standard",
+    "aoo": "No",
+    "description": "Prepare an action to trigger in response to a specific circumstance."
+  },
+  {
+    "name": "Grapple (Initiating)",
+    "action_type": "Standard",
+    "aoo": "Yes",
+    "description": "Attempt to seize an opponent and restrain them in a grapple."
+  },
+  {
+    "name": "Shove",
+    "action_type": "Standard",
+    "aoo": "Yes",
+    "description": "Attempt to push a creature, potentially knocking them prone or moving them."
+  },
+  {
+    "name": "Use an Object",
+    "action_type": "Standard",
+    "aoo": "No",
+    "description": "Interact with an item or object in the environment."
+  },
+  {
+    "name": "Move",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Move up to your speed across the battlefield."
+  },
+  {
+    "name": "Climb",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Ascend or descend a surface, using movement and possibly an Athletics check."
+  },
+  {
+    "name": "Swim",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Move through water, using movement and possibly an Athletics check."
+  },
+  {
+    "name": "Crawl",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Move on hands and knees, typically through difficult terrain."
+  },
+  {
+    "name": "Jump",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Leap across obstacles or gaps, using movement and possibly an Athletics check."
+  },
+  {
+    "name": "Stand Up",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Recover from being prone, using half of your movement speed."
+  },
+  {
+    "name": "Mount/Dismount",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Get on or off a mount, using movement."
+  },
+  {
+    "name": "Squeeze",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "Move through a tight space, using movement but at half speed."
+  },
+  {
+    "name": "Fly",
+    "action_type": "Move",
+    "aoo": "No",
+    "description": "If you have a flying speed, move through the air using movement."
+  },
+  {
+    "name": "Disarm",
+    "action_type": "Special",
+    "aoo": "Yes",
+    "description": "Attempt to knock a weapon or item out of an opponent's grasp."
+  },
+  {
+    "name": "Trip",
+    "action_type": "Special",
+    "aoo": "Yes",
+    "description": "Attempt to knock an opponent prone by sweeping their legs out from under them."
+  },
+  {
+    "name": "Sunder",
+    "action_type": "Special",
+    "aoo": "Yes",
+    "description": "Try to break or destroy an opponent's weapon, shield, or other item they are holding."
+  },
+  {
+    "name": "Feint",
+    "action_type": "Special",
+    "aoo": "Yes",
+    "description": "Make a deceptive move or fake out an opponent to create an opening for a subsequent attack."
+  },
+  {
+    "name": "Bull Rush",
+    "action_type": "Special",
+    "aoo": "Yes",
+    "description": "Attempt to push an opponent backward, potentially knocking them prone or into a hazard."
+  },
+  {
+    "name": "Overrun",
+    "action_type": "Special",
+    "aoo": "Yes",
+    "description": "Charge through an opponent's space to move past them."
+  },
+  {
+    "name": "Drawing/Sheathing a Weapon",
+    "action_type": "Move-Equivalent",
+    "aoo": "No",
+    "description": "Typically, drawing a weapon from a sheath or holster or putting it away."
+  },
+  {
+    "name": "Using a Skill",
+    "action_type": "Move-Equivalent",
+    "aoo": "No",
+    "description": "Performing skill actions such as administering first aid or picking a lock."
+  },
+  {
+    "name": "Using Some Class Features",
+    "action_type": "Move-Equivalent",
+    "aoo": "Varies",
+    "description": "Activating certain class features or abilities."
+  },
+  {
+    "name": "Manipulating an Object",
+    "action_type": "Move-Equivalent",
+    "aoo": "No",
+    "description": "Performing actions like reloading a crossbow or opening a door."
+  },
+  {
+    "name": "Minor Spellcasting",
+    "action_type": "Move-Equivalent",
+    "aoo": "No",
+    "description": "Casting a spell with a short casting time."
+  },
+  {
+    "name": "Full Attack",
+    "action_type": "Full-Round",
+    "aoo": "Yes",
+    "description": "Make multiple attacks with a weapon or unarmed strike."
+  },
+  {
+    "name": "Casting a Full-Round Spell",
+    "action_type": "Full-Round",
+    "aoo": "Yes",
+    "description": "Casting a spell with a casting time of one full round."
+  },
+  {
+    "name": "Using Some Special Abilities",
+    "action_type": "Full-Round",
+    "aoo": "Varies",
+    "description": "Activating certain special abilities or class features."
+  },
+  {
+    "name": "Full-Round Skill Uses",
+    "action_type": "Full-Round",
+    "aoo": "No",
+    "description": "Performing skill actions that require a full round to complete."
+  },
+  {
+    "name": "Using Some Combat Maneuvers",
+    "action_type": "Full-Round",
+    "aoo": "Yes",
+    "description": "Performing certain combat maneuvers or special attacks."
+  },
+  {
+    "name": "Total Defense",
+    "action_type": "Full-Round",
+    "aoo": "No",
+    "description": "Focusing entirely on defending yourself, gaining a bonus to your Armor Class."
+  }
+]
