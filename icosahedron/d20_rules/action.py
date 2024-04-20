@@ -27,4 +27,5 @@ class Action(BaseModel):
         :ivar allow_mutation: Whether instances of Action are mutable or not.
         :vartype allow_mutation: bool
         """
+
         allow_mutation = False
