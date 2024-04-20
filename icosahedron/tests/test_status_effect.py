@@ -2,6 +2,9 @@ from ..d20_rules.status_effect import StatusEffect
 
 
 def test_status_effect_initialization():
+    """
+    Test initialization of the StatusEffect class with provided attributes.
+    """
     status_effect = StatusEffect(
         name="Blessed",
         description="Character receives a bonus on attack rolls and saving throws.",
@@ -23,6 +26,9 @@ def test_status_effect_initialization():
 
 
 def test_status_effect_loading_from_dict():
+    """
+    Test loading a StatusEffect instance from a dictionary and comparing it to the expected result.
+    """
     status_effect_data = {
         "name": "Blessed",
         "description": "Character receives a bonus on attack rolls and saving throws.",
@@ -35,6 +41,9 @@ def test_status_effect_loading_from_dict():
 
 
 def test_status_effect_saving_to_dict():
+    """
+    Test saving a StatusEffect instance to a dictionary and comparing it to the expected result.
+    """
     status_effect = StatusEffect(
         name="Blessed",
         description="Character receives a bonus on attack rolls and saving throws.",

@@ -35,7 +35,8 @@ Recorded steps to make code actually work in commit history of branch [refactor/
 
 ## Final refactor
 
-1.
+1. Nothing to do. It worked first time.
 
 ## Documentation comments
 
+1. Add comments to the code to explain the purpose of the class and methods.
