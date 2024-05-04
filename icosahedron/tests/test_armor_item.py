@@ -1,38 +1,36 @@
-import unittest
-
-from icosahedron.d20_rules.inventory_items.armor_item import ArmorItem
-from icosahedron.tests.base_test_case import BaseTestCase
-
-
-class TestArmorItem(unittest.TestCase, BaseTestCase):
-    def setUp(self):
-        self.instance = ArmorItem(
-            name="Chain Mail",
-            armor_class=16,
-            max_dex_bonus=2,
-            check_penalty=-5,
-            spell_failure=30,
-            speed_reduction=10,
-            weight=40,
-            value=75,
-            condition="new",
-        )
-        self.load_data("chain_mail.json")
-
-    def instance_test(self, instance):
-        self.assertEqual(instance.name, "Chain Mail")
-        self.assertEqual(instance.armor_class, 16)
-        self.assertEqual(instance.max_dex_bonus, 2)
-        self.assertEqual(instance.check_penalty, -5)
-        self.assertEqual(instance.spell_failure, 30)
-        self.assertEqual(instance.speed_reduction, 10)
-        self.assertEqual(instance.weight, 40)
-        self.assertEqual(instance.value, 75)
-        self.assertEqual(instance.condition, "new")
-
-    def from_dict(self):
-        return ArmorItem.from_dict(self.instance_dict)
+import json
+import pytest
+from icosahedron.d20_rules.character_class import CharacterClass
+from icosahedron.directories import test_data
 
 
-if __name__ == "__main__":
-    unittest.main()
+@pytest.fixture
+def character_class():
+    hit_dice = 10
+    base_attack_bonus = 1
+    bab_progression = 0.75
+    skill_points = 2
+
+    return CharacterClass(hit_dice, base_attack_bonus, bab_progression, skill_points)
+
+
+@pytest.fixture
+def instance_dict():
+    with open(test_data("fighter_class.json")) as f:
+        instance_str = f.read()
+    return json.loads(instance_str)
+
+
+def test_instance_test(character_class):
+    assert character_class.hit_dice == 10
+    assert character_class.base_attack_bonus == 1
+    assert character_class.bab_progression == 0.75
+    assert character_class.skill_points == 2
+
+
+def test_from_dict(instance_dict):
+    character_class = CharacterClass.from_dict(instance_dict)
+    assert character_class.hit_dice == 10
+    assert character_class.base_attack_bonus == 1
+    assert character_class.bab_progression == 0.75
+    assert character_class.skill_points == 2
