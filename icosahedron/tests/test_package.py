@@ -1,11 +1,5 @@
-import unittest
 import icosahedron
 
 
-class TestPackage(unittest.TestCase):
-    def test_something(self):
-        self.assertIsNotNone(icosahedron.__version__)  # add assertion here
-
-
-if __name__ == "__main__":
-    unittest.main()
+def test_something():
+    assert icosahedron.__version__ is not None
