@@ -1,38 +1,50 @@
-import unittest
-
+import pytest
+import json
 from icosahedron.d20_rules.inventory_items.weapon_item import WeaponItem
-from icosahedron.tests.base_test_case import BaseTestCase
+from icosahedron.directories import test_data
 
 
-class TestWeaponItem(unittest.TestCase, BaseTestCase):
-    def setUp(self):
-        self.instance = WeaponItem(
-            name="Mace",
-            weight=8.0,
-            value=308.0,
-            description="nothing special",
-            condition="Good",
-            range=0,
-            damage="1d6",
-            damage_type="Bludgeoning",
-            crit_range=2,
-            crit_multiplier="2x",
-        )
-        self.load_data("mace.json")
-
-    def instance_test(self, instance):
-        self.assertEqual(instance.name, "Mace")
-        self.assertEqual(instance.value, 308)
-        self.assertEqual(instance.condition, "Good")
-        self.assertEqual(instance.value, 308.0)
-        self.assertEqual(instance.weight, 8)
-        self.assertEqual(instance.damage, "1d6")
-        self.assertEqual(instance.damage_type, "Bludgeoning")
-        self.assertEqual(instance.description, "nothing special")
-
-    def from_dict(self):
-        return WeaponItem.from_dict(self.instance_dict)
+@pytest.fixture
+def weapon_item():
+    return WeaponItem(
+        name="Mace",
+        weight=8.0,
+        value=308.0,
+        description="nothing special",
+        condition="Good",
+        range=0,
+        damage="1d6",
+        damage_type="Bludgeoning",
+        crit_range=2,
+        crit_multiplier="2x",
+    )
 
 
-if __name__ == "__main__":
-    unittest.main()
+@pytest.fixture
+def instance_dict():
+    with open(test_data("mace.json")) as f:
+        instance_str = f.read()
+    return json.loads(instance_str)
+
+
+def test_instance_test(weapon_item):
+    assert weapon_item.name == "Mace"
+    assert weapon_item.value == 308
+    assert weapon_item.condition == "Good"
+    assert weapon_item.value == 308.0
+    assert weapon_item.weight == 8
+    assert weapon_item.damage == "1d6"
+    assert weapon_item.damage_type == "Bludgeoning"
+    assert weapon_item.description == "nothing special"
+
+
+def test_from_dict(instance_dict):
+    weapon_item = WeaponItem.from_dict(instance_dict)
+    assert weapon_item.name == "Mace"
+    assert weapon_item.value == 308
+    assert weapon_item.condition == "Good"
+    assert weapon_item.value == 308.0
+    assert weapon_item.weight == 8
+    assert weapon_item.damage == "1d6"
+    assert weapon_item.damage_type == "Bludgeoning"
+    assert weapon_item.description == "nothing special"

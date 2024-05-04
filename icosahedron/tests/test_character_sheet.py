@@ -1,119 +1,166 @@
-import unittest
-
+import json
+import pytest
 from icosahedron.d20_rules.character_sheet import CharacterSheet
-from icosahedron.tests.base_test_case import BaseTestCase
+from icosahedron.directories import test_data
 
 
-class TestCharacterSheet(unittest.TestCase, BaseTestCase):
-    def setUp(self):
-        self.instance = CharacterSheet(
-            name="Alice",
-            race="Human",
-            char_class="Wizard",
-            level=3,
-            alignment="Neutral Good",
-            ability_scores={
-                "strength": 8,
-                "dexterity": 14,
-                "constitution": 12,
-                "intelligence": 16,
-                "wisdom": 10,
-                "charisma": 10,
-            },
-            skills={
-                "arcana": 6,
-                "history": 6,
-                "investigation": 6,
-                "nature": 6,
-                "religion": 6,
-            },
-            feats=[
-                {
-                    "name": "Alert",
-                    "description": "+5 initiative and cannot be surprised",
-                },
-                {
-                    "name": "Magic Initiate",
-                    "description": "Can cast two cantrips and one 1st-level spell from a chosen spellcasting class (cleric)",
-                },
-            ],
-            equipment=[
-                "Spellbook",
-                "Wand",
-                "Backpack",
-                "Bedroll",
-                "Rations (5 days)",
-                "Waterskin",
-                "20 gold pieces",
-            ],
-            spells_known={
-                "cantrips": ["Mage Hand", "Prestidigitation", "Ray of Frost"],
-                "1st_level_spells": ["Magic Missile", "Shield", "Cure Wounds"],
-            },
-            background="Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and",
-        )
-
-        self.load_data("alice.json")
-
-    def instance_test(self, instance):
-        self.assertEqual(instance.name, "Alice")
-        self.assertEqual(instance.race, "Human")
-        self.assertEqual(instance.char_class, "Wizard")
-        self.assertEqual(instance.level, 3)
-        self.assertEqual(instance.alignment, "Neutral Good")
-        self.assertEqual(
-            instance.ability_scores,
+@pytest.fixture
+def character_sheet():
+    return CharacterSheet(
+        name="Alice",
+        race="Human",
+        char_class="Wizard",
+        level=3,
+        alignment="Neutral Good",
+        ability_scores={
+            "strength": 8,
+            "dexterity": 14,
+            "constitution": 12,
+            "intelligence": 16,
+            "wisdom": 10,
+            "charisma": 10,
+        },
+        skills={
+            "arcana": 6,
+            "history": 6,
+            "investigation": 6,
+            "nature": 6,
+            "religion": 6,
+        },
+        feats=[
             {
-                "strength": 8,
-                "dexterity": 14,
-                "constitution": 12,
-                "intelligence": 16,
-                "wisdom": 10,
-                "charisma": 10,
+                "name": "Alert",
+                "description": "+5 initiative and cannot be surprised",
             },
-        )
-        self.assertEqual(
-            instance.skills,
-            {"arcana": 6, "history": 6, "investigation": 6, "nature": 6, "religion": 6},
-        )
-        self.assertEqual(len(instance.feats), 2)
-        self.assertEqual(instance.feats[0]["name"], "Alert")
-        self.assertEqual(
-            instance.feats[0]["description"], "+5 initiative and cannot be surprised"
-        )
-        self.assertEqual(instance.feats[1]["name"], "Magic Initiate")
-        self.assertEqual(
-            instance.feats[1]["description"],
-            "Can cast two cantrips and one 1st-level spell from a chosen spellcasting class (cleric)",
-        )
-        self.assertEqual(len(instance.equipment), 7)
-        self.assertEqual(
-            instance.equipment,
-            [
-                "Spellbook",
-                "Wand",
-                "Backpack",
-                "Bedroll",
-                "Rations (5 days)",
-                "Waterskin",
-                "20 gold pieces",
-            ],
-        )
-        self.assertEqual(
-            instance.spells_known,
             {
-                "cantrips": ["Mage Hand", "Prestidigitation", "Ray of Frost"],
-                "1st_level_spells": ["Magic Missile", "Shield", "Cure Wounds"],
+                "name": "Magic Initiate",
+                "description": "Can cast two cantrips and one 1st-level spell from a chosen spellcasting class (cleric)",
             },
-        )
-        self.assertEqual(
-            instance.background,
-            "Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and",
-        )
+        ],
+        equipment=[
+            "Spellbook",
+            "Wand",
+            "Backpack",
+            "Bedroll",
+            "Rations (5 days)",
+            "Waterskin",
+            "20 gold pieces",
+        ],
+        spells_known={
+            "cantrips": ["Mage Hand", "Prestidigitation", "Ray of Frost"],
+            "1st_level_spells": ["Magic Missile", "Shield", "Cure Wounds"],
+        },
+        background="Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and",
+    )
 
-    def from_dict(self):
-        return CharacterSheet.from_dict(self.instance_dict)
+
+@pytest.fixture
+def instance_dict():
+    with open(test_data("alice.json")) as f:
+        instance_str = f.read()
+    return json.loads(instance_str)
 
 
-if __name__ == "__main__":
-    unittest.main()
+def test_instance_test(character_sheet):
+    assert character_sheet.name == "Alice"
+    assert character_sheet.race == "Human"
+    assert character_sheet.char_class == "Wizard"
+    assert character_sheet.level == 3
+    assert character_sheet.alignment == "Neutral Good"
+    assert character_sheet.ability_scores == {
+        "strength": 8,
+        "dexterity": 14,
+        "constitution": 12,
+        "intelligence": 16,
+        "wisdom": 10,
+        "charisma": 10,
+    }
+    assert character_sheet.skills == {
+        "arcana": 6,
+        "history": 6,
+        "investigation": 6,
+        "nature": 6,
+        "religion": 6,
+    }
+    assert len(character_sheet.feats) == 2
+    assert character_sheet.feats[0]["name"] == "Alert"
+    assert (
+        character_sheet.feats[0]["description"]
+        == "+5 initiative and cannot be surprised"
+    )
+    assert character_sheet.feats[1]["name"] == "Magic Initiate"
+    assert (
+        character_sheet.feats[1]["description"]
+        == "Can cast two cantrips and one 1st-level spell from a chosen spellcasting class (cleric)"
+    )
+    assert len(character_sheet.equipment) == 7
+    assert character_sheet.equipment == [
+        "Spellbook",
+        "Wand",
+        "Backpack",
+        "Bedroll",
+        "Rations (5 days)",
+        "Waterskin",
+        "20 gold pieces",
+    ]
+    assert character_sheet.spells_known == {
+        "cantrips": ["Mage Hand", "Prestidigitation", "Ray of Frost"],
+        "1st_level_spells": ["Magic Missile", "Shield", "Cure Wounds"],
+    }
+    assert (
+        character_sheet.background
+        == "Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and"
+    )
+
+
+def test_from_dict(instance_dict):
+    character_sheet = CharacterSheet.from_dict(instance_dict)
+    assert character_sheet.name == "Alice"
+    assert character_sheet.race == "Human"
+    assert character_sheet.char_class == "Wizard"
+    assert character_sheet.level == 3
+    assert character_sheet.alignment == "Neutral Good"
+    assert character_sheet.ability_scores == {
+        "strength": 8,
+        "dexterity": 14,
+        "constitution": 12,
+        "intelligence": 16,
+        "wisdom": 10,
+        "charisma": 10,
+    }
+    assert character_sheet.skills == {
+        "arcana": 6,
+        "history": 6,
+        "investigation": 6,
+        "nature": 6,
+        "religion": 6,
+    }
+    assert len(character_sheet.feats) == 2
+    assert character_sheet.feats[0]["name"] == "Alert"
+    assert (
+        character_sheet.feats[0]["description"]
+        == "+5 initiative and cannot be surprised"
+    )
+    assert character_sheet.feats[1]["name"] == "Magic Initiate"
+    assert (
+        character_sheet.feats[1]["description"]
+        == "Can cast two cantrips and one 1st-level spell from a chosen spellcasting class (cleric)"
+    )
+    assert len(character_sheet.equipment) == 7
+    assert character_sheet.equipment == [
+        "Spellbook",
+        "Wand",
+        "Backpack",
+        "Bedroll",
+        "Rations (5 days)",
+        "Waterskin",
+        "20 gold pieces",
+    ]
+    assert character_sheet.spells_known == {
+        "cantrips": ["Mage Hand", "Prestidigitation", "Ray of Frost"],
+        "1st_level_spells": ["Magic Missile", "Shield", "Cure Wounds"],
+    }
+    assert (
+        character_sheet.background
+        == "Alice grew up in a small village where she was fascinated by the natural world and the secrets of the arcane. She left her village to study magic at a nearby wizard academy, where she excelled in her studies and gained a reputation as a diligent and creative student. After graduating, she set out on a journey to explore the world and use her magic to help others. Alice is driven by a desire to uncover new knowledge and"
+    )
