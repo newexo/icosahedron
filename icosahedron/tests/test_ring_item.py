@@ -32,7 +32,7 @@ def test_instance_test(magic_ring):
 
 
 def test_from_dict(instance_dict):
-    magic_ring = MagicRing.from_dict(instance_dict)
+    magic_ring = MagicRing.parse_obj(instance_dict)
     assert magic_ring.name == "Ring of Protection"
     assert magic_ring.value == 100
     assert magic_ring.condition == "Good"

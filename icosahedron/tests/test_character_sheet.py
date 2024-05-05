@@ -114,7 +114,7 @@ def test_instance_test(character_sheet):
 
 
 def test_from_dict(instance_dict):
-    character_sheet = CharacterSheet.from_dict(instance_dict)
+    character_sheet = CharacterSheet.parse_obj(instance_dict)
     assert character_sheet.name == "Alice"
     assert character_sheet.race == "Human"
     assert character_sheet.char_class == "Wizard"

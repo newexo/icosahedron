@@ -1,12 +1,18 @@
 import numpy as np
 
-from icosahedron.utils.dictable import Dictable
+from pydantic import BaseModel
 
 dice_types = [4, 6, 8, 10, 12, 20, 100]
 
 
-class DiceRoll(Dictable):
-    """Represents a D20 roll with a given dice type, number of dice, and modifier."""
+class DiceRoll(BaseModel):
+    """
+    Represents a D20 roll with a given dice type, number of dice, and modifier.
+    """
+
+    dice_type: int
+    num_dice: int = 1
+    modifier: int = 0
 
     def __init__(self, dice_type: int, num_dice: int = 1, modifier: int = 0):
         """
@@ -25,33 +31,7 @@ class DiceRoll(Dictable):
             raise ValueError("Invalid dice type. Must be one of {}.".format(dice_types))
         if num_dice < 1:
             raise ValueError("Number of dice must be greater than or equal to 1.")
-        self.dice_type = dice_type
-        self.num_dice = num_dice
-        self.modifier = modifier
-
-    def to_dict(self) -> dict:
-        """Converts the D20Roll instance to a dictionary.
-
-        Returns:
-            dict: The dictionary representing the D20Roll instance.
-        """
-        return {
-            "dice_type": self.dice_type,
-            "num_dice": self.num_dice,
-            "modifier": self.modifier,
-        }
-
-    @classmethod
-    def from_dict(cls, data: dict) -> "DiceRoll":
-        """Creates a D20Roll instance from a dictionary.
-
-        Args:
-            data (dict): The dictionary representing the D20Roll instance.
-
-        Returns:
-            DiceRoll: The D20Roll instance represented by the dictionary.
-        """
-        return cls(data["dice_type"], data.get("num_dice", 1), data.get("modifier", 0))
+        super().__init__(dice_type=dice_type, num_dice=num_dice, modifier=modifier)
 
 
 class DiceRoller:

@@ -9,8 +9,8 @@ def skill_data():
     return {
         "name": "Spellcraft",
         "description": "Spellcraft represents knowledge and understanding of spells, magical items, and the intricacies of spellcasting.",
-        "abilityScore": "Intelligence",
-        "classSkill": True,
+        "ability_score": "Intelligence",
+        "class_skill": True,
         "synergy": [
             {
                 "skill": "Knowledge (Arcana)",
@@ -38,8 +38,8 @@ def skill():
     skill_data = {
         "name": "Spellcraft",
         "description": "Spellcraft represents knowledge and understanding of spells, magical items, and the intricacies of spellcasting.",
-        "abilityScore": "Intelligence",
-        "classSkill": True,
+        "ability_score": "Intelligence",
+        "class_skill": True,
         "synergy": [
             {
                 "skill": "Knowledge (Arcana)",
@@ -60,7 +60,7 @@ def skill():
             "Determine Magic Item Properties: By examining a magic item, Spellcraft can help determine its properties, functions, and limitations.",
         ],
     }
-    return Skill.from_dict(skill_data)
+    return Skill.parse_obj(skill_data)
 
 
 def test_init(skill):
@@ -93,14 +93,14 @@ def test_init(skill):
 
 
 def test_to_dict(skill):
-    skill_dict = skill.to_dict()
+    skill_dict = skill.dict()
     assert skill_dict["name"] == "Spellcraft"
     assert (
         skill_dict["description"]
         == "Spellcraft represents knowledge and understanding of spells, magical items, and the intricacies of spellcasting."
     )
-    assert skill_dict["abilityScore"] == "Intelligence"
-    assert skill_dict["classSkill"] is True
+    assert skill_dict["ability_score"] == "Intelligence"
+    assert skill_dict["class_skill"] is True
     assert skill_dict["synergy"] == [
         {
             "skill": "Knowledge (Arcana)",
@@ -123,7 +123,7 @@ def test_to_dict(skill):
 
 
 def test_from_dict(skill_data):
-    skill = Skill.from_dict(skill_data)
+    skill = Skill.parse_obj(skill_data)
     assert skill.name == "Spellcraft"
     assert (
         skill.description

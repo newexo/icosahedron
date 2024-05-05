@@ -55,7 +55,7 @@ def test_instance_test(mob_stat_block):
 
 
 def test_from_dict(instance_dict):
-    mob_stat_block = MobStatBlock.from_dict(instance_dict)
+    mob_stat_block = MobStatBlock.parse_obj(instance_dict)
     assert mob_stat_block.name == "Iggy"
     assert mob_stat_block.hit_points == 12
     assert mob_stat_block.armor_class == 14

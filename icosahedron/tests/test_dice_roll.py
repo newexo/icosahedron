@@ -67,13 +67,13 @@ def test_init_negative_num_dice():
 def test_to_json():
     roll = DiceRoll(dice_type=20, num_dice=1, modifier=0)
     expected = {"dice_type": 20, "num_dice": 1, "modifier": 0}
-    result = roll.to_json()
+    result = roll.model_dump_json()
     assert json.loads(result) == expected
 
 
 def test_from_json():
     json_data = '{"dice_type": 20, "num_dice": 1, "modifier": 0}'
-    roll = DiceRoll.from_json(json_data)
+    roll = DiceRoll.model_validate_json(json_data)
     assert roll.dice_type == 20
     assert roll.num_dice == 1
     assert roll.modifier == 0
@@ -82,12 +82,12 @@ def test_from_json():
 def test_to_dict():
     roll = DiceRoll(dice_type=20, num_dice=1, modifier=0)
     expected = {"dice_type": 20, "num_dice": 1, "modifier": 0}
-    assert roll.to_dict() == expected
+    assert roll.dict() == expected
 
 
 def test_from_dict():
     data = {"dice_type": 20, "num_dice": 1, "modifier": 0}
-    roll = DiceRoll.from_dict(data)
+    roll = DiceRoll.parse_obj(data)
     assert roll.dice_type == 20
     assert roll.num_dice == 1
     assert roll.modifier == 0
@@ -95,27 +95,7 @@ def test_from_dict():
 
 def test_load_roll():
     with open(test_data("1d20plus5.json")) as f:
-        roll = DiceRoll.from_json(f.read())
+        roll = DiceRoll.model_validate_json(f.read())
         assert roll.dice_type == 20
         assert roll.num_dice == 1
         assert roll.modifier == 5
-
-
-def test_load_rolls():
-    with open(test_data("dice_rolls.json")) as f:
-        rolls = DiceRoll.list_from_json(f.read())
-
-        roll = rolls[0]
-        assert roll.dice_type == 20
-        assert roll.num_dice == 1
-        assert roll.modifier == 5
-
-        roll = rolls[1]
-        assert roll.dice_type == 6
-        assert roll.num_dice == 3
-        assert roll.modifier == 0
-
-        roll = rolls[2]
-        assert roll.dice_type == 12
-        assert roll.num_dice == 6
-        assert roll.modifier == 2

@@ -34,12 +34,12 @@ def test_instance_test(inventory_item):
 
 def test_to_dict(inventory_item, instance_dict):
     expected = instance_dict
-    actual = inventory_item.to_dict()
+    actual = inventory_item.dict()
     assert expected == actual
 
 
 def test_from_dict(instance_dict):
-    inventory_item = InventoryItem.from_dict(instance_dict)
+    inventory_item = InventoryItem.parse_obj(instance_dict)
     assert inventory_item.name == "Spellbook"
     assert inventory_item.weight == 3
     assert inventory_item.description == "A book of spells."
