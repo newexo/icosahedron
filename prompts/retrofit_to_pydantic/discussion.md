@@ -2,21 +2,9 @@
 
 ## Prompts to prime the pump
 
-## Prompts to generate python code
+- Tell me about Pydantic.
 
-## Branch for generated raw results
+## Prompts to refactor python code
 
-Raw results are in branch []().
-
-## Steps to make code actually work
-
-Recorded steps to make code actually work in commit history of branch []().
-
-1. 
-
-## Final refactor
-
-1.
-
-## Documentation comments
-
+Most prompts were straightforward, but it was necessary to remind GPT that Pydantic models usually do not require 
+`__init__` methods.
