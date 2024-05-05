@@ -2593,7 +2593,8 @@ Rewrite the following as pytest.
 ```python
 import unittest
 
-from icosahedron.d20_rules.character_class import CharacterClass, Character
+from icosahedron.d20_rules.character_class import CharacterClass
+from icosahedron.d20_rules.character import Character
 
 
 class TestCharacter(unittest.TestCase):
@@ -2658,7 +2659,8 @@ Here's the equivalent code using pytest:
 ```python
 
 import pytest
-from icosahedron.d20_rules.character_class import CharacterClass, Character
+from icosahedron.d20_rules.character_class import CharacterClass
+from icosahedron.d20_rules.character import Character
 
 
 @pytest.fixture

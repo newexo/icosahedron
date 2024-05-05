@@ -1,5 +1,6 @@
 import pytest
-from icosahedron.d20_rules.character_class import CharacterClass, Character
+from icosahedron.d20_rules.character_class import CharacterClass
+from icosahedron.d20_rules.character import Character
 
 
 @pytest.fixture

@@ -11,7 +11,7 @@ def spell():
         school="Evocation",
         level=3,
         casting_time="1 action",
-        range_="Long (400 feet + 40 feet per caster level)",
+        range="Long (400 feet + 40 feet per caster level)",
         duration="Instantaneous",
         saving_throw="Reflex half",
         spell_resistance=True,
@@ -44,7 +44,7 @@ def test_instance_test(spell):
 
 
 def test_from_dict(instance_dict):
-    spell = Spell.from_dict(instance_dict)
+    spell = Spell.parse_obj(instance_dict)
     assert spell.name == "Fireball"
     assert spell.school == "Evocation"
     assert spell.level == 3

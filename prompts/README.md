@@ -17,3 +17,4 @@ repair generated code.
 8. [Spells](spells)
 9. [Action](action)
 10. [Retrofit to pytest](retrofit_to_pytest)
+11. [Retrofit to Pydantic](retrofit_to_pydantic)

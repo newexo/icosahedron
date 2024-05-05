@@ -39,7 +39,7 @@ def test_instance_test(weapon_item):
 
 
 def test_from_dict(instance_dict):
-    weapon_item = WeaponItem.from_dict(instance_dict)
+    weapon_item = WeaponItem.parse_obj(instance_dict)
     assert weapon_item.name == "Mace"
     assert weapon_item.value == 308
     assert weapon_item.condition == "Good"

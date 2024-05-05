@@ -1,7 +1,7 @@
 {
     "name": "Alice",
     "race": "Human",
-    "class": "Wizard",
+    "char_class": "Wizard",
     "level": 3,
     "alignment": "Neutral Good",
     "ability_scores": {
