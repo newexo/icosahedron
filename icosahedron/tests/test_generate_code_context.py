@@ -11,8 +11,8 @@ def code_sample():
 
 def test_code_block(code_sample):
     expected = """```python
-print('Hello, world!')
-print('Foo bar baz.')
+print("Hello, world!")
+print("Foo bar baz.")
 ```"""
     assert generate_code_context.code_block(code_sample) == expected
 
