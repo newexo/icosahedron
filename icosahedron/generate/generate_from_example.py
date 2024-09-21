@@ -42,14 +42,7 @@ class ModelContext:
 
     @staticmethod
     def _default_gpt3_5_turbo():
-        # expected deprecation date on 2024-06-12
-        current_date = datetime.datetime.now().date()
-        target_date = datetime.date(2024, 6, 12)
-
-        if current_date > target_date:
-            return "gpt-3.5-turbo"
-        else:
-            return "gpt-3.5-turbo-0301"
+        return "gpt-4o"
 
 
 class Generator(metaclass=ABCMeta):
@@ -68,7 +61,8 @@ class Generator(metaclass=ABCMeta):
         pass
 
     def _make_user_message(self):
-        return f"Write a JSON object for {self.context.delimiter}{self.name}{self.context.delimiter}."
+        return (f"Write a JSON object for {self.context.delimiter}{self.name}{self.context.delimiter}. Do produce any "
+                f"other output besides the JSON.")
 
     @property
     def system_message(self):
