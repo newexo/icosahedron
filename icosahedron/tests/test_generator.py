@@ -51,7 +51,7 @@ def test_user_message():
     item = GeneratorFromExample.get_generator(
         ExampleItemType.ARMOR, "Scale Mail", context=context
     )
-    expected = "Write a JSON object for ####Scale Mail####."
+    expected = "Write a JSON object for ####Scale Mail####. Do produce any other output besides the JSON."
     assert expected == item.user_message
 
 

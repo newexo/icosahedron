@@ -133,3 +133,7 @@ dmypy.json
 
 # MacOS nonsense
 .DS_Store
+
+# Project specific
+data/generated_context/*.md
+icosahedron/scratch.py
