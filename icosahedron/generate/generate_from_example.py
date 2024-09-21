@@ -61,8 +61,10 @@ class Generator(metaclass=ABCMeta):
         pass
 
     def _make_user_message(self):
-        return (f"Write a JSON object for {self.context.delimiter}{self.name}{self.context.delimiter}. Do produce any "
-                f"other output besides the JSON.")
+        return (
+            f"Write a JSON object for {self.context.delimiter}{self.name}{self.context.delimiter}. Do produce any "
+            f"other output besides the JSON."
+        )
 
     @property
     def system_message(self):

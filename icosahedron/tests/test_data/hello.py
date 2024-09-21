@@ -1,2 +1,2 @@
-print('Hello, world!')
-print('Foo bar baz.')
+print("Hello, world!")
+print("Foo bar baz.")
