@@ -42,7 +42,7 @@ class ModelContext:
 
     @staticmethod
     def _default_gpt3_5_turbo():
-        return "gpt-4o"
+        return "gpt-4o-mini"
 
 
 class Generator(metaclass=ABCMeta):

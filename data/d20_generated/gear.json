@@ -1,142 +1,142 @@
 [
   {
     "name": "Backpack",
-    "weight": 5,
-    "description": "A backpack is a sturdy, multi-pocketed bag made of leather or canvas, designed to be worn on the back and used to carry adventuring gear, supplies, and personal belongings.",
-    "condition": "good",
+    "weight": 2,
+    "description": "A sturdy backpack made of durable fabric, designed to carry supplies and equipment for adventurers. It features multiple compartments and adjustable straps for comfort and convenience.",
+    "condition": "new",
     "value": 25
   },
   {
     "name": "Rations (iron or standard)",
     "weight": 2,
-    "description": "Rations are preserved food supplies, typically consisting of dried meats, hardtack, nuts, and other non-perishable items, designed to sustain adventurers during long journeys. Iron rations are more durable and long-lasting compared to standard rations.",
+    "description": "Rations are pre-packaged food supplies designed to sustain adventurers during their journeys. Iron rations are durable and can last for weeks without spoiling, while standard rations are more palatable but have a shorter shelf life. Both types provide essential nutrients to keep adventurers energized and ready for battle.",
     "condition": "good",
     "value": 5
   },
   {
     "name": "Waterskin",
     "weight": 1,
-    "description": "A waterskin is a durable, often leather container used to carry water or other liquids, essential for adventurers to stay hydrated during their journeys.",
+    "description": "A waterskin is a flexible container made from leather or other durable materials, designed to hold liquids, primarily water. It is essential for adventurers to stay hydrated during long journeys in the wilderness.",
     "condition": "good",
-    "value": 2
+    "value": 5
   },
   {
     "name": "Torch",
     "weight": 1,
-    "description": "A torch is a wooden stick wrapped in cloth and soaked in a flammable substance, used to provide light in dark areas. It can also be used as a makeshift weapon or to ignite other objects.",
+    "description": "A torch is a simple yet essential tool for adventurers, made of a wooden stick with a flammable material at one end. When lit, it provides a steady source of light, illuminating dark areas and helping to ward off creatures that lurk in the shadows.",
     "condition": "new",
-    "value": 1
+    "value": 2
   },
   {
     "name": "Lantern",
     "weight": 2,
-    "description": "A lantern is a portable light source, typically made of metal and glass, designed to protect a flame or light source from the elements while providing illumination. It is often used by adventurers to explore dark areas such as caves or dungeons.",
+    "description": "A lantern is a portable light source, typically made of metal and glass, designed to hold a flame or a magical light. It provides illumination in dark places, making it essential for adventurers exploring caves, dungeons, or during nighttime travels.",
     "condition": "good",
     "value": 15
   },
   {
     "name": "Rope (hemp or silk)",
-    "weight": 10,
-    "description": "A sturdy length of rope, available in either hemp or silk. Hemp rope is rough and durable, ideal for climbing and securing loads, while silk rope is lighter, more flexible, and less prone to fraying, often used for more delicate tasks.",
-    "condition": "good",
-    "value": 1
+    "weight": 5,
+    "description": "A sturdy length of rope made from either durable hemp or luxurious silk, used for climbing, securing objects, or creating makeshift shelters. The hemp rope is rough and strong, while the silk rope is lighter and more flexible, making it suitable for various adventuring needs.",
+    "condition": "new",
+    "value": 15
   },
   {
     "name": "Grappling Hook",
-    "weight": 4,
-    "description": "A grappling hook is a sturdy, multi-pronged metal hook attached to a length of rope, used for climbing, securing, or retrieving objects from a distance.",
+    "weight": 5,
+    "description": "A grappling hook is a metal device with multiple prongs, designed to be thrown or launched to secure a rope to a distant object, allowing adventurers to scale walls, cross chasms, or retrieve items from hard-to-reach places.",
     "condition": "good",
     "value": 25
   },
   {
     "name": "Lockpicks",
-    "weight": 0.5,
-    "description": "A set of lockpicks consists of various slender tools designed to manipulate the internal mechanisms of locks, allowing skilled individuals to unlock doors, chests, and other secured items without the proper key.",
+    "weight": 1,
+    "description": "A set of finely crafted metal tools designed for manipulating the internal mechanisms of locks, allowing skilled individuals to unlock doors and chests without the original key. Often used by rogues and thieves, these tools are essential for stealthy adventurers.",
     "condition": "good",
     "value": 25
   },
   {
     "name": "Crowbar",
     "weight": 5,
-    "description": "A crowbar is a sturdy, iron tool with a curved, forked end, used for prying open crates, doors, and other sealed objects. It is a versatile tool for adventurers needing to break into or out of places.",
+    "description": "A crowbar is a sturdy metal tool with a curved end, designed for prying, lifting, and breaking apart objects. It is often used by adventurers to open locked doors, remove obstacles, or as a makeshift weapon in desperate situations.",
     "condition": "good",
-    "value": 2
+    "value": 15
   },
   {
-    "name": "Climbing Gear (pitons, carabiners, harness)",
-    "weight": 12,
-    "description": "A set of climbing gear including pitons, carabiners, and a harness, essential for scaling steep cliffs and navigating treacherous mountainous terrain. This equipment ensures safety and stability for adventurers during their climbs.",
-    "condition": "good",
+    "name": "Climbing Gear",
+    "weight": 5,
+    "description": "Climbing gear includes essential equipment such as pitons, carabiners, and a harness, designed to ensure safety and support during ascents and descents in rugged terrains. The gear is made from durable materials to withstand the rigors of climbing.",
+    "condition": "new",
     "value": 75
   },
   {
     "name": "Map and Compass",
     "weight": 1,
-    "description": "A map and compass set is an essential tool for navigation, consisting of a detailed map of the region and a reliable compass to help adventurers find their way through unfamiliar terrain.",
-    "condition": "good",
+    "description": "A map and compass set is essential for any adventurer navigating through uncharted territories. The map is a detailed representation of the surrounding area, marked with landmarks, paths, and potential dangers, while the compass provides direction, ensuring that the adventurer can find their way back or explore new routes with confidence.",
+    "condition": "new",
     "value": 25
   },
   {
     "name": "Healer's Kit",
-    "weight": 1,
-    "description": "A healer's kit is a small pouch containing bandages, salves, and splints, used to stabilize the wounded and treat minor injuries. It is an essential tool for any adventurer looking to provide first aid in the field.",
-    "condition": "good",
+    "weight": 2,
+    "description": "A healer's kit is a collection of medical supplies and tools, including bandages, salves, and herbs, used by adventurers to treat wounds and ailments. It is essential for any party venturing into dangerous territories, providing the means to stabilize and heal injured companions.",
+    "condition": "new",
     "value": 50
   },
   {
     "name": "Tent",
-    "weight": 20,
-    "description": "A tent is a portable shelter made of durable fabric, supported by poles and ropes, providing adventurers with a temporary home and protection from the elements during their journeys.",
-    "condition": "good",
+    "weight": 10,
+    "description": "A tent is a portable shelter made of fabric or other materials, supported by poles and secured to the ground with stakes. It provides protection from the elements, making it an essential item for adventurers who need a place to rest and recuperate during their journeys.",
+    "condition": "new",
     "value": 50
   },
   {
     "name": "Mirror",
     "weight": 2,
-    "description": "A mirror is a polished surface, typically made of glass with a reflective coating, used to see one's reflection. It can be used for personal grooming, signaling, or even in certain magical rituals.",
+    "description": "A polished glass mirror set in a decorative frame, capable of reflecting images clearly. It is often used by adventurers for grooming, but some believe it can reveal hidden truths or even show glimpses of the future.",
     "condition": "good",
-    "value": 25
+    "value": 50
   },
   {
     "name": "10-Foot Pole",
-    "weight": 7,
-    "description": "A 10-foot pole is a long, sturdy wooden or metal rod, often used by adventurers to probe for traps, measure distances, or reach objects from a safe distance.",
-    "condition": "good",
-    "value": 5
+    "weight": 5,
+    "description": "A sturdy wooden pole measuring ten feet in length, often used by adventurers to probe for traps, cross chasms, or as a makeshift lever. Its length makes it versatile for various tasks in exploration and dungeon delving.",
+    "condition": "new",
+    "value": 2
   },
   {
     "name": "Blanket or Bedroll",
     "weight": 5,
-    "description": "A blanket or bedroll is a thick, warm covering or a portable sleeping mat, often made of wool or other insulating materials, used by adventurers to stay warm and comfortable during rest periods in the wilderness.",
+    "description": "A warm and durable blanket or bedroll made from thick wool or canvas, designed to provide comfort and insulation during rest. It can be easily rolled up for transport and is essential for adventurers camping in the wilderness.",
     "condition": "good",
-    "value": 10
+    "value": 15
   },
   {
     "name": "Flint and Steel",
-    "weight": 0.5,
-    "description": "A small, essential toolset consisting of a piece of flint and a steel striker, used to create sparks and ignite fires. It is a reliable and reusable method for adventurers to start campfires or signal fires.",
-    "condition": "good",
+    "weight": 1,
+    "description": "Flint and steel is a simple yet essential tool for starting fires. It consists of a piece of flint, a hard stone that can create sparks when struck, and a steel striker that produces a shower of sparks when scraped against the flint. This combination is vital for adventurers in the wild, allowing them to cook food, stay warm, and ward off dangers in the dark.",
+    "condition": "new",
     "value": 5
   },
   {
     "name": "Potion Vials",
-    "weight": 0.5,
-    "description": "Potion vials are small, glass containers used to hold various magical potions and elixirs. They are often sealed with a cork or wax to prevent spillage and are essential for any adventurer looking to carry healing potions, poisons, or other magical liquids.",
+    "weight": 0.1,
+    "description": "Potion vials are small glass containers used to hold various potions and elixirs. They come in different shapes and sizes, often with cork or wax seals to prevent spillage. The vials are typically labeled to indicate their contents, which can range from healing potions to toxic substances.",
     "condition": "new",
-    "value": 10
+    "value": 5
   },
   {
     "name": "Sack or Bag",
     "weight": 1,
-    "description": "A sack or bag is a simple container made of cloth, leather, or other flexible material, used to carry and store various items and supplies during an adventure.",
+    "description": "A simple sack or bag made from sturdy cloth or leather, used for carrying various items. It is versatile and can hold anything from food supplies to adventuring gear, making it an essential item for any traveler.",
     "condition": "good",
-    "value": 2
+    "value": 5
   },
   {
     "name": "Spyglass",
     "weight": 1,
-    "description": "A spyglass is a small, handheld telescope made of brass and glass, used by adventurers and sailors to see distant objects more clearly. It is often used for scouting and navigation.",
+    "description": "A spyglass is a compact telescope designed for long-distance viewing. It is typically made of polished brass and glass, allowing adventurers to scout distant locations, observe enemy movements, or admire the beauty of the landscape from afar.",
     "condition": "good",
-    "value": 1000
+    "value": 75
   }
 ]

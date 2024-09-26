@@ -11,97 +11,97 @@
   {
     "name": "Ring of Invisibility",
     "weight": 0,
-    "description": "A Ring of Invisibility is a magical ring that grants the wearer the ability to become invisible at will, rendering them unseen by normal vision.",
+    "description": "A Ring of Invisibility grants the wearer the ability to become invisible at will, allowing them to move unseen and evade detection from enemies.",
     "condition": "Good",
-    "value": 150,
-    "magic_bonus": 0,
+    "value": 250,
+    "magic_bonus": 3,
     "effect": "invisibility"
   },
   {
     "name": "Ring of Strength",
     "weight": 0,
-    "description": "A Ring of Strength is a magical ring that, when worn, enhances the wearer's physical power, increasing their strength and ability to carry heavy loads.",
+    "description": "A Ring of Strength is a magical ring that, when worn, enhances the wearer's physical power, allowing them to perform feats of strength beyond their normal capabilities.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,
-    "effect": "strength enhancement"
+    "effect": "strength"
   },
   {
     "name": "Ring of Regeneration",
     "weight": 0,
-    "description": "A Ring of Regeneration is a magical ring that, when worn, gradually heals the wearer over time, allowing them to recover from injuries more quickly.",
+    "description": "The Ring of Regeneration is a powerful magical ring that grants the wearer the ability to heal wounds over time, restoring a small amount of health each turn.",
     "condition": "Good",
-    "value": 150,
-    "magic_bonus": 3,
+    "value": 500,
+    "magic_bonus": 5,
     "effect": "regeneration"
   },
   {
     "name": "Ring of Spell Storing",
     "weight": 0,
-    "description": "A Ring of Spell Storing is a magical ring that can store spells cast into it, allowing the wearer to cast those spells later. The ring can store up to five levels worth of spells at a time.",
+    "description": "A Ring of Spell Storing is a magical ring that can hold spells for later use. The wearer can store up to five levels of spells in the ring, which can be cast without expending their own spell slots.",
     "condition": "Good",
-    "value": 200,
+    "value": 1500,
     "magic_bonus": 0,
     "effect": "spell storage"
   },
   {
     "name": "Ring of Feather Falling",
     "weight": 0,
-    "description": "A Ring of Feather Falling is a magical ring that, when worn, allows the wearer to fall slowly and safely from great heights, preventing any fall damage.",
+    "description": "A Ring of Feather Falling is a magical ring that allows the wearer to fall gently from great heights, preventing damage from falls and ensuring a safe landing.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 0,
-    "effect": "feather falling"
+    "magic_bonus": 1,
+    "effect": "fall damage reduction"
   },
   {
     "name": "Ring of Water Walking",
     "weight": 0,
-    "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground.",
+    "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground, enabling them to traverse lakes, rivers, and oceans with ease.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 0,
+    "magic_bonus": 1,
     "effect": "water walking"
   },
   {
     "name": "Ring of Teleportation",
     "weight": 0,
-    "description": "A Ring of Teleportation is a magical ring that allows the wearer to instantly transport themselves to a location they can visualize or have been to before.",
+    "description": "A Ring of Teleportation allows the wearer to instantly transport themselves to a previously visited location, making it an invaluable tool for quick escapes or strategic repositioning.",
     "condition": "Good",
-    "value": 150,
+    "value": 500,
     "magic_bonus": 3,
     "effect": "teleportation"
   },
   {
     "name": "Ring of Fire Resistance",
     "weight": 0,
-    "description": "A Ring of Fire Resistance is a magical ring that, when worn, grants the wearer resistance to fire damage, reducing the damage taken from fire-based attacks and hazards.",
+    "description": "A Ring of Fire Resistance is a magical ring that grants the wearer protection against fire damage, allowing them to withstand extreme heat and flames without harm.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 0,
+    "magic_bonus": 3,
     "effect": "fire resistance"
   },
   {
     "name": "Ring of Mind Shielding",
     "weight": 0,
-    "description": "A Ring of Mind Shielding is a magical ring that, when worn, protects the wearer from mind-reading and mental influence, making them immune to telepathy and mind control.",
+    "description": "A Ring of Mind Shielding is a magical ring that protects the wearer from mental intrusion and psychic attacks, ensuring that their thoughts remain private and their mind is fortified against manipulation.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,
-    "effect": "mind shielding"
+    "effect": "mental protection"
   },
   {
     "name": "Ring of Invisibility Detection",
     "weight": 0,
-    "description": "A Ring of Invisibility Detection is a magical ring that allows the wearer to see invisible creatures and objects within a certain range.",
+    "description": "The Ring of Invisibility Detection is a magical ring that grants the wearer the ability to sense invisible creatures and objects within a certain radius, allowing them to detect hidden threats.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 0,
-    "effect": "invisibility detection"
+    "magic_bonus": 3,
+    "effect": "detection"
   },
   {
     "name": "Ring of Sustenance",
     "weight": 0,
-    "description": "A Ring of Sustenance is a magical ring that, when worn, allows the wearer to function without food or water and reduces the need for sleep, providing the benefits of a full night's rest in just 2 hours.",
+    "description": "The Ring of Sustenance is a magical ring that allows the wearer to go without food and water for extended periods of time, providing them with the necessary sustenance to survive without the need for regular meals.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 0,
@@ -110,27 +110,27 @@
   {
     "name": "Ring of Elemental Control",
     "weight": 0,
-    "description": "A Ring of Elemental Control is a powerful magical ring that grants the wearer the ability to manipulate and control elemental forces such as fire, water, earth, and air.",
+    "description": "The Ring of Elemental Control is a powerful magical artifact that grants the wearer the ability to manipulate elemental forces. With this ring, the wearer can summon and control fire, water, earth, and air, allowing for devastating attacks or protective barriers.",
     "condition": "Excellent",
     "value": 500,
-    "magic_bonus": 3,
-    "effect": "elemental control"
+    "magic_bonus": 4,
+    "effect": "elemental manipulation"
   },
   {
     "name": "Ring of the Ram",
     "weight": 0,
-    "description": "A Ring of the Ram is a magical ring that, when activated, can unleash a powerful force resembling a ram's head to strike a target, dealing damage and potentially pushing them back.",
+    "description": "The Ring of the Ram is a powerful magical ring that allows the wearer to unleash a forceful blast of energy, capable of pushing back enemies and breaking down barriers.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,
-    "effect": "force strike"
+    "effect": "force blast"
   },
   {
     "name": "Ring of Telekinesis",
     "weight": 0,
-    "description": "A Ring of Telekinesis is a magical ring that grants the wearer the ability to move objects with their mind, allowing them to manipulate and control items from a distance.",
+    "description": "A Ring of Telekinesis grants the wearer the ability to manipulate objects at a distance, allowing them to move, lift, or throw items without physical contact.",
     "condition": "Good",
-    "value": 150,
+    "value": 250,
     "magic_bonus": 3,
     "effect": "telekinesis"
   }
