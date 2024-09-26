@@ -9,7 +9,7 @@ def test_init_model_context_default():
     context = ModelContext(client=MockOpenAI())
     assert 0 == context.temperature
     assert 500 == context.max_tokens
-    assert "gpt-4o" == context.model
+    assert "gpt-4o-mini" == context.model
     assert "####" == context.delimiter
 
 
