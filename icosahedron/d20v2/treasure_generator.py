@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from .dice_roller import DiceRoller
 
+
 class BaseTreasureGenerator(ABC):
     """
     Abstract base class for generating treasure in a d20 game based on CR and other factors.
@@ -147,18 +148,30 @@ class DungeonTreasureGenerator(BaseTreasureGenerator):
         # Example logic for magic items, could be expanded with real item generation
         if cr <= 4:
             # CR 0-4: Common magic items like potions
-            magic_items = ["Potion of Healing"] if not use_average else ["Potion of Healing", "Scroll of Light"]
+            magic_items = (
+                ["Potion of Healing"]
+                if not use_average
+                else ["Potion of Healing", "Scroll of Light"]
+            )
 
         elif cr <= 10:
             # CR 5-10: Uncommon magic items
-            magic_items = ["+1 Weapon"] if not use_average else ["+1 Weapon", "Bag of Holding"]
+            magic_items = (
+                ["+1 Weapon"] if not use_average else ["+1 Weapon", "Bag of Holding"]
+            )
 
         elif cr <= 16:
             # CR 11-16: Rare magic items
-            magic_items = ["+2 Weapon"] if not use_average else ["+2 Weapon", "Cloak of Protection"]
+            magic_items = (
+                ["+2 Weapon"]
+                if not use_average
+                else ["+2 Weapon", "Cloak of Protection"]
+            )
 
         else:
             # CR 17+: Very rare or legendary magic items
-            magic_items = ["+3 Weapon"] if not use_average else ["+3 Weapon", "Staff of Power"]
+            magic_items = (
+                ["+3 Weapon"] if not use_average else ["+3 Weapon", "Staff of Power"]
+            )
 
         return magic_items

@@ -1,5 +1,8 @@
 import pytest
-from ..d20v2.hit_point_calculator import FighterHitPointCalculator, WizardHitPointCalculator
+from ..d20v2.hit_point_calculator import (
+    FighterHitPointCalculator,
+    WizardHitPointCalculator,
+)
 from ..d20v2.dice_roller import DiceRoller
 
 
@@ -72,7 +75,9 @@ def test_wizard_hp_average(wizard_hp_calculator):
 # Test minimum 1 HP rule for wizard with low Constitution (if the Constitution modifier is -1 and roll is 1)
 def test_wizard_hp_minimum_one(wizard_hp_calculator, dice_roller):
     # Create a wizard with even lower Constitution (-3)
-    wizard_with_low_constitution = WizardHitPointCalculator(dice_roller, constitution_modifier=-3)
+    wizard_with_low_constitution = WizardHitPointCalculator(
+        dice_roller, constitution_modifier=-3
+    )
 
     # Simulate a case where the wizard rolls 1s (expected from a low roll on d6)
     hp = wizard_with_low_constitution.calculate_hit_points(level=3, use_average=False)

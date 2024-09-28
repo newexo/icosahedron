@@ -50,7 +50,9 @@ class FighterHitPointCalculator(BaseHitPointCalculator):
         Returns:
             int: The total hit points for the fighter.
         """
-        total_hp = 10 + self.constitution_modifier  # Max hit die at 1st level for Fighter (d10)
+        total_hp = (
+            10 + self.constitution_modifier
+        )  # Max hit die at 1st level for Fighter (d10)
 
         for lvl in range(2, level + 1):
             if use_average:
@@ -80,7 +82,9 @@ class WizardHitPointCalculator(BaseHitPointCalculator):
         Returns:
             int: The total hit points for the wizard.
         """
-        total_hp = 6 + self.constitution_modifier  # Max hit die at 1st level for Wizard (d6)
+        total_hp = (
+            6 + self.constitution_modifier
+        )  # Max hit die at 1st level for Wizard (d6)
 
         for lvl in range(2, level + 1):
             if use_average:

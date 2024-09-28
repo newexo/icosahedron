@@ -56,5 +56,7 @@ class HeroicAbilityScoreRoller(BaseAbilityScoreRoller):
     def roll_ability_score(self):
         # Roll 3d6, then ensure each die is at least 4 by using max(roll, 4)
         dice_rolls, _ = self.dice_roller.d6(n=3)
-        adjusted_rolls = [max(roll, 4) for roll in dice_rolls]  # Ensure each roll is at least 4
+        adjusted_rolls = [
+            max(roll, 4) for roll in dice_rolls
+        ]  # Ensure each roll is at least 4
         return sum(adjusted_rolls)
