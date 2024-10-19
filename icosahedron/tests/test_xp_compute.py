@@ -14,10 +14,14 @@ def test_monster_initialization():
     zombie = Monster("Zombie", 1 / 2)
     assert zombie.name == "Zombie"
     assert zombie.cr == 1 / 2
-    assert zombie.get_xp_value(3) == 150  # Zombie CR 1/2 should give 150 XP for a 3rd level party
+    assert (
+        zombie.get_xp_value(3) == 150
+    )  # Zombie CR 1/2 should give 150 XP for a 3rd level party
 
     wraith = Monster("Wraith", 5)
-    assert wraith.get_xp_value(3) == 1800  # Wraith CR 5 should give 1800 XP for a 3rd level party
+    assert (
+        wraith.get_xp_value(3) == 1800
+    )  # Wraith CR 5 should give 1800 XP for a 3rd level party
 
 
 def test_party_initialization():

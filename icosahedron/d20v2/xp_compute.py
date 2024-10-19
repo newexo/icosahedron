@@ -16,7 +16,7 @@ class Monster:
         (1 / 4): {3: 75},  # CR 1/4 monsters provide 75 XP to a 3rd level party
         (1 / 2): {3: 150},  # CR 1/2 monsters provide 150 XP to a 3rd level party
         1: {3: 300},  # CR 1 monsters provide 300 XP to a 3rd level party
-        5: {3: 1800}  # CR 5 monsters provide 1800 XP to a 3rd level party
+        5: {3: 1800},  # CR 5 monsters provide 1800 XP to a 3rd level party
     }
 
     def __init__(self, name: str, cr: float):
@@ -33,7 +33,9 @@ class Monster:
 class Encounter:
     def __init__(self, monsters: list, participants: list):
         self.monsters = monsters
-        self.participants = participants  # List of Characters who contributed to the encounter
+        self.participants = (
+            participants  # List of Characters who contributed to the encounter
+        )
 
     def calculate_total_xp(self, party_level: int):
         total_xp = sum(monster.get_xp_value(party_level) for monster in self.monsters)
