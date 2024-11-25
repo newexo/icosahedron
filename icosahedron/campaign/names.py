@@ -1,13 +1,18 @@
 from langchain_core.language_models.llms import BaseLLM
 from langchain.prompts import PromptTemplate
 
-default_name_prompt_template = """You are a GM of am RPG. You are creating campaign and need to create 
-a list of names for potential NPCs and player characters. The campaign is set in a culture 
-similar to {culture}. List {number} suggested names with etymology for {gender} characters.
-express the results as a JSON list of objects with fields `name`, `etymology` (a sentence 
-explaining the historical origin of the name as word), `origin` 
-(language or nationality) and `gender` 
-(male, female and any). Display only a JSON object with no other text."""
+default_name_prompt_template = """
+You are a GM of an RPG. You are creating a campaign and need to generate a list of names 
+for potential NPCs and player characters. The campaign is set in a culture similar to {culture}. 
+Provide {number} suggested names with etymology for {gender} characters. Express the results 
+as a JSON list of objects with the following fields: 
+- `name` (the name itself)
+- `etymology` (a sentence explaining the historical origin of the name as a word)
+- `origin` (language or nationality)
+- `gender` (male, female, or any).
+
+Display only the JSON list of objects with no additional text.
+"""
 
 
 class NameGenerator:
