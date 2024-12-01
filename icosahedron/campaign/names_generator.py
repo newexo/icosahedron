@@ -1,21 +1,13 @@
-from langchain_core.language_models.llms import BaseLLM
-from langchain.prompts import PromptTemplate
-
+from .templated_generator import TemplatedGenerator
 from ..directories import templates
 
 with open(templates("name_prompt_template.txt")) as f:
     default_name_prompt_template = f.read()
 
 
-class NameGenerator:
-    prompt_template: str
-    prompt: PromptTemplate
-    llm: BaseLLM
-
+class NameGenerator(TemplatedGenerator):
     def __init__(self, llm, prompt_template: str = default_name_prompt_template):
-        self.llm = llm
-        self.prompt_template = prompt_template
-        self.prompt = PromptTemplate.from_template(template=prompt_template)
+        super().__init__(llm, prompt_template)
 
     def prompt_formatted_str(self, culture, number, gender) -> str:
         return self.prompt.format(culture=culture, number=number, gender=gender)
