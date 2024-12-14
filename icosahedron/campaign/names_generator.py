@@ -1,4 +1,4 @@
-from .templated_generator import TemplatedGenerator
+from ..generate.templated_generator import TemplatedGenerator
 from ..directories import templates
 
 with open(templates("name_prompt_template.txt")) as f:

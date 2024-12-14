@@ -11,10 +11,10 @@
   {
     "name": "Ring of Invisibility",
     "weight": 0,
-    "description": "A Ring of Invisibility grants the wearer the ability to become invisible at will, allowing them to move unseen and evade detection from enemies.",
-    "condition": "Excellent",
-    "value": 500,
-    "magic_bonus": 5,
+    "description": "The Ring of Invisibility is a magical ring that grants the wearer the ability to become invisible at will, allowing them to evade detection and move unseen.",
+    "condition": "Good",
+    "value": 250,
+    "magic_bonus": 3,
     "effect": "invisibility"
   },
   {
@@ -33,12 +33,12 @@
     "condition": "Good",
     "value": 500,
     "magic_bonus": 5,
-    "effect": "regeneration"
+    "effect": "healing"
   },
   {
     "name": "Ring of Spell Storing",
     "weight": 0,
-    "description": "A Ring of Spell Storing is a magical ring that allows the wearer to store spells for later use. The wearer can cast the stored spells without expending their own spell slots.",
+    "description": "A Ring of Spell Storing is a magical ring that can hold spells for later use. The wearer can store up to five levels of spells in the ring, which can be cast without expending their own spell slots.",
     "condition": "Good",
     "value": 1500,
     "magic_bonus": 0,
@@ -47,16 +47,16 @@
   {
     "name": "Ring of Feather Falling",
     "weight": 0,
-    "description": "A Ring of Feather Falling is a magical ring that allows the wearer to fall gently from great heights, preventing damage from falls and allowing for a safe descent.",
+    "description": "A Ring of Feather Falling is a magical ring that allows the wearer to fall gently from great heights, preventing damage from falls and ensuring a safe landing.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 1,
-    "effect": "fall damage reduction"
+    "magic_bonus": 0,
+    "effect": "fall prevention"
   },
   {
     "name": "Ring of Water Walking",
     "weight": 0,
-    "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground, enabling them to traverse lakes, rivers, and oceans with ease.",
+    "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground, granting them the ability to traverse lakes, rivers, and oceans with ease.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 1,
@@ -65,10 +65,10 @@
   {
     "name": "Ring of Teleportation",
     "weight": 0,
-    "description": "A Ring of Teleportation is a magical ring that allows the wearer to instantly transport themselves to a previously visited location, making it a valuable tool for quick escapes or strategic repositioning.",
+    "description": "A Ring of Teleportation allows the wearer to instantly transport themselves to a previously visited location, making it an invaluable tool for quick escapes or strategic repositioning during adventures.",
     "condition": "Good",
     "value": 500,
-    "magic_bonus": 3,
+    "magic_bonus": 5,
     "effect": "teleportation"
   },
   {
@@ -83,7 +83,7 @@
   {
     "name": "Ring of Mind Shielding",
     "weight": 0,
-    "description": "A Ring of Mind Shielding is a magical ring that protects the wearer from mental intrusion and psychic attacks, ensuring that their thoughts remain private and their mind is fortified against manipulation.",
+    "description": "A Ring of Mind Shielding is a magical ring that protects the wearer from mental intrusion and psychic attacks, ensuring their thoughts remain private and their mind is fortified against manipulation.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,

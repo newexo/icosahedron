@@ -1,4 +1,4 @@
-from icosahedron.generate.generate_from_example import ModelContext
+from icosahedron.generate.model_context import ModelContext
 
 
 class MockOpenAI:

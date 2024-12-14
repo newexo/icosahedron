@@ -3,8 +3,8 @@ import json
 from icosahedron.generate.generate_from_example import (
     GeneratorFromExample,
     ExampleItemType,
-    ModelContext,
 )
+from ..generate.model_context import ModelContext
 
 
 def test_generator():

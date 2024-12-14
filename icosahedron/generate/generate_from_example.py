@@ -1,48 +1,16 @@
 from abc import ABCMeta, abstractmethod
 
 import openai
-import datetime
 import asyncio
 
 from enum import Enum
 
 import json
 from icosahedron import directories
+from icosahedron.generate.model_context import ModelContext
 
 with open(directories.data("example_items.json")) as f:
     example_items = json.load(f)
-
-
-class ModelContext:
-    client: openai.OpenAI
-    delimiter: str
-    model: str
-    temperature: float
-    max_tokens: int
-
-    def __init__(
-        self,
-        client: openai.OpenAI,
-        delimiter: str = None,
-        model: str = None,
-        temperature: float = 0.0,
-        max_tokens: int = -1,
-    ):
-        self.client = client
-        if delimiter is None:
-            delimiter = "####"
-        self.delimiter = delimiter
-        if model is None:
-            model = self._default_gpt3_5_turbo()
-        self.model = model
-        self.temperature = temperature
-        if max_tokens < 0:
-            max_tokens = 500
-        self.max_tokens = max_tokens
-
-    @staticmethod
-    def _default_gpt3_5_turbo():
-        return "gpt-4o-mini"
 
 
 class Generator(metaclass=ABCMeta):
