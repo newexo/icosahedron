@@ -1,6 +1,6 @@
 import pytest
-from ..generate import generate_code_context
-from .. import directories
+from icosahedron.generate import generate_code_context
+from icosahedron import directories
 
 
 @pytest.fixture

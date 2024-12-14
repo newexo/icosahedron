@@ -1,12 +1,8 @@
 from icosahedron.generate.model_context import ModelContext
+from icosahedron.tests.generator_tests.conftest import MockOpenAI
 
 
-class MockOpenAI:
-    pass
-
-
-def test_init_model_context_default():
-    context = ModelContext(client=MockOpenAI())
+def test_init_model_context_default(context):
     assert 0 == context.temperature
     assert 500 == context.max_tokens
     assert "gpt-4o-mini" == context.model
@@ -25,3 +21,4 @@ def test_init_model_context():
     assert 100 == context.max_tokens
     assert "fancy-model" == context.model
     assert "***" == context.delimiter
+    assert False
