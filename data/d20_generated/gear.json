@@ -9,14 +9,14 @@
   {
     "name": "Rations (iron or standard)",
     "weight": 2,
-    "description": "Rations are pre-packaged food supplies designed to sustain adventurers during their journeys. Iron rations are durable and can last for weeks without spoiling, while standard rations are more palatable but have a shorter shelf life. Both types provide essential nutrients to keep adventurers energized and ready for battle.",
+    "description": "Rations are pre-packaged food supplies designed to sustain adventurers during their journeys. Iron rations are durable and can last for weeks without spoiling, while standard rations are more palatable but have a shorter shelf life. Both types provide essential nourishment for adventurers on the go.",
     "condition": "good",
     "value": 5
   },
   {
     "name": "Waterskin",
     "weight": 1,
-    "description": "A waterskin is a flexible container made from leather or other durable materials, designed to hold liquids, primarily water. It is essential for adventurers to stay hydrated during long journeys in the wilderness.",
+    "description": "A waterskin is a flexible container made from leather or other durable materials, designed to hold liquids, primarily water. It features a secure closure to prevent leaks and is often carried by adventurers to stay hydrated during their journeys.",
     "condition": "good",
     "value": 5
   },
@@ -37,14 +37,14 @@
   {
     "name": "Rope (hemp or silk)",
     "weight": 5,
-    "description": "A sturdy length of rope made from either durable hemp or luxurious silk, used for climbing, securing objects, or creating makeshift shelters. The hemp rope is rough and strong, while the silk rope is lighter and more flexible, making it suitable for various adventuring needs.",
+    "description": "A sturdy length of rope made from either durable hemp or luxurious silk, used for climbing, securing objects, or creating makeshift traps. The hemp rope is rough and strong, while the silk rope is lighter and more flexible, making it suitable for various adventuring needs.",
     "condition": "new",
-    "value": 15
+    "value": 10
   },
   {
     "name": "Grappling Hook",
     "weight": 5,
-    "description": "A grappling hook is a metal device with multiple prongs, designed to be thrown or launched to secure a rope to a distant object, allowing adventurers to scale walls, cross chasms, or retrieve items from hard-to-reach places.",
+    "description": "A grappling hook is a metal tool with multiple prongs designed to catch onto surfaces, allowing adventurers to scale walls, cross chasms, or secure ropes for climbing. It is often used by rogues and explorers to navigate difficult terrain.",
     "condition": "good",
     "value": 25
   },
@@ -65,7 +65,7 @@
   {
     "name": "Climbing Gear",
     "weight": 5,
-    "description": "Climbing gear includes essential equipment such as pitons, carabiners, and a harness, designed to ensure safety and support during ascents and descents in rugged terrains. The gear is made from durable materials to withstand the rigors of climbing.",
+    "description": "Climbing gear includes essential equipment such as pitons, carabiners, and a harness, designed to ensure safety and stability while scaling steep terrains. The gear is made from durable materials to withstand the rigors of climbing and is often used by adventurers seeking to conquer challenging cliffs and mountains.",
     "condition": "new",
     "value": 75
   },
@@ -78,58 +78,58 @@
   },
   {
     "name": "Healer's Kit",
-    "weight": 2,
-    "description": "A healer's kit is a collection of medical supplies and tools, including bandages, salves, and herbs, used by adventurers to treat wounds and ailments. It is essential for any party venturing into dangerous territories, providing the means to stabilize and heal injured companions.",
-    "condition": "new",
+    "weight": 5,
+    "description": "A healer's kit is a collection of medical supplies and tools used by adventurers to treat wounds and ailments. It typically includes bandages, antiseptics, herbs, and other essential items for stabilizing injuries and providing first aid in the field.",
+    "condition": "good",
     "value": 50
   },
   {
     "name": "Tent",
-    "weight": 10,
-    "description": "A tent is a portable shelter made of fabric or other materials, supported by poles and secured to the ground with stakes. It provides protection from the elements, making it an essential item for adventurers who need a place to rest and recuperate during their journeys.",
+    "weight": 15,
+    "description": "A tent is a portable shelter made of fabric or other materials, supported by poles and secured to the ground with stakes. It provides protection from the elements, making it an essential item for adventurers during their travels and camping.",
     "condition": "new",
     "value": 50
   },
   {
     "name": "Mirror",
     "weight": 2,
-    "description": "A polished glass mirror set in a decorative frame, capable of reflecting images clearly. It is often used by adventurers for grooming, but some believe it can reveal hidden truths or even show glimpses of the future.",
-    "condition": "good",
+    "description": "A polished glass mirror set in a decorative frame, often used for personal grooming or as a tool for scrying. It reflects not only the physical appearance but can also reveal glimpses of the past or future under certain magical conditions.",
+    "condition": "excellent",
     "value": 50
   },
   {
     "name": "10-Foot Pole",
     "weight": 5,
-    "description": "A sturdy wooden pole measuring ten feet in length, often used by adventurers to probe for traps, cross chasms, or as a makeshift lever. Its length makes it versatile for various tasks in exploration and dungeon delving.",
+    "description": "A sturdy wooden pole measuring ten feet in length, often used by adventurers to probe for traps, cross chasms, or as a makeshift lever. Its length makes it versatile for various tasks in exploration and combat.",
     "condition": "new",
     "value": 2
   },
   {
     "name": "Blanket or Bedroll",
     "weight": 5,
-    "description": "A warm and durable blanket or bedroll made from thick wool or canvas, designed to provide comfort and insulation during rest. It can be easily rolled up for transport and is essential for adventurers camping in the wilderness.",
+    "description": "A warm and durable blanket or bedroll made from thick wool or canvas, designed to provide comfort and insulation during rest. It can be easily rolled up for transport and is essential for adventurers who need to sleep outdoors or in rough conditions.",
     "condition": "good",
     "value": 15
   },
   {
     "name": "Flint and Steel",
     "weight": 1,
-    "description": "Flint and steel is a simple yet essential tool for starting fires. It consists of a piece of flint, a hard stone that can create sparks when struck, and a steel striker that produces a shower of sparks when scraped against the flint. This combination is vital for adventurers in the wild, allowing them to cook food, stay warm, and ward off dangers in the dark.",
-    "condition": "new",
+    "description": "A flint and steel set consists of a piece of flint and a steel striker, used to create sparks to ignite tinder and start a fire. Essential for survival in the wilderness, this tool is compact and reliable, allowing adventurers to cook food, stay warm, and ward off predators.",
+    "condition": "good",
     "value": 5
   },
   {
     "name": "Potion Vials",
-    "weight": 0.1,
-    "description": "Potion vials are small glass containers used to hold various potions and elixirs. They come in different shapes and sizes, often with cork or wax seals to prevent spillage. The vials are typically labeled to indicate their contents, which can range from healing potions to toxic substances.",
+    "weight": 1,
+    "description": "Potion vials are small glass containers used to hold various potions and elixirs. They come in different shapes and sizes, often sealed with corks or wax to preserve the contents. The vials may be labeled with the type of potion they contain, and some are even enchanted to keep the potions fresh.",
     "condition": "new",
-    "value": 5
+    "value": 10
   },
   {
     "name": "Sack or Bag",
     "weight": 1,
-    "description": "A simple sack or bag made from sturdy cloth or leather, used for carrying various items. It is versatile and can hold anything from food supplies to adventuring gear, making it an essential item for any traveler.",
-    "condition": "good",
+    "description": "A simple sack or bag made of sturdy cloth or leather, used for carrying various items. It is versatile and can hold anything from food supplies to adventuring gear, making it an essential item for any traveler.",
+    "condition": "new",
     "value": 5
   },
   {

@@ -2,7 +2,7 @@
   {
     "name": "Leather Armor",
     "weight": 15,
-    "description": "Leather Armor is crafted from tough, flexible animal hides, providing a balance of protection and mobility. It is lightweight and allows for ease of movement, making it a popular choice among rogues and scouts who require stealth and agility. The armor is often treated with oils to enhance its durability and water resistance.",
+    "description": "Leather Armor is crafted from tough, flexible animal hides, providing a balance of protection and mobility. It is lightweight and allows for ease of movement, making it a popular choice among rogues and scouts. The armor is designed to absorb minor impacts while still allowing the wearer to remain agile and stealthy.",
     "condition": "new",
     "value": 50,
     "armor_class": 11,
@@ -26,7 +26,7 @@
   {
     "name": "Chain Shirt",
     "weight": 20,
-    "description": "The Chain Shirt is a type of armor made from interlocking metal rings, designed to be worn over clothing. It provides a good balance of protection and mobility, allowing the wearer to move freely while still offering a decent level of defense against slashing and piercing attacks.",
+    "description": "A Chain Shirt is a type of armor made from interlinked metal rings, providing a balance between protection and mobility. It is lighter than full chain mail, allowing for greater freedom of movement while still offering substantial defense against slashing and piercing attacks. The shirt fits snugly against the body, making it a popular choice for agile adventurers.",
     "condition": "new",
     "value": 50,
     "armor_class": 13,
@@ -38,7 +38,7 @@
   {
     "name": "Splint Mail",
     "weight": 45,
-    "description": "Splint Mail Armor consists of metal strips (or splints) that are attached to a backing of leather or chain. This armor provides excellent protection while allowing for a reasonable range of movement. The splints are designed to deflect blows and absorb impact, making it a favored choice among heavily armored warriors.",
+    "description": "Splint Mail Armor consists of metal strips (or splints) that are attached to a backing of leather or cloth. This design provides excellent protection while allowing for a reasonable range of motion. The splints are strategically placed to cover vital areas, making it a favored choice among warriors who seek a balance between mobility and defense.",
     "condition": "new",
     "value": 100,
     "armor_class": 17,
@@ -62,13 +62,13 @@
   {
     "name": "Plate Mail",
     "weight": 65,
-    "description": "Plate Mail Armor consists of large metal plates that cover the entire body, providing superior protection against physical attacks. Each plate is meticulously crafted to fit together, allowing for a degree of movement while ensuring maximum defense. The armor is often polished to a shine, making it both a formidable and visually impressive choice for any warrior.",
+    "description": "Plate Mail Armor consists of large metal plates that cover the entire body, providing superior protection against physical attacks. Each plate is meticulously crafted to fit together, allowing for a degree of movement while still offering maximum defense. The armor is often polished to a shine, making it not only functional but also visually impressive.",
     "condition": "new",
     "value": 150,
     "armor_class": 18,
     "max_dex_bonus": 1,
     "check_penalty": -6,
-    "spell_failure": 15,
+    "spell_failure": 40,
     "speed_reduction": 5
   }
 ]

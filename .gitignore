@@ -137,3 +137,4 @@ dmypy.json
 # Project specific
 data/generated_context/*.md
 icosahedron/scratch.py
+secrets/
