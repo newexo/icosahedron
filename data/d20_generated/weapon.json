@@ -126,7 +126,7 @@
   {
     "name": "Scimitar",
     "weight": 3.0,
-    "description": "A scimitar is a curved, single-edged sword with a sharp blade, designed for slashing attacks. It is favored by many for its balance and speed in combat.",
+    "description": "A scimitar is a curved, single-edged sword with a sharp blade and a distinctive hilt, designed for slashing attacks and favored by many desert warriors and nomadic tribes.",
     "condition": "Good",
     "value": 150.0,
     "damage": "1d6",
@@ -142,7 +142,7 @@
   {
     "name": "Flail",
     "weight": 6.0,
-    "description": "A flail is a weapon consisting of a spiked or weighted head attached to a handle by a chain or strap, allowing for powerful, swinging attacks that can bypass shields and armor.",
+    "description": "A flail is a weapon consisting of a spiked or heavy ball attached to a handle by a chain, allowing for powerful swinging attacks that can bypass shields and armor.",
     "condition": "Good",
     "value": 250.0,
     "damage": "1d8",
@@ -155,7 +155,7 @@
   {
     "name": "Morningstar",
     "weight": 6.0,
-    "description": "A morningstar is a spiked weapon that consists of a heavy head with sharp spikes attached to a long handle, designed for delivering devastating blows and penetrating armor.",
+    "description": "A morningstar is a spiked weapon that consists of a heavy head attached to a long handle, designed to deliver devastating blows and puncture armor.",
     "condition": "Good",
     "value": 250.0,
     "damage": "1d8",
@@ -168,7 +168,7 @@
   {
     "name": "Halberd",
     "weight": 12.0,
-    "description": "A halberd is a versatile pole weapon that combines the features of a spear and an axe, featuring a long shaft with a pointed tip and a broad blade, making it effective for both slashing and thrusting attacks.",
+    "description": "A halberd is a versatile pole weapon that combines the features of a spear and an axe, featuring a long shaft with a pointed tip for thrusting and a broad blade for slashing.",
     "condition": "Good",
     "value": 450.0,
     "damage": "1d10",
@@ -177,8 +177,7 @@
     "crit_range": 3,
     "crit_multiplier": "3x",
     "special_properties": [
-      "Reach",
-      "Two-Handed"
+      "Reach"
     ]
   },
   {
@@ -186,7 +185,7 @@
     "weight": 5.0,
     "description": "A club is a simple, blunt weapon made from a heavy piece of wood or metal, designed for striking opponents with force. It is easy to wield and effective in close combat.",
     "condition": "Good",
-    "value": 150.0,
+    "value": 15.0,
     "damage": "1d4",
     "damage_type": "Bludgeoning",
     "range": 0,
@@ -197,7 +196,7 @@
   {
     "name": "Quarterstaff",
     "weight": 4.0,
-    "description": "A quarterstaff is a long wooden staff, typically around six to eight feet in length, used for both offense and defense. It is versatile and can be wielded with one or two hands.",
+    "description": "A quarterstaff is a long wooden staff, typically around six to eight feet in length, used for both offense and defense. It is versatile and can be wielded with one or two hands, making it a popular choice among spellcasters and martial artists alike.",
     "condition": "Good",
     "value": 15.0,
     "damage": "1d6",
@@ -205,20 +204,18 @@
     "range": 0,
     "crit_range": 2,
     "crit_multiplier": "2x",
-    "special_properties": [
-      "Versatile"
-    ]
+    "special_properties": []
   },
   {
     "name": "Falchion",
     "weight": 6.0,
-    "description": "The falchion is a one-edged sword with a curved blade, designed for slashing attacks. It combines the cutting power of an axe with the reach of a sword, making it a favored weapon among warriors.",
+    "description": "The falchion is a one-edged sword with a curved blade that is designed for slashing attacks. It combines the cutting power of an axe with the reach of a sword, making it a favored weapon among warriors.",
     "condition": "Good",
     "value": 450.0,
     "damage": "1d8",
     "damage_type": "Slashing",
     "range": 0,
-    "crit_range": 3,
+    "crit_range": 18,
     "crit_multiplier": "2x",
     "special_properties": []
   }

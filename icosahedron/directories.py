@@ -27,3 +27,7 @@ def tests(filename=None):
 
 def test_data(filename=None):
     return qualifyname(tests("test_data"), filename)
+
+
+def secrets(filename=None):
+    return qualifyname(base("secrets"), filename)
