@@ -7,5 +7,10 @@ class MockOpenAI:
 
 
 @pytest.fixture
+def mock_openai():
+    return MockOpenAI()
+
+
+@pytest.fixture
 def context():
-    return ModelContext(client=MockOpenAI())
+    return ModelContext(model_name="fancy-model")

@@ -7,7 +7,7 @@ from enum import Enum
 
 import json
 from icosahedron import directories
-from icosahedron.generate.model_context import ModelContext
+from icosahedron.generate.model_context import OpenAIModelContext
 
 with open(directories.data("example_items.json")) as f:
     example_items = json.load(f)
@@ -17,11 +17,11 @@ class Generator(metaclass=ABCMeta):
     def __init__(
         self,
         name: str,
-        context: ModelContext = None,
+        context: OpenAIModelContext = None,
     ):
         self.name = name
         if context is None:
-            context = ModelContext(client=openai.OpenAI())
+            context = OpenAIModelContext(client=openai.OpenAI())
         self.context = context
 
     @abstractmethod
@@ -54,7 +54,7 @@ class Generator(metaclass=ABCMeta):
 
     def generate(self):
         response = self.context.client.chat.completions.create(
-            model=self.context.model,
+            model=self.context.model_name,
             messages=self.messages,
             temperature=self.context.temperature,
         )
@@ -73,7 +73,7 @@ class GeneratorFromExample(Generator):
     def __init__(
         self,
         name: str,
-        context: ModelContext = None,
+        context: OpenAIModelContext = None,
         json_sample: str = None,
         dictionary_sample: dict = None,
     ):
@@ -88,14 +88,14 @@ class GeneratorFromExample(Generator):
         )
 
     @staticmethod
-    def get_generator(t: ExampleItemType, name: str, context: ModelContext = None):
+    def get_generator(t: ExampleItemType, name: str, context: OpenAIModelContext = None):
         return GeneratorFromExample(
             name, context, dictionary_sample=example_items[t.value]
         )
 
     @classmethod
     async def generate_items(
-        cls, t: ExampleItemType, names, context: ModelContext = None
+        cls, t: ExampleItemType, names, context: OpenAIModelContext = None
     ):
         async def generate_item(name):
             return cls.get_generator(t, name, context).generate()

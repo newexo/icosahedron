@@ -11,7 +11,7 @@
   {
     "name": "Ring of Invisibility",
     "weight": 0,
-    "description": "The Ring of Invisibility is a magical ring that grants the wearer the ability to become invisible at will, allowing them to evade detection and move unseen.",
+    "description": "The Ring of Invisibility grants the wearer the ability to become invisible at will, allowing them to move unseen and evade detection.",
     "condition": "Good",
     "value": 250,
     "magic_bonus": 3,
@@ -38,7 +38,7 @@
   {
     "name": "Ring of Spell Storing",
     "weight": 0,
-    "description": "A Ring of Spell Storing is a magical ring that can hold spells for later use. The wearer can store up to five levels of spells in the ring, which can be cast without expending their own spell slots.",
+    "description": "A Ring of Spell Storing is a magical ring that allows the wearer to store spells for later use. The ring can hold up to five levels of spells, which can be cast by the wearer without expending their own spell slots.",
     "condition": "Good",
     "value": 1500,
     "magic_bonus": 0,
@@ -51,30 +51,30 @@
     "condition": "Good",
     "value": 150,
     "magic_bonus": 0,
-    "effect": "fall prevention"
+    "effect": "fall damage reduction"
   },
   {
     "name": "Ring of Water Walking",
     "weight": 0,
-    "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground, granting them the ability to traverse lakes, rivers, and oceans with ease.",
+    "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground, enabling them to traverse lakes, rivers, and oceans with ease.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 1,
+    "magic_bonus": 0,
     "effect": "water walking"
   },
   {
     "name": "Ring of Teleportation",
     "weight": 0,
-    "description": "A Ring of Teleportation allows the wearer to instantly transport themselves to a previously visited location, making it an invaluable tool for quick escapes or strategic repositioning during adventures.",
+    "description": "A Ring of Teleportation is a magical ring that allows the wearer to instantly transport themselves to a previously visited location, making it a valuable tool for quick escapes or strategic repositioning.",
     "condition": "Good",
     "value": 500,
-    "magic_bonus": 5,
+    "magic_bonus": 3,
     "effect": "teleportation"
   },
   {
     "name": "Ring of Fire Resistance",
     "weight": 0,
-    "description": "A Ring of Fire Resistance is a magical ring that grants the wearer protection against fire damage, allowing them to withstand extreme heat and flames without harm.",
+    "description": "A Ring of Fire Resistance is a magical ring that grants the wearer protection against fire-based attacks, reducing damage taken from fire spells and effects.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,
@@ -83,7 +83,7 @@
   {
     "name": "Ring of Mind Shielding",
     "weight": 0,
-    "description": "A Ring of Mind Shielding is a magical ring that protects the wearer from mental intrusion and psychic attacks, ensuring their thoughts remain private and their mind is fortified against manipulation.",
+    "description": "A Ring of Mind Shielding is a magical ring that protects the wearer from mental intrusion and psychic attacks, ensuring that their thoughts remain private and their mind is fortified against manipulation.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,
@@ -101,7 +101,7 @@
   {
     "name": "Ring of Sustenance",
     "weight": 0,
-    "description": "A Ring of Sustenance is a magical ring that allows the wearer to survive without food or water for extended periods, providing the necessary nourishment and hydration through magical means.",
+    "description": "The Ring of Sustenance is a magical ring that allows the wearer to go without food and water for extended periods of time, providing the necessary nourishment and hydration through magical means.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 0,
