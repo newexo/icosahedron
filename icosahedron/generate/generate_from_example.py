@@ -7,7 +7,7 @@ from enum import Enum
 
 import json
 from icosahedron import directories
-from icosahedron.generate.model_context import OpenAIModelContext
+from icosahedron.generate.openai_model_context import OpenAIModelContext
 
 with open(directories.data("example_items.json")) as f:
     example_items = json.load(f)
@@ -88,7 +88,9 @@ class GeneratorFromExample(Generator):
         )
 
     @staticmethod
-    def get_generator(t: ExampleItemType, name: str, context: OpenAIModelContext = None):
+    def get_generator(
+        t: ExampleItemType, name: str, context: OpenAIModelContext = None
+    ):
         return GeneratorFromExample(
             name, context, dictionary_sample=example_items[t.value]
         )

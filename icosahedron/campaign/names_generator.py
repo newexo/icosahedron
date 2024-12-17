@@ -1,4 +1,5 @@
 from ..generate.templated_generator import TemplatedGenerator
+from ..generate.model_context import ModelContext
 from ..directories import templates
 
 with open(templates("name_prompt_template.txt")) as f:
@@ -6,8 +7,12 @@ with open(templates("name_prompt_template.txt")) as f:
 
 
 class NameGenerator(TemplatedGenerator):
-    def __init__(self, llm, prompt_template: str = default_name_prompt_template):
-        super().__init__(llm, prompt_template)
+    def __init__(
+        self,
+        context: ModelContext,
+        prompt_template: str = default_name_prompt_template,
+    ):
+        super().__init__(prompt_template=prompt_template, context=context)
 
     def prompt_formatted_str(self, culture, number, gender) -> str:
         return self.prompt.format(culture=culture, number=number, gender=gender)
@@ -21,4 +26,5 @@ class NameGenerator(TemplatedGenerator):
         prompt_formatted_str: str = self.prompt_formatted_str(
             culture=culture, number=number, gender=gender
         )
-        return self.llm.invoke(prompt_formatted_str)
+        result = self.llm.invoke(prompt_formatted_str)
+        return self.context.interpret_json_result(result)

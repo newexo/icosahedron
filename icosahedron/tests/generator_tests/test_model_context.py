@@ -1,4 +1,6 @@
-from icosahedron.generate.model_context import ModelContext, OpenAIModelContext
+from ...generate.openai_model_context import OpenAIModelContext
+
+from .mocks import MockModelContext
 
 
 def test_init_model_context_default(context):
@@ -17,7 +19,7 @@ def test_init_openai_model_context(mock_openai):
 
 
 def test_init_model_context():
-    context = ModelContext(
+    context = MockModelContext(
         temperature=0.5,
         max_tokens=100,
         model_name="other-fancy-model",

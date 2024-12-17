@@ -1,11 +1,9 @@
 import json
 
-from icosahedron.tests.generator_tests.conftest import MockOpenAI
 from icosahedron.generate.generate_from_example import (
     GeneratorFromExample,
     ExampleItemType,
 )
-from icosahedron.generate.model_context import ModelContext
 
 
 def test_generator(context):

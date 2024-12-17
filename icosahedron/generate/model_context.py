@@ -1,7 +1,7 @@
-import openai
+from abc import ABCMeta, abstractmethod
 
 
-class ModelContext:
+class ModelContext(metaclass=ABCMeta):
     delimiter: str
     model_name: str
     temperature: float
@@ -23,16 +23,10 @@ class ModelContext:
             max_tokens = 500
         self.max_tokens = max_tokens
 
+    @abstractmethod
+    def get_llm(self):
+        pass
 
-class OpenAIModelContext(ModelContext):
-    client: openai.OpenAI
-
-    def __init__(self, client: openai.OpenAI, model_name: str = None, **kwargs):
-        self.client = client
-        if model_name is None:
-            model_name = self._default_gpt()
-        super().__init__(model_name, **kwargs)
-
-    @staticmethod
-    def _default_gpt():
-        return "gpt-4o-mini"
+    @abstractmethod
+    def interpret_json_result(self, result):
+        pass

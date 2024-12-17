@@ -1,9 +1,5 @@
 import pytest
-from icosahedron.generate.model_context import ModelContext
-
-
-class MockOpenAI:
-    pass
+from icosahedron.tests.generator_tests.mocks import MockOpenAI, MockModelContext
 
 
 @pytest.fixture
@@ -13,4 +9,4 @@ def mock_openai():
 
 @pytest.fixture
 def context():
-    return ModelContext(model_name="fancy-model")
+    return MockModelContext(model_name="fancy-model")

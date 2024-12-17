@@ -1,12 +1,12 @@
-from ..campaign import names_generator
+from icosahedron.campaign import names_generator
 
 
 def test_default_name_template():
     assert names_generator.default_name_prompt_template
 
 
-def test_name_generator():
-    name_generator = names_generator.NameGenerator(llm=None)
+def test_name_generator(context):
+    name_generator = names_generator.NameGenerator(context=context)
     assert (
         name_generator.prompt_template == names_generator.default_name_prompt_template
     )
