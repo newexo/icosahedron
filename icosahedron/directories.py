@@ -21,6 +21,10 @@ def data(filename=None):
     return qualifyname(base("data"), filename)
 
 
+def templates(filename=None):
+    return qualifyname(data("templates"), filename)
+
+
 def tests(filename=None):
     return qualifyname(code("tests"), filename)
 

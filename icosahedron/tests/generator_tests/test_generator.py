@@ -1,14 +1,12 @@
-from .test_model_context import MockOpenAI
 import json
+
 from icosahedron.generate.generate_from_example import (
     GeneratorFromExample,
     ExampleItemType,
-    ModelContext,
 )
 
 
-def test_generator():
-    context = ModelContext(client=MockOpenAI())
+def test_generator(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.ARMOR, "Scale Mail", context=context
     )
@@ -17,8 +15,7 @@ def test_generator():
     assert "Scale Mail" == item.name
 
 
-def test_system_message():
-    context = ModelContext(client=MockOpenAI())
+def test_system_message(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.ARMOR, "Scale Mail", context=context
     )
@@ -46,8 +43,7 @@ Only JSON objects, with nothing else."""
     assert expected == item.system_message
 
 
-def test_user_message():
-    context = ModelContext(client=MockOpenAI())
+def test_user_message(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.ARMOR, "Scale Mail", context=context
     )
@@ -55,8 +51,7 @@ def test_user_message():
     assert expected == item.user_message
 
 
-def test_messages():
-    context = ModelContext(client=MockOpenAI())
+def test_messages(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.ARMOR, "Scale Mail", context=context
     )
@@ -67,8 +62,7 @@ def test_messages():
     assert expected == item.messages
 
 
-def test_armor_json_sample():
-    context = ModelContext(client=MockOpenAI())
+def test_armor_json_sample(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.ARMOR, "Scale Mail", context=context
     )
@@ -88,8 +82,7 @@ def test_armor_json_sample():
     assert expected == actual
 
 
-def test_weapon_json_sample():
-    context = ModelContext(client=MockOpenAI())
+def test_weapon_json_sample(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.WEAPON, "Mace", context=context
     )
@@ -110,8 +103,7 @@ def test_weapon_json_sample():
     assert expected == actual
 
 
-def test_magic_ring():
-    context = ModelContext(client=MockOpenAI())
+def test_magic_ring(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.MAGIC_RING, "Ring of Protection", context=context
     )
@@ -128,8 +120,7 @@ def test_magic_ring():
     assert expected == actual
 
 
-def test_generic_item():
-    context = ModelContext(client=MockOpenAI())
+def test_generic_item(context):
     item = GeneratorFromExample.get_generator(
         ExampleItemType.GENERIC_ITEM, "Spellbook", context=context
     )

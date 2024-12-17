@@ -1,21 +1,11 @@
 import pytest
-import asyncio
 
 import os
 
-from icosahedron.env import load_icosahedron_env
 from icosahedron.generate.generate_from_example import (
     GeneratorFromExample,
     ExampleItemType,
 )
-
-
-pytest_plugins = ('pytest_asyncio',)
-
-
-@pytest.fixture
-def load_env():
-    load_icosahedron_env()
 
 
 def test_openai_key_exists(load_env):
@@ -64,7 +54,9 @@ async def test_generate_items(load_env):
         "Banded Mail",
         "Plate Mail",
     ]
-    armor_data = await GeneratorFromExample.generate_items(ExampleItemType.ARMOR, armor_names)
+    armor_data = await GeneratorFromExample.generate_items(
+        ExampleItemType.ARMOR, armor_names
+    )
     assert len(armor_data) == len(armor_names)
     actual = {armor["name"] for armor in armor_data}
     assert actual == set(armor_names)

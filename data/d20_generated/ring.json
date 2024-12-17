@@ -11,10 +11,10 @@
   {
     "name": "Ring of Invisibility",
     "weight": 0,
-    "description": "A Ring of Invisibility grants the wearer the ability to become invisible at will, allowing them to move unseen and evade detection from enemies.",
-    "condition": "Excellent",
-    "value": 500,
-    "magic_bonus": 5,
+    "description": "The Ring of Invisibility grants the wearer the ability to become invisible at will, allowing them to move unseen and evade detection.",
+    "condition": "Good",
+    "value": 250,
+    "magic_bonus": 3,
     "effect": "invisibility"
   },
   {
@@ -33,12 +33,12 @@
     "condition": "Good",
     "value": 500,
     "magic_bonus": 5,
-    "effect": "regeneration"
+    "effect": "healing"
   },
   {
     "name": "Ring of Spell Storing",
     "weight": 0,
-    "description": "A Ring of Spell Storing is a magical ring that allows the wearer to store spells for later use. The wearer can cast the stored spells without expending their own spell slots.",
+    "description": "A Ring of Spell Storing is a magical ring that allows the wearer to store spells for later use. The ring can hold up to five levels of spells, which can be cast by the wearer without expending their own spell slots.",
     "condition": "Good",
     "value": 1500,
     "magic_bonus": 0,
@@ -47,10 +47,10 @@
   {
     "name": "Ring of Feather Falling",
     "weight": 0,
-    "description": "A Ring of Feather Falling is a magical ring that allows the wearer to fall gently from great heights, preventing damage from falls and allowing for a safe descent.",
+    "description": "A Ring of Feather Falling is a magical ring that allows the wearer to fall gently from great heights, preventing damage from falls and ensuring a safe landing.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 1,
+    "magic_bonus": 0,
     "effect": "fall damage reduction"
   },
   {
@@ -59,7 +59,7 @@
     "description": "A Ring of Water Walking is a magical ring that allows the wearer to walk on the surface of water as if it were solid ground, enabling them to traverse lakes, rivers, and oceans with ease.",
     "condition": "Good",
     "value": 150,
-    "magic_bonus": 1,
+    "magic_bonus": 0,
     "effect": "water walking"
   },
   {
@@ -74,7 +74,7 @@
   {
     "name": "Ring of Fire Resistance",
     "weight": 0,
-    "description": "A Ring of Fire Resistance is a magical ring that grants the wearer protection against fire damage, allowing them to withstand extreme heat and flames without harm.",
+    "description": "A Ring of Fire Resistance is a magical ring that grants the wearer protection against fire-based attacks, reducing damage taken from fire spells and effects.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 3,
@@ -101,7 +101,7 @@
   {
     "name": "Ring of Sustenance",
     "weight": 0,
-    "description": "A Ring of Sustenance is a magical ring that allows the wearer to survive without food or water for extended periods, providing the necessary nourishment and hydration through magical means.",
+    "description": "The Ring of Sustenance is a magical ring that allows the wearer to go without food and water for extended periods of time, providing the necessary nourishment and hydration through magical means.",
     "condition": "Good",
     "value": 150,
     "magic_bonus": 0,

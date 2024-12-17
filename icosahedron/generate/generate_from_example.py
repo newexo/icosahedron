@@ -1,59 +1,27 @@
 from abc import ABCMeta, abstractmethod
 
 import openai
-import datetime
 import asyncio
 
 from enum import Enum
 
 import json
 from icosahedron import directories
+from icosahedron.generate.openai_model_context import OpenAIModelContext
 
 with open(directories.data("example_items.json")) as f:
     example_items = json.load(f)
-
-
-class ModelContext:
-    client: openai.OpenAI
-    delimiter: str
-    model: str
-    temperature: float
-    max_tokens: int
-
-    def __init__(
-        self,
-        client: openai.OpenAI,
-        delimiter: str = None,
-        model: str = None,
-        temperature: float = 0.0,
-        max_tokens: int = -1,
-    ):
-        self.client = client
-        if delimiter is None:
-            delimiter = "####"
-        self.delimiter = delimiter
-        if model is None:
-            model = self._default_gpt3_5_turbo()
-        self.model = model
-        self.temperature = temperature
-        if max_tokens < 0:
-            max_tokens = 500
-        self.max_tokens = max_tokens
-
-    @staticmethod
-    def _default_gpt3_5_turbo():
-        return "gpt-4o-mini"
 
 
 class Generator(metaclass=ABCMeta):
     def __init__(
         self,
         name: str,
-        context: ModelContext = None,
+        context: OpenAIModelContext = None,
     ):
         self.name = name
         if context is None:
-            context = ModelContext(client=openai.OpenAI())
+            context = OpenAIModelContext(client=openai.OpenAI())
         self.context = context
 
     @abstractmethod
@@ -86,7 +54,7 @@ class Generator(metaclass=ABCMeta):
 
     def generate(self):
         response = self.context.client.chat.completions.create(
-            model=self.context.model,
+            model=self.context.model_name,
             messages=self.messages,
             temperature=self.context.temperature,
         )
@@ -105,7 +73,7 @@ class GeneratorFromExample(Generator):
     def __init__(
         self,
         name: str,
-        context: ModelContext = None,
+        context: OpenAIModelContext = None,
         json_sample: str = None,
         dictionary_sample: dict = None,
     ):
@@ -120,14 +88,16 @@ class GeneratorFromExample(Generator):
         )
 
     @staticmethod
-    def get_generator(t: ExampleItemType, name: str, context: ModelContext = None):
+    def get_generator(
+        t: ExampleItemType, name: str, context: OpenAIModelContext = None
+    ):
         return GeneratorFromExample(
             name, context, dictionary_sample=example_items[t.value]
         )
 
     @classmethod
     async def generate_items(
-        cls, t: ExampleItemType, names, context: ModelContext = None
+        cls, t: ExampleItemType, names, context: OpenAIModelContext = None
     ):
         async def generate_item(name):
             return cls.get_generator(t, name, context).generate()
