@@ -1,0 +1,13 @@
+You are a GM of an RPG. You are creating a campaign and need to generate a list of magic rings
+for treasure. The campaign is set in a culture similar to {culture}.
+Provide {number} suggested rings. Express the results a JSON list of strings, where each is a name only.
+
+For example:
+[
+  "Ring of Fire",
+  "Ring of Ice",
+  "Ring of Earth",
+  "Ring of Air"
+]
+
+Display only the JSON list of objects with no additional text.

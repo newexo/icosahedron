@@ -13,3 +13,11 @@ class TemplatedGenerator:
         self.llm = context.get_llm()
         self.prompt_template = prompt_template
         self.prompt = PromptTemplate.from_template(template=prompt_template)
+
+    def prompt_formatted_str(self, **kwargs) -> str:
+        return self.prompt.format(**kwargs)
+
+    def generate(self, **kwargs):
+        prompt_formatted_str: str = self.prompt_formatted_str(**kwargs)
+        result = self.llm.invoke(prompt_formatted_str)
+        return self.context.interpret_json_result(result)

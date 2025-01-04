@@ -1,0 +1,11 @@
+You are a GM of an RPG. You are creating a campaign and need to generate a list of magic rings
+for treasure. The campaign is set in a culture similar to {culture}.
+Given a ring named "{name}", generate a JSON object representing a ring. Express the results
+as an object with the following fields:
+- name (the name of the ring)
+- description (a sentence explaining the ring's magical properties)
+- value (the ring's monetary value)
+- magic_bonus (the ring's magical bonus)
+- effect (the ring's magical effect)
+
+Display only the JSON object with no additional text.
