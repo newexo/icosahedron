@@ -4,7 +4,7 @@ from icosahedron.generate.openai_model_context import OpenAIModelContext
 
 def test_generate_names(load_env):
     generator = NameGenerator(context=OpenAIModelContext(max_tokens=1000))
-    j = generator.generate(number=10)['characters']
+    j = generator.generate(number=10)["characters"]
     assert len(j) == 10
     expected = {"name", "etymology", "origin", "gender"}
     for item in j:
