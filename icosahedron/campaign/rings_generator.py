@@ -33,16 +33,16 @@ with open(templates("magic_ring_template.txt")) as f:
 
 class RingDetailsGenerator(TemplatedGenerator):
     def __init__(
-            self,
-            context: ModelContext,
-            prompt_template: str = default_magic_ring_template,
+        self,
+        context: ModelContext,
+        prompt_template: str = default_magic_ring_template,
     ):
         super().__init__(prompt_template=prompt_template, context=context)
 
     def generate(
-            self,
-            culture: str = "European high fantasy",
-            name: str = "Ring of Invisibility",
+        self,
+        culture: str = "European high fantasy",
+        name: str = "Ring of Invisibility",
     ):
         prompt_formatted_str: str = self.prompt_formatted_str(
             culture=culture, name=name

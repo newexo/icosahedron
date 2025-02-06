@@ -1,0 +1,14 @@
+You are a GM of an RPG. You are creating a campaign and need to generate a list of spells. The campaign is set in a
+culture similar to {culture}.
+Provide {number} suggested spells of level {level} for class {class_type}.
+Express the results a JSON list of strings, where each is a name only.
+
+For example:
+[
+  "Sleep",
+  "Fireball",
+  "Raise Dead",
+  "Magic Missile",
+]
+
+Display only the JSON list of objects with no additional text.

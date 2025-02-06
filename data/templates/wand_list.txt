@@ -1,0 +1,16 @@
+You are a GM of an RPG. You are creating a campaign and need to generate a list of magic wands, staffs, or rods for
+treasure. The campaign is set in a culture similar to {culture}.
+Provide {number} suggested magic items. Express the results a JSON list of strings, where each is a name only.
+
+For example:
+[
+  "Wand of Magic Missiles",
+  "Staff of Healing",
+  "Rod of Lordly Might",
+  "Wand of Wonder",
+  "Staff of Power",
+  "Rod of Absorption",
+  "Wand of Fireballs",
+]
+
+Display only the JSON list of objects with no additional text.
