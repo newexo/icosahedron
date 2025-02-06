@@ -1,0 +1,26 @@
+You are a GM of an RPG. You are creating a campaign and need to generate a monster. The campaign is set in a
+culture similar to {culture}.
+The monster is {name}.
+Express the results as a JSON object.
+
+For example:
+{{
+    "name": "Ogre",
+    "hit_dice": "4d10 + 12",
+    "speed": "30 ft.",
+    "ac": 16,
+    "attacks": "Greatclub +6 (2d6+4)",
+    "special_attacks": "Javelin +2 (1d6+4)",
+    "special": "Darkvision 60 ft., passive Perception 8",
+    "saves": "Fort +6, Ref +2, Will +1",
+    "skills": "Perception +2",
+    "abilities": "Str 19, Dex 8, Con 16, Int 5, Wis 8, Cha 7",
+    "feats": "Toughness",
+    "size": "Large",
+    "challenge": 2,
+    "treasure": "Standard"
+    "alignment": "Chaotic evil",
+    "description": "Ogres are giant creatures that are known for their strength and cruelty. They are often found in the wilderness",
+}}
+
+Display only the JSON object with no additional text.
