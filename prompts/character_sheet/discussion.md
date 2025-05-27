@@ -34,7 +34,7 @@ The generated code samples were long enough that the full code would have exceed
 
 ## Final refactor
 
-1.
+1. Already in good shape, no refactor needed.
 
 ## Documentation comments
 

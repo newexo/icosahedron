@@ -38,11 +38,10 @@ Raw results are in branch [generate/action](https://github.com/newexo/icosahedro
 Recorded steps to make code actually work in commit history of branch [refactor/action](https://github.com/newexo/icosahedron/tree/refactor/action).
 
 1. Only required fixing import in test_action.py to make tests run.
-2. 
 
 ## Final refactor
 
-1.
+1. Already in good shape, no refactor needed.
 
 ## Documentation comments
 
