@@ -1,1 +1,0 @@
-# generated d20 style data objects
