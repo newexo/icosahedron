@@ -17,21 +17,9 @@ def base(filename=None):
     return qualifyname(basepath, filename)
 
 
-def data(filename=None):
-    return qualifyname(base("data"), filename)
-
-
-def templates(filename=None):
-    return qualifyname(data("templates"), filename)
-
-
 def tests(filename=None):
     return qualifyname(code("tests"), filename)
 
 
 def test_data(filename=None):
     return qualifyname(tests("test_data"), filename)
-
-
-def secrets(filename=None):
-    return qualifyname(base("secrets"), filename)
